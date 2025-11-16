@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Landscaping Pty Ltd | Bespoke Outdoor Transformations</title>
+<style>
+:root {
+  --bg: #050816;
+  --bg2: #0b1a2f;
+  --card: #0f1f38;
+  --accent: #3fd0ff;
+  --accent2: #6af1ff;
+  --text: #e6f5ff;
+  --muted: #9fb6d1;
+  --white: #ffffff;
+  --danger: #ff6b6b;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0c1f3f 0%, #050816 60%);
+  color: var(--text);
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.section {
+  padding: 4rem 0;
+}
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+p {
+  color: var(--muted);
+}
+button, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #041224;
+  box-shadow: 0 10px 30px rgba(63, 208, 255, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(5, 8, 22, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+header .container {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.logo-wrap img {
+  width: 48px;
+  height: 48px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+nav a {
+  color: var(--muted);
+  font-weight: 500;
+}
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+.hero-card, .card, .faq-item {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent2);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.metric-pills {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.metric {
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--accent2);
+  background: rgba(63,208,255,0.05);
+}
+.hero-portrait {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.problem-grid, .feature-grid, .steps {
+  display: grid;
+  gap: 1.5rem;
+}
+.problem-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.problem-card {
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.problem-card h4 {
+  margin-bottom: 0.5rem;
+}
+.flow {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(255,255,255,0.1);
+  color: var(--accent2);
+}
+.steps {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.step-card {
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.step-card span {
+  font-weight: 600;
+  color: var(--accent2);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.roi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.roi-inputs input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(5,8,22,0.6);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.roi-output {
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+.roi-output h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.highlight {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+}
+.about-photo {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.faq-grid {
+  display: grid;
+  gap: 1rem;
+}
+.faq-item h4 {
+  margin-bottom: 0.5rem;
+}
+.final-cta {
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 3rem 2rem;
+}
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  header .container {
+    justify-content: space-between;
+  }
+  .metric-pills {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo-wrap">
+      <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png" alt="Sydney Landscaping Logo">
+      <strong>Sydney Landscaping Pty Ltd</strong>
+    </div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#problem">Pains</a>
+      <a href="#solution">Solution</a>
+      <a href="#roi">ROI</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn-primary" href="https://systempros.ai/booking" target="_blank">Book a Design Call</a>
+  </div>
+</header>
+
+<section class="section" id="hero">
+  <div class="container hero">
+    <div>
+      <div class="kicker">Residential Landscaping Leaders</div>
+      <h1>Never lose another $25k landscape to slow quotes or messy handovers.</h1>
+      <p>Sydney Landscaping’s Signature Outdoor Transformation Plan builds high-performing gardens for Sydney homeowners who want craftsmanship without the chaos. From concept to concrete, we handle the heavy lifting while you serve clients and live life.</p>
+      <div class="metric-pills">
+        <div class="metric">📉 Avg. 6 dream projects lost monthly to delays</div>
+        <div class="metric">💰 $25k median job value across North Shore & Beaches</div>
+      </div>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="https://systempros.ai/booking" target="_blank">Book a Design Call</a>
+        <a class="btn btn-secondary" href="#roi">Try the ROI Calculator</a>
+      </div>
+    </div>
+    <div class="hero-card hero-portrait">
+      <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Tom Jones">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="problem">
+  <div class="container">
+    <h2>Where Sydney homeowners see delays, they see dollars slipping away.</h2>
+    <p>Every unanswered enquiry or half-finished concept is money left on the lawn.</p>
+    <div class="problem-grid">
+      <div class="card problem-card">
+        <h4>📞 Missed enquiries</h4>
+        <p>Weekends bring the hottest leads, yet crews are onsite. Slow follow-up means they hire someone else.</p>
+      </div>
+      <div class="card problem-card">
+        <h4>🧱 Disjointed trades</h4>
+        <p>Separate designers, concreters, and gardeners multiply errors, variations, and client frustration.</p>
+      </div>
+      <div class="card problem-card">
+        <h4>💸 Wasted marketing dollars</h4>
+        <p>Ads generate high intent prospects, but without a seamless plan they never convert to shovel-ready builds.</p>
+      </div>
+      <div class="card problem-card">
+        <h4>⏳ Homeowners on hold</h4>
+        <p>Busy families won’t wait weeks for revised plans or council notes—they move on.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:2rem;">
+      <h4>Simple math:</h4>
+      <p>If you miss 5 qualified leads per week at $25k average value, that’s $500k of potential work per month left undone—and $6M+ per year walking away.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="solution">
+  <div class="container">
+    <h2>Introducing the Signature Outdoor Transformation Plan</h2>
+    <p>Our end-to-end design & construct system unites award-winning designers, licensed structural landscapers, and in-house crews so every detail—from drainage to decking—lands flawlessly.</p>
+    <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top:1.5rem;">
+      <div class="card">
+        <strong>⚡ Lightning-fast concepts</strong>
+        <p>Concept to 3D visuals in days, not months.</p>
+      </div>
+      <div class="card">
+        <strong>🧠 Integrated project brain</strong>
+        <p>Single team handles retaining walls, concreting, planting, and irrigation.</p>
+      </div>
+      <div class="card">
+        <strong>📋 Council-ready</strong>
+        <p>Documentation, engineering and compliance sorted for sloped or complex blocks.</p>
+      </div>
+      <div class="card">
+        <strong>🤝 Concierge communication</strong>
+        <p>Weekly progress touchpoints so homeowners stay excited and informed.</p>
+      </div>
+    </div>
+    <div class="flow">Homeowner → Signature Plan → Turnkey landscape handover</div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <h2>How it works in 3 steps</h2>
+    <div class="steps">
+      <div class="card step-card">
+        <span>Step 1</span>
+        <h4>On-site vision session</h4>
+        <p>We walk the property, capture levels, light, and lifestyle goals, then deliver mood boards with investment bands.</p>
+      </div>
+      <div class="card step-card">
+        <span>Step 2</span>
+        <h4>Masterplan & approvals</h4>
+        <p>Detailed design, materials, and structural drawings aligned with council and engineering requirements.</p>
+      </div>
+      <div class="card step-card">
+        <span>Step 3</span>
+        <h4>Build & lush handover</h4>
+        <p>In-house crews construct, plant, and commission irrigation, then provide maintenance guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="roi">
+  <div class="container">
+    <h2>Run the numbers for your property pipeline</h2>
+    <div class="roi-grid">
+      <div class="card roi-inputs">
+        <label>Missed qualified leads per month</label>
+        <input type="number" id="leads" value="6" min="0">
+        <label>Close rate (%)</label>
+        <input type="number" id="close" value="45" min="0" max="100">
+        <label>Average project value ($)</label>
+        <input type="number" id="value" value="25000" min="0">
+        <label>Signature Plan investment ($/project)</label>
+        <input type="number" id="price" value="12500" min="0">
+        <a class="btn btn-primary" href="https://systempros.ai/booking" target="_blank" style="width:100%; justify-content:center; margin-top:0.5rem;">Talk Through Your Numbers</a>
+      </div>
+      <div class="card roi-output">
+        <h4>Estimated extra revenue / month</h4>
+        <h3 id="extra">$0</h3>
+        <p>ROI multiple</p>
+        <h3 id="roiMultiple">0x</h3>
+        <div class="highlight" id="highlight">Adjust the sliders to see impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <h2>Meet Tom Jones</h2>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Tom Jones">
+      </div>
+      <div class="card">
+        <p>Tom Jones founded Sydney Landscaping Pty Ltd in 2015 after years on the tools across the North Shore. He saw beautiful concepts fail because communication stalled and trades were siloed.</p>
+        <p>With TAFE NSW qualifications and Fair Trading structural licenses, Tom built a single team to own the whole journey: excavation, retaining, concrete, decks, pavers, planting, irrigation, and maintenance. His goal? Give Sydney families a stunning outdoor sanctuary without the project fatigue.</p>
+        <p>Today, Tom’s award-winning crew serves Northern Beaches, North Shore, the Hills District, and Greater Sydney with craftsmanship that lasts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2>FAQs</h2>
+    <div class="faq-grid">
+      <div class="faq-item card">
+        <h4>Will this replace my existing trades?</h4>
+        <p>We collaborate with trusted partners if you have them, but our in-house team covers every discipline to maintain continuity.</p>
+      </div>
+      <div class="faq-item card">
+        <h4>Is it complicated to switch from my current landscaper?</h4>
+        <p>We review your plans, identify gaps, and create a transition schedule so work never stalls.</p>
+      </div>
+      <div class="faq-item card">
+        <h4>What if I only need part of the service?</h4>
+        <p>We tailor scopes—retaining walls, decking, or full design-build—while keeping management centralized.</p>
+      </div>
+      <div class="faq-item card">
+        <h4>Is this only for large estates?</h4>
+        <p>No. We work on courtyards to multi-level gardens; the key is homeowners who value premium outcomes.</p>
+      </div>
+      <div class="faq-item card">
+        <h4>What if I’m not techy?</h4>
+        <p>Our team handles all drafting, approvals, and communication. You just approve selections and enjoy the process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card final-cta">
+      <h2>Your forever garden is one call away.</h2>
+      <p>Let’s craft a sanctuary that elevates your lifestyle, impresses guests, and stands the test of time.</p>
+      <div style="margin:1.5rem 0;">
+        <a class="btn btn-primary" href="https://systempros.ai/booking" target="_blank">Reserve My Site Walkthrough</a>
+      </div>
+      <p style="color:var(--muted);">No-pressure consult • Transparent budgets • Cancel anytime before construction</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Sydney Landscaping Pty Ltd • Award-winning residential landscape design & construction across Greater Sydney.</p>
+</footer>
+
+<script>
+function calculateROI() {
+  const leads = parseFloat(document.getElementById('leads').value) || 0;
+  const closeRate = parseFloat(document.getElementById('close').value) || 0;
+  const value = parseFloat(document.getElementById('value').value) || 0;
+  const price = parseFloat(document.getElementById('price').value) || 1;
+  const closedDeals = leads * (closeRate / 100);
+  const extraRevenue = closedDeals * value;
+  const roi = extraRevenue / price;
+  document.getElementById('extra').textContent = extraRevenue.toLocaleString('en-AU', {style:'currency', currency:'AUD'});
+  document.getElementById('roiMultiple').textContent = roi.toFixed(1) + 'x';
+  const highlight = document.getElementById('highlight');
+  if (roi < 1) {
+    highlight.textContent = 'Tweak your assumptions—there\'s more upside waiting.';
+    highlight.style.color = 'var(--danger)';
+  } else if (roi >= 1 && roi < 5) {
+    highlight.textContent = 'Nice—these numbers look promising.';
+    highlight.style.color = 'var(--accent)';
+  } else {
+    highlight.textContent = 'These results are extremely strong—lock in that consult.';
+    highlight.style.color = 'var(--accent2)';
+  }
+}
+['leads','close','value','price'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', calculateROI);
+});
+calculateROI();
+</script>
+</body>
+</html>
