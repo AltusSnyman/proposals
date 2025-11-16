@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sydney Landscaping – 1-Click 24/7 Landscape Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Turn missed landscaping calls into booked projects with a 1-Click 24/7 AI phone assistant. No disruption, no extra staff. Perfect for Sydney landscaping business owners losing high-value leads."
+  />
+  
+  <style>
+    :root {
+      --bg-main: #05070b;
+      --bg-alt: #0b1018;
+      --bg-card: #0f1724;
+      --accent-neo-blue: #3bdcff;
+      --accent-ice-blue: #a4f1ff;
+      --accent-neo-blue-soft: rgba(59, 220, 255, 0.16);
+      --accent-danger: #ff4d4d;
+      --accent-success: #3bffa3;
+      --accent-warning: #ffd857;
+      --text-main: #ffffff;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2933;
+      --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.6);
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-pill: 999px;
+      --transition-fast: 0.2s ease;
+      --transition-slow: 0.4s ease;
+      --max-width: 1120px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1728 0, #020309 55%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* HEADER / NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 7, 11, 0.95),
+        rgba(5, 7, 11, 0.85),
+        transparent
+      );
+      border-bottom: 1px solid rgba(59, 220, 255, 0.12);
+    }
+    
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+    
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 0 12px rgba(59, 220, 255, 0.4));
+    }
+    
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .nav-title-main {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--accent-ice-blue);
+    }
+    
+    .nav-title-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+    
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      height: 1px;
+      width: 0;
+      background: linear-gradient(to right, var(--accent-neo-blue), var(--accent-ice-blue));
+      transition: width var(--transition-fast);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-main);
+      transition: background var(--transition-fast), color var(--transition-fast),
+        border-color var(--transition-fast), transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+    
+    .btn-primary {
+      background: radial-gradient(circle at top left, #5de4ff, #0078ff);
+      box-shadow: 0 0 24px rgba(61, 203, 255, 0.4);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 36px rgba(61, 203, 255, 0.55);
+    }
+    
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.5);
+    }
+    
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.8);
+    }
+    
+    .btn span.icon {
+      font-size: 16px;
+      margin-left: 6px;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+    
+    /* HERO */
+    .hero {
+      padding: 40px 0 48px;
+    }
+    
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 34px;
+      align-items: center;
+    }
+    
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at left, rgba(59, 220, 255, 0.28), transparent);
+      margin-bottom: 14px;
+      font-size: 12px;
+      color: var(--accent-ice-blue);
+    }
+    
+    .hero-kicker-tag {
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+    
+    .hero-kicker-text {
+      color: var(--text-muted);
+    }
+    
+    .hero-title {
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    
+    .hero-title span.accent {
+      background: linear-gradient(120deg, var(--accent-ice-blue), var(--accent-neo-blue));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+    
+    .hero-metric-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    
+    .hero-metric {
+      padding: 8px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 12px;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.9);
+    }
+    
+    .hero-metric strong {
+      color: var(--accent-ice-blue);
+      font-weight: 600;
+    }
+    
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    
+    .hero-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    
+    .hero-card {
+      border-radius: var(--radius-xl);
+      padding: 18px 18px 16px;
+      background: radial-gradient(circle at top right, #1d2939, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(59, 220, 255, 0.22), transparent);
+      pointer-events: none;
+    }
+    
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    
+    .hero-card-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+    
+    .hero-card-pill {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--accent-ice-blue);
+    }
+    
+    .hero-card-main {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .hero-avatar-wrap {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid rgba(59, 220, 255, 0.6);
+      box-shadow: 0 0 22px rgba(59, 220, 255, 0.4);
+      flex-shrink: 0;
+    }
+    
+    .hero-avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-card-copy {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    
+    .hero-card-copy strong {
+      color: var(--accent-ice-blue);
+      font-weight: 600;
+    }
+    
+    .hero-card-foot {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+      opacity: 0.9;
+    }
+    
+    .hero-card-foot span {
+      color: var(--accent-neo-blue);
+    }
+    
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 28px;
+      }
+      .hero-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    /* SECTIONS */
+    .section {
+      padding: 40px 0;
+    }
+    
+    .section-header {
+      margin-bottom: 18px;
+    }
+    
+    .section-kicker {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-ice-blue);
+      margin-bottom: 6px;
+    }
+    
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 520px;
+    }
+    
+    /* PROBLEM SECTION */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 20px;
+      align-items: flex-start;
+    }
+    
+    .problem-list {
+      margin-top: 8px;
+    }
+    
+    .problem-item {
+      display: flex;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(31, 41, 51, 0.9);
+      font-size: 14px;
+    }
+    
+    .problem-item:last-child {
+      border-bottom: none;
+    }
+    
+    .problem-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(248, 113, 113, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: var(--accent-danger);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .problem-text strong {
+      color: var(--accent-ice-blue);
+      font-weight: 500;
+    }
+    
+    .problem-right-card {
+      border-radius: var(--radius-xl);
+      padding: 16px 16px 14px;
+      background: linear-gradient(145deg, #111827, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+    
+    .problem-right-card h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--accent-ice-blue);
+    }
+    
+    .problem-highlight {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.6);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .problem-highlight strong {
+      color: var(--accent-warning);
+      font-weight: 600;
+    }
+    
+    @media (max-width: 800px) {
+      .problem-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    
+    /* SOLUTION SECTION */
+    .solution-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+    
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .pill {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text-muted);
+    }
+    
+    .pill strong {
+      color: var(--accent-ice-blue);
+      font-weight: 500;
+    }
+    
+    .solution-copy {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    
+    .solution-diagram {
+      border-radius: var(--radius-xl);
+      padding: 16px 16px 12px;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+    
+    .diagram-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    
+    .diagram-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .diagram-badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--bg-main);
+      background: linear-gradient(135deg, var(--accent-ice-blue), var(--accent-neo-blue));
+      flex-shrink: 0;
+    }
+    
+    .diagram-text span {
+      color: var(--accent-ice-blue);
+      font-weight: 500;
+    }
+    
+    .diagram-footer {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    
+    @media (max-width: 800px) {
+      .solution-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    
+    /* HOW IT WORKS */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    
+    .step-card {
+      border-radius: var(--radius-xl);
+      padding: 14px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 13px;
+    }
+    
+    .step-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    
+    .step-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--accent-ice-blue);
+    }
+    
+    .step-body {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    
+    @media (max-width: 900px) {
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .steps-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    
+    /* ROI SECTION */
+    .roi-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+    
+    .roi-card {
+      border-radius: var(--radius-xl);
+      padding: 18px 16px 14px;
+      background: linear-gradient(140deg, #020617, #111827);
+      border: 1px solid rgba(59, 220, 255, 0.55);
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+    
+    .roi-input-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    
+    .roi-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .roi-field label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .roi-field label span.hint {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    
+    .roi-field input {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 6px 10px;
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      transition: border-color var(--transition-fast),
+        box-shadow var(--transition-fast), background var(--transition-fast);
+    }
+    
+    .roi-field input:focus {
+      border-color: var(--accent-neo-blue);
+      box-shadow: 0 0 0 1px rgba(59, 220, 255, 0.4);
+      background: rgba(15, 23, 42, 1);
+    }
+    
+    .roi-footnote {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    
+    .roi-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .btn-roi {
+      padding: 8px 14px;
+      font-size: 13px;
+      border-radius: var(--radius-pill);
+      background: radial-gradient(circle at top left, #5de4ff, #0078ff);
+      border: none;
+      color: var(--text-main);
+      cursor: pointer;
+      box-shadow: 0 0 18px rgba(61, 203, 255, 0.4);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    
+    .btn-roi:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 28px rgba(61, 203, 255, 0.6);
+    }
+    
+    .roi-reset {
+      font-size: 11px;
+      color: var(--text-muted);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    
+    .roi-result-card {
+      border-radius: var(--radius-xl);
+      padding: 14px 14px 12px;
+      background: rgba(6, 78, 59, 0.12);
+      border: 1px solid rgba(59, 255, 163, 0.6);
+      font-size: 13px;
+      color: var(--text-main);
+    }
+    
+    .roi-result-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    
+    .roi-result-label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .roi-result-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-success);
+    }
+    
+    .roi-result-highlight {
+      font-size: 12px;
+      margin-top: 6px;
+      color: var(--accent-warning);
+    }
+    
+    .roi-right {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    
+    .roi-right strong {
+      color: var(--accent-ice-blue);
+      font-weight: 600;
+    }
+    
+    @media (max-width: 800px) {
+      .roi-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    
+    /* ABOUT SECTION */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 20px;
+      align-items: center;
+    }
+    
+    .about-photo-wrap {
+      max-width: 260px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .about-photo-frame {
+      border-radius: 32px;
+      padding: 4px;
+      background: radial-gradient(circle at top, #3bdcff, #0b1120);
+      box-shadow: 0 20px 80px rgba(15, 23, 42, 0.9);
+    }
+    
+    .about-photo-inner {
+      border-radius: 28px;
+      overflow: hidden;
+      background: #020617;
+    }
+    
+    .about-photo-inner img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .about-badge {
+      position: absolute;
+      bottom: 10px;
+      right: -6px;
+      border-radius: 16px;
+      padding: 6px 10px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 140px;
+    }
+    
+    .about-badge strong {
+      color: var(--accent-ice-blue);
+      font-size: 11px;
+    }
+    
+    .about-badge span {
+      color: var(--text-muted);
+      font-size: 10px;
+    }
+    
+    .about-copy {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    
+    .about-copy strong {
+      color: var(--accent-ice-blue);
+      font-weight: 600;
+    }
+    
+    .about-list {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    
+    .about-list li {
+      margin-bottom: 4px;
+    }
+    
+    @media (max-width: 800px) {
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .about-photo-wrap {
+        order: -1;
+      }
+    }
+    
+    /* FAQ SECTION */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+    
+    .faq-item {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 13px;
+    }
+    
+    .faq-q {
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: var(--accent-ice-blue);
+    }
+    
+    .faq-a {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    
+    @media (max-width: 800px) {
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    
+    /* FINAL CTA / FOOTER */
+    .cta-final {
+      padding: 32px 0 40px;
+    }
+    
+    .cta-card {
+      border-radius: 32px;
+      padding: 20px 18px 18px;
+      background: radial-gradient(circle at top, #1f2937, #020617);
+      border: 1px solid rgba(59, 220, 255, 0.6);
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    
+    .cta-text {
+      max-width: 540px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    
+    .cta-text h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+    
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .cta-footnote {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    
+    .footer {
+      padding: 14px 0 22px;
+      border-top: 1px solid rgba(15, 23, 42, 0.96);
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer a {
+      color: var(--accent-ice-blue);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="nav">
+          <div class="nav-left">
+            <a href="#top" class="nav-logo">
+              <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png"
+                alt="SystemPros AI logo" />
+              <div class="nav-title">
+                <span class="nav-title-main">SystemPros AI</span>
+                <span class="nav-title-sub">24/7 Landscaping Phone Assistant</span>
+              </div>
+            </a>
+          </div>
+          <nav class="nav-links">
+            <a href="#problem">Problem</a>
+            <a href="#solution">Solution</a>
+            <a href="#how">How it works</a>
+            <a href="#roi">ROI Calculator</a>
+            <a href="#about">About</a>
+          </nav>
+          <div class="nav-cta">
+            <a class="btn btn-ghost" href="#roi">Check ROI</a>
+            <a class="btn btn-primary" href="tel:0290711111" target="_blank" rel="noopener">
+              Call Now
+              <span class="icon">📞</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-left">
+              <div class="hero-kicker">
+                <span class="hero-kicker-tag">Sydney Landscaping Growth</span>
+                <span class="hero-kicker-text">Turn missed calls into booked projects</span>
+              </div>
+              <h1 class="hero-title">
+                Never lose another
+                <span class="accent">$25,000 landscape project</span>
+                to voicemail.
+              </h1>
+              <p class="hero-subtitle">
+                SystemPros AI is your 1-click, 24/7 phone assistant for Sydney Landscaping Pty Ltd.
+                We answer calls, texts & web leads instantly so you stop bleeding
+                high-value landscape projects when your team is out on site.
+              </p>
+              
+              <div class="hero-metric-row">
+                <div class="hero-metric">
+                  <span>📵</span>
+                  <span>Average Sydney landscaper loses
+                    <strong>$150k+/yr</strong> to missed calls</span>
+                </div>
+                <div class="hero-metric">
+                  <span>⚡</span>
+                  <span><strong>1-click</strong> setup • no disruption</span>
+                </div>
+              </div>
+              
+              <div class="hero-cta-row">
+                <a class="btn btn-primary" href="tel:0290711111" target="_blank" rel="noopener">
+                  Talk to Sydney Landscaping
+                  <span class="icon">📞</span>
+                </a>
+                <a class="btn btn-ghost" href="#roi">
+                  Try the ROI calculator
+                </a>
+              </div>
+              <p class="hero-note">
+                No contracts. Cancel anytime. If it doesn't make you money, you don't keep it.
+              </p>
+            </div>
+
+            <div class="hero-right">
+              <div class="hero-card">
+                <div class="hero-card-header">
+                  <span class="hero-card-title">Live Example</span>
+                  <span class="hero-card-pill">Landscaping AI Phone System</span>
+                </div>
+                <div class="hero-card-main">
+                  <div class="hero-avatar-wrap">
+                    <img
+                      src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png"
+                      alt="Tom Jones - Sydney Landscaping" />
+                  </div>
+                  <div class="hero-card-copy">
+                    <p>
+                      "Most Sydney landscapers are leaving <strong>thousands a week</strong> on the
+                      table because the phone rings while they're on site, meeting clients, or
+                      finishing a retaining wall.
+                      <br /><br />
+                      So we built a
+                      <strong>24/7 AI phone assistant</strong> that never misses
+                      a call, but still keeps a human in the loop."
+                    </p>
+                  </div>
+                </div>
+                <div class="hero-card-foot">
+                  <span>SystemPros AI • Built for serious landscaping businesses across Sydney</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section id="problem" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">The Problem</div>
+            <h2 class="section-title">Your phone is quietly killing your revenue.</h2>
+            <p class="section-subtitle">
+              You're not ignoring homeowners — you're just busy transforming gardens. But voicemail
+              doesn't sell landscape projects. Every missed call is a chance for another Sydney landscaper to pick it up.
+            </p>
+          </div>
+
+          <div class="problem-grid">
+            <div>
+              <div class="problem-list">
+                <div class="problem-item">
+                  <div class="problem-icon">✖</div>
+                  <div class="problem-text">
+                    <strong>Missed calls, after-hours inquiries & weekend leads</strong><br />
+                    Homeowners across North Shore, Northern Beaches, and Hills District don't leave voicemails. They hang up and call the next landscaper
+                    on Google who actually answers.
+                  </div>
+                </div>
+                <div class="problem-item">
+                  <div class="problem-icon">✖</div>
+                  <div class="problem-text">
+                    <strong>Your team can't answer 24/7</strong><br />
+                    You're installing pavers, building retaining walls, meeting clients. You can't afford
+                    a full-time receptionist, but you also can't afford to keep missing
+                    $10–30k landscape jobs.
+                  </div>
+                </div>
+                <div class="problem-item">
+                  <div class="problem-icon">✖</div>
+                  <div class="problem-text">
+                    <strong>No consistent follow-up</strong><br />
+                    Even when a lead texts or fills out a form, they might not get a reply
+                    for hours — by then they've already booked Sydney Landscaping's competitor.
+                  </div>
+                </div>
+                <div class="problem-item">
+                  <div class="problem-icon">✖</div>
+                  <div class="problem-text">
+                    <strong>Your marketing is working… but the phones aren't</strong><br />
+                    You can spend thousands on Google Ads and local SEO, but if you can't answer
+                    the incoming volume, you're just paying to feed your competition.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-right-card">
+              <h3>What does that look like in real money?</h3>
+              <p>
+                Let's say you miss just
+                <strong>2 calls per week</strong> from homeowners who were ready
+                to book a landscape consultation.
+              </p>
+              <p style="margin-top: 6px;">
+                If only <strong>1 of those 2</strong> would have turned into a
+                <strong>$25,000 landscape project</strong>, that's:
+              </p>
+              <div class="problem-highlight">
+                <span>Lost revenue per month:</span>
+                <strong>≈ $100,000</strong>
+              </div>
+              <div class="problem-highlight">
+                <span>Per year if nothing changes:</span>
+                <strong>≈ $1,200,000</strong>
+              </div>
+              <p style="margin-top: 8px;">
+                That's over a million dollars a year… quietly slipping away to voicemail
+                and missed calls across Sydney's Northern Beaches, North Shore, and Hills District.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section id="solution" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">The Solution</div>
+            <h2 class="section-title">Your 1-Click 24/7 Landscaping Phone Assistant.</h2>
+            <p class="section-subtitle">
+              SystemPros AI answers every call, text & lead instantly — 24/7 — so you can keep
+              building beautiful Sydney landscapes while your "always-on" assistant books new ones.
+            </p>
+          </div>
+
+          <div class="solution-grid">
+            <div>
+              <div class="solution-copy">
+                <p>
+                  SystemPros AI is a
+                  <strong>smart phone system built specifically for landscaping companies</strong>.
+                  It doesn't replace Tom Jones and the Sydney Landscaping team — it backs them up so you never miss another
+                  high-value landscape project.
+                </p>
+                
+                <div class="pill-row">
+                  <div class="pill"><strong>24/7 answering</strong> without extra staff</div>
+                  <div class="pill"><strong>Instant SMS & call-back</strong> for every lead</div>
+                  <div class="pill"><strong>Simple call-forwarding</strong> – no new number needed</div>
+                  <div class="pill"><strong>Always a human option</strong> when you want it</div>
+                </div>
+                
+                <p style="margin-bottom: 8px;">
+                  Homeowners in Sydney get an <strong>immediate response</strong> the moment they contact you:
+                </p>
+                <ul style="font-size: 13px; color: var(--text-muted); padding-left: 18px;">
+                  <li>✔ Warm, professional greeting instead of ringing out</li>
+                  <li>✔ Basic landscape questions answered automatically</li>
+                  <li>✔ Project details captured & sent to you instantly</li>
+                  <li>✔ Hot leads escalated to your mobile or office</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div class="solution-diagram">
+                <strong>What it looks like in the real world:</strong>
+                <div class="diagram-flow">
+                  <div class="diagram-step">
+                    <div class="diagram-badge">1</div>
+                    <div class="diagram-text">
+                      <span>Homeowner calls Sydney Landscaping</span><br />
+                      They found you on Google, saw your award-winning work, or got a referral from North Shore. They're ready
+                      to talk about their retaining wall or deck project now.
+                    </div>
+                  </div>
+                  <div class="diagram-step">
+                    <div class="diagram-badge">2</div>
+                    <div class="diagram-text">
+                      <span>SystemPros AI picks up instantly</span><br />
+                      No more endless ringing. We greet them professionally, capture their landscape project info,
+                      answer basic questions, and keep them with Sydney Landscaping.
+                    </div>
+                  </div>
+                  <div class="diagram-step">
+                    <div class="diagram-badge">3</div>
+                    <div class="diagram-text">
+                      <span>Lead is sent straight to Tom's team</span><br />
+                      You get a text/email with the homeowner's details, and we can
+                      even route hot landscape project calls live to your phone.
+                    </div>
+                  </div>
+                </div>
+                <div class="diagram-footer">
+                  Sydney Landscaping still owns the relationship. We just make sure you never miss your
+                  shot to start it.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">How It Works</div>
+            <h2 class="section-title">Live in minutes, not weeks.</h2>
+            <p class="section-subtitle">
+              No hardware. No tech headaches. Just one simple change that captures the landscape projects
+              you're already generating across Sydney.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-tag">Step 1</div>
+              <div class="step-title">We connect your number</div>
+              <div class="step-body">
+                We set up call-forwarding from Sydney Landscaping's existing business line to SystemPros AI.
+                You keep the same number homeowners know: 02 9071 1111.
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-tag">Step 2</div>
+              <div class="step-title">AI answers & follows up</div>
+              <div class="step-body">
+                Every call, text or landscape inquiry form gets an immediate, professional response.
+                No more "missed call" roulette for Sydney homeowners.
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-tag">Step 3</div>
+              <div class="step-title">You close the projects</div>
+              <div class="step-body">
+                You receive qualified landscape leads with all the details. Jump in live, book a
+                consultation, and do what Sydney Landscaping does best — close projects.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROI CALCULATOR -->
+      <section id="roi" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">ROI Calculator</div>
+            <h2 class="section-title">See how fast SystemPros AI pays for itself.</h2>
+            <p class="section-subtitle">
+              Plug in realistic numbers for Sydney Landscaping Pty Ltd. Even with conservative
+              assumptions, the math is usually a no-brainer.
+            </p>
+          </div>
+
+          <div class="roi-grid">
+            <!-- Left: Interactive calculator -->
+            <div class="roi-card">
+              <h3 style="font-size: 14px; margin-bottom: 8px; color: var(--accent-ice-blue);">
+                Interactive ROI calculator
+              </h3>
+              
+              <div class="roi-input-row">
+                <div class="roi-field">
+                  <label for="missedCalls">
+                    Missed calls / leads per month
+                    <span class="hint">Be honest, even if it hurts</span>
+                  </label>
+                  <input type="number" id="missedCalls" min="0" step="1" value="10" />
+                </div>
+                <div class="roi-field">
+                  <label for="closeRate">
+                    Close rate (%)
+                    <span class="hint">Typical range 25–50%</span>
+                  </label>
+                  <input type="number" id="closeRate" min="0" max="100" step="1" value="35" />
+                </div>
+              </div>
+              
+              <div class="roi-input-row">
+                <div class="roi-field">
+                  <label for="jobValue">
+                    Avg revenue per project ($)
+                    <span class="hint">Example: 25000</span>
+                  </label>
+                  <input type="number" id="jobValue" min="0" step="500" value="25000" />
+                </div>
+                <div class="roi-field">
+                  <label for="systemCost">
+                    SystemPros AI monthly cost ($)
+                    <span class="hint">Default example: 500</span>
+                  </label>
+                  <input type="number" id="systemCost" min="0" step="25" value="500" />
+                </div>
+              </div>
+              
+              <div class="roi-actions">
+                <button class="btn-roi" id="calcRoiBtn">Calculate ROI</button>
+                <span class="roi-reset" id="resetRoiBtn">Reset to example values</span>
+              </div>
+              
+              <div class="roi-footnote">
+                We're not promising guaranteed numbers — this simply shows what
+                <em>capturing missed calls you already get</em> could be worth for Sydney Landscaping.
+              </div>
+              
+              <div class="roi-result-card" id="roiResultCard" style="margin-top: 10px;">
+                <div class="roi-result-row">
+                  <span class="roi-result-label">Extra revenue / month (est.):</span>
+                  <span class="roi-result-value" id="extraRevenue">$0</span>
+                </div>
+                <div class="roi-result-row">
+                  <span class="roi-result-label">ROI vs. SystemPros AI cost:</span>
+                  <span class="roi-result-value" id="roiMultiple">0×</span>
+                </div>
+                <div class="roi-result-highlight" id="roiHighlight">
+                  Enter your numbers and hit "Calculate ROI" to see how quickly it can pay for itself.
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Explanation & CTA -->
+            <div class="roi-right">
+              <p>
+                Let's say Sydney Landscaping misses just
+                <strong>10 calls per month</strong>. If you close only
+                <strong>35%</strong> of those and your average landscape project is
+                <strong>$25,000</strong>, that's:
+              </p>
+              <p style="margin-top: 6px;">
+                <strong>3.5 extra projects × $25,000 = $87,500</strong> a month in potential
+                revenue you're not capturing.
+              </p>
+              <p style="margin-top: 10px;">
+                If SystemPros AI helps you save even a fraction of that, the
+                <strong>$500/month</strong> example cost becomes insignificant.
+              </p>
+              <p style="margin-top: 10px;">
+                And remember: this is all from leads Sydney Landscaping is
+                <strong>already getting</strong> — we're just making sure you get the
+                chance to call them back before another landscaper does.
+              </p>
+              
+              <div style="margin-top: 16px;">
+                <a class="btn btn-primary" href="tel:0290711111" target="_blank" rel="noopener">
+                  Talk through your numbers
+                  <span class="icon">📊</span>
+                </a>
+              </div>
+              
+              <p style="margin-top: 10px; font-size: 12px;">
+                No pressure, no hard pitch. We'll walk through Sydney Landscaping's real numbers and tell you honestly if it looks like a win.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">About SystemPros AI</div>
+            <h2 class="section-title">Built for landscapers who are serious about growth.</h2>
+            <p class="section-subtitle">
+              You don't need more complexity. You need something simple that catches the money
+              you're dropping — without adding headaches.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy">
+              <p>
+                I work with <strong>Sydney landscaping business owners like Tom Jones</strong> who are great at
+                transforming outdoor spaces and serving homeowners — but are tired of seeing big landscape projects
+                slip away because nobody could grab the phone in time.
+              </p>
+              <p style="margin-top: 10px;">
+                SystemPros AI was designed to be:
+              </p>
+              <ul class="about-list">
+                <li>✔ Easy to switch on – one call-forward and you're live</li>
+                <li>✔ Friendly & human-sounding – no weird robot vibes</li>
+                <li>✔ Flexible – always a path to a real person at Sydney Landscaping</li>
+                <li>✔ Laser-focused on ROI – not tech for tech's sake</li>
+              </ul>
+              <p style="margin-top: 10px;">
+                If you want to
+                <strong>book more landscape projects without hiring more staff</strong>, this is
+                built for Sydney Landscaping Pty Ltd.
+              </p>
+            </div>
+
+            <div class="about-photo-wrap">
+              <div class="about-photo-frame">
+                <div class="about-photo-inner">
+                  <img
+                    src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png"
+                    alt="Tom Jones - Sydney Landscaping Founder" />
+                </div>
+              </div>
+              <div class="about-badge">
+                <strong>Hey, I'm Tom from Sydney Landscaping</strong>
+                <span>
+                  My goal is simple: help landscapers catch the money they're already generating,
+                  using automation that actually feels good to use.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">FAQ</div>
+            <h2 class="section-title">Questions you might be asking.</h2>
+            <p class="section-subtitle">
+              You don't have time for fluff. Here are quick, straight answers to the big
+              questions Sydney landscapers usually have before they switch.
+            </p>
+          </div>
+
+          <div class="faq-grid">
+            <div>
+              <div class="faq-item">
+                <div class="faq-q">"Will this replace my office staff at Sydney Landscaping?"</div>
+                <div class="faq-a">
+                  No. SystemPros AI <strong>supports</strong> your team; it doesn't replace them.
+                  It covers you when they're busy on site, away, or off-hours, and makes sure
+                  they have clean info and warm landscape leads to follow up.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">"What happens if a homeowner wants to speak to Tom or the team?"</div>
+                <div class="faq-a">
+                  We can route hot landscape project calls straight to your mobile or office line,
+                  and we'll clearly set expectations in the greeting. Sydney Landscaping stays in
+                  control of how and when humans step in.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">"Is switching over complicated?"</div>
+                <div class="faq-a">
+                  Not at all. We use simple call-forwarding from Sydney Landscaping's existing number.
+                  If you can tap a few buttons on your phone, you can turn this on.
+                  We'll walk you through it.
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="faq-item">
+                <div class="faq-q">"What if it doesn't work for Sydney Landscaping?"</div>
+                <div class="faq-a">
+                  There's <strong>no long-term contract</strong>. If you're not seeing value,
+                  you can cancel. We'd rather be a clear win for the right landscapers than
+                  try to strap everyone into long agreements.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">"Is this only for big landscaping companies?"</div>
+                <div class="faq-a">
+                  No. In fact, small and mid-size Sydney landscaping companies often see the
+                  biggest lift, because capturing just a few more retaining wall or decking projects per month is a
+                  huge difference to their bottom line.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">"Can you help me estimate the ROI for Sydney Landscaping?"</div>
+                <div class="faq-a">
+                  Yes. Use the calculator above for a quick view, then
+                  <a href="tel:0290711111" target="_blank" rel="noopener">
+                    call 02 9071 1111
+                  </a>
+                  and we'll walk through your numbers together.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="cta-final">
+        <div class="container">
+          <div class="cta-card">
+            <div class="cta-row">
+              <div class="cta-text">
+                <h2>Ready to stop losing landscape projects to missed calls?</h2>
+                <p>
+                  If Sydney Landscaping's phone rings and no one answers, someone else is grabbing that project.
+                  SystemPros AI makes sure <strong>it's you</strong> instead.
+                </p>
+                <p class="cta-footnote">
+                  One short call. No tech talk. Just straight numbers and whether this
+                  makes sense for Sydney Landscaping right now.
+                </p>
+              </div>
+              <div class="cta-buttons">
+                <a class="btn btn-primary" href="tel:0290711111" target="_blank" rel="noopener">
+                  Call Sydney Landscaping now
+                  <span class="icon">📞</span>
+                </a>
+                <a class="btn btn-ghost" href="#roi">
+                  Or play with the ROI calculator
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <span>© <span id="year"></span> SystemPros AI. All rights reserved.</span>
+            <span>Built for Sydney landscaping companies who are done leaving money on the table.</span>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ROI Calculator logic
+    const missedCallsInput = document.getElementById("missedCalls");
+    const closeRateInput = document.getElementById("closeRate");
+    const jobValueInput = document.getElementById("jobValue");
+    const systemCostInput = document.getElementById("systemCost");
+    const calcBtn = document.getElementById("calcRoiBtn");
+    const resetBtn = document.getElementById("resetRoiBtn");
+
+    const extraRevenueEl = document.getElementById("extraRevenue");
+    const roiMultipleEl = document.getElementById("roiMultiple");
+    const roiHighlightEl = document.getElementById("roiHighlight");
+
+    function formatCurrency(num) {
+      if (!isFinite(num)) return "$0";
+      return "$" + num.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    }
+
+    function calculateROI() {
+      const missedCalls = parseFloat(missedCallsInput.value) || 0;
+      const closeRate = (parseFloat(closeRateInput.value) || 0) / 100;
+      const jobValue = parseFloat(jobValueInput.value) || 0;
+      const systemCost = parseFloat(systemCostInput.value) || 0;
+
+      const expectedJobs = missedCalls * closeRate;
+      const extraRevenue = expectedJobs * jobValue;
+      const roiMultiple = systemCost > 0 ? extraRevenue / systemCost : 0;
+
+      extraRevenueEl.textContent = formatCurrency(extraRevenue);
+      roiMultipleEl.textContent = (roiMultiple || 0).toFixed(1) + "×";
+
+      if (extraRevenue <= 0) {
+        roiHighlightEl.textContent =
+          "If your missed calls never convert, there's no ROI. But most Sydney landscapers know they're losing real projects here.";
+      } else if (roiMultiple < 2) {
+        roiHighlightEl.textContent =
+          "Even with conservative numbers, capturing a few extra landscape projects can more than cover the system.";
+      } else if (roiMultiple < 5) {
+        roiHighlightEl.textContent =
+          "Nice. Your own numbers suggest SystemPros AI could easily pay for itself several times over for Sydney Landscaping.";
+      } else {
+        roiHighlightEl.textContent =
+          "These numbers are strong. Even a fraction of this upside would make SystemPros AI a no-brainer for Sydney Landscaping.";
+      }
+    }
+
+    function resetROI() {
+      missedCallsInput.value = 10;
+      closeRateInput.value = 35;
+      jobValueInput.value = 25000;
+      systemCostInput.value = 500;
+      extraRevenueEl.textContent = "$0";
+      roiMultipleEl.textContent = "0×";
+      roiHighlightEl.textContent =
+        "Enter your numbers and hit "Calculate ROI" to see how quickly it can pay for itself.";
+    }
+
+    calcBtn.addEventListener("click", calculateROI);
+    resetBtn.addEventListener("click", resetROI);
+  </script>
+</body>
+</html>
