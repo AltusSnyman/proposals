@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal for Sydney Landscaping Pty Ltd from SystemPros AI</title>
+    <style>
+        :root {
+            --bg-dark: #0a192f;
+            --bg-medium: #11223d;
+            --accent-blue: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+            --border-color: #233554;
+            --cta-bg: #64ffda;
+            --cta-text: #0a192f;
+            --roi-positive: #64ffda;
+            --roi-neutral: #ffc107;
+            --roi-negative: #dc3545;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-dark);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header .logo-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #header .logo-name img {
+            height: 30px;
+        }
+
+        #header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        #header nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+
+        #header nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        #header .cta-button {
+            background-color: var(--cta-bg);
+            color: var(--cta-text);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        #header .cta-button:hover {
+            background-color: var(--text-primary);
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            color: var(--accent-blue);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-blue);
+        }
+
+        .cta-link {
+            display: inline-block;
+            background-color: var(--cta-bg);
+            color: var(--cta-text);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-link:hover {
+            background-color: var(--text-primary);
+        }
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 60%;
+            padding-right: 30px;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .sub-headline {
+            font-size: 1.2em;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .metric-pills {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .metric-pill {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .metric-pill i {
+            color: var(--accent-blue);
+            font-size: 1.2em;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .hero-cta-group .primary-cta {
+            background-color: var(--accent-blue);
+            color: var(--cta-text);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-cta-group .primary-cta:hover {
+            background-color: var(--text-primary);
+        }
+
+        .hero-cta-group .secondary-cta {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .hero-cta-group .secondary-cta:hover {
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        .hero-image-card {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        .hero-image-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px var(--accent-blue);
+        }
+
+        .hero-image-card .quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .hero-image-card .sender {
+            font-weight: bold;
+            color: var(--accent-blue);
+            font-size: 1em;
+        }
+
+        .problem, .solution, .how-it-works, .roi-calculator, .about, .faq, .cta-section {
+            padding: 80px 0;
+        }
+
+        .problem-content, .solution-content, .how-it-works-content, .about-content, .faq-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .problem .content-box, .solution .content-box, .how-it-works .content-box, .about .content-box, .faq .content-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .problem .section-title, .solution .section-title, .how-it-works .section-title, .about .section-title, .faq .section-title {
+            width: 100%;
+        }
+
+        .problem-row, .solution-feature {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .problem-row:hover, .solution-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-blue);
+        }
+
+        .problem-row h3, .solution-feature h3 {
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .problem-row p, .solution-feature p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+
+        .problem-row .highlight {
+            color: var(--accent-blue);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .solution-flow {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .solution-flow .step {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .solution-flow .step-label {
+            font-size: 0.8em;
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .solution-flow .step-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: var(--accent-blue);
+            margin-bottom: 5px;
+        }
+
+        .solution-flow .step-description {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+
+        .solution-flow .arrow {
+            font-size: 2em;
+            color: var(--text-secondary);
+        }
+
+        .how-it-works-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .how-it-works-card {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px 25px;
+            text-align: center;
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .how-it-works-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-blue);
+        }
+
+        .how-it-works-card .step-tag {
+            font-size: 0.8em;
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .how-it-works-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .how-it-works-card p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+
+        .roi-calculator .calculator-card, .faq .accordion {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .calculator-inputs label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        .calculator-inputs input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-size: 1em;
+        }
+
+        .calculator-inputs input[type="number"]:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 5px var(--accent-blue);
+        }
+
+        .calculator-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .calculator-buttons button {
+            padding: 12px 20px;
+            border: 1px solid var(--accent-blue);
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .calculate-btn {
+            background-color: var(--accent-blue);
+            color: var(--cta-text);
+            border-color: var(--accent-blue);
+        }
+
+        .calculate-btn:hover {
+            background-color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+
+        .reset-btn {
+            background-color: transparent;
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+        }
+
+        .reset-btn:hover {
+            background-color: var(--accent-blue);
+            color: var(--cta-text);
+        }
+
+        .roi-results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--bg-dark);
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .roi-results p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .roi-results .highlight {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        .roi-tip {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .roi-tip.positive { color: var(--roi-positive); }
+        .roi-tip.neutral { color: var(--roi-neutral); }
+        .roi-tip.negative { color: var(--roi-negative); }
+
+        .about .content-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-image-card {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .about-image-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 0 20px var(--accent-blue);
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item .question {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item .question:hover {
+            background-color: var(--border-color);
+        }
+
+        .faq-item .question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item .question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: var(--bg-dark);
+            padding: 0 20px;
+            font-size: 0.95em;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+        }
+
+        .faq-item .answer.active {
+            max-height: 200px; /* Adjust as needed */
+            padding: 20px;
+        }
+
+        .cta-section {
+            text-align: center;
+            background-color: var(--bg-medium);
+            border-radius: 8px;
+            padding: 80px 40px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            background-color: var(--bg-dark);
+        }
+
+        @media (max-width: 768px) {
+            #header .container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            #header nav {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            #header .cta-button {
+                margin-top: 10px;
+            }
+
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+
+            .hero-image-card {
+                margin: 0 auto;
+            }
+
+            .hero-cta-group {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .problem-content, .solution-content, .how-it-works-content, .about .content-box, .faq .content-box {
+                flex-direction: column;
+            }
+
+            .how-it-works-card {
+                width: 80%;
+                margin: 0 auto 30px auto;
+            }
+
+            .calculator-buttons {
+                flex-direction: column;
+            }
+
+            .about .content-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image-card img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .cta-section h2 {
+                font-size: 2em;
+            }
+            .cta-section p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo-name">
+                <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png" alt="SystemPros AI Logo">
+                SystemPros AI
+                <span style="font-size: 0.7em; color: var(--text-secondary);">24/7 Landscaping Phone Assistant</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#roi-calculator">ROI Calculator</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <a href="https://systempros.ai/booking" class="cta-button" target="_blank">Book a Demo</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Never miss another $10,000 landscaping project, Sydney Landscaping Pty Ltd.</h1>
+                <p class="sub-headline">SystemPros AI provides a 24/7 AI-powered virtual receptionist & lead qualification system designed specifically for leading landscaping businesses like yours.</p>
+                <div class="metric-pills">
+                    <div class="metric-pill">
+                        <i class="fas fa-phone-slash"></i>
+                        <span>~150+ Missed Calls Monthly Est.</span>
+                    </div>
+                    <div class="metric-pill">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>~$1.5M+ Potential Lost Revenue Annually</span>
+                    </div>
+                </div>
+                <div class="hero-cta-group">
+                    <a href="https://systempros.ai/booking" class="primary-cta" target="_blank">Book Your 15-Min Call</a>
+                    <a href="#roi-calculator" class="secondary-cta">See Your ROI →</a>
+                </div>
+            </div>
+            <div class="hero-image-card">
+                <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="SystemPros AI Founder">
+                <p class="quote">"We're automating the front lines so you can focus on building beautiful landscapes and a thriving business."</p>
+                <div class="sender">SystemPros AI</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2 class="section-title">Your phones are quietly costing Sydney Landscaping Pty Ltd thousands in lost opportunities.</h2>
+            <div class="problem-content">
+                <div class="content-box">
+                    <p>Even with award-winning designs and top-tier service, missing calls means missing customers. Every missed call is a potential project walking out the door.</p>
+                    
+                    <div class="problem-row">
+                        <h3>After Hours & Unanswered Calls</h3>
+                        <p>When clients call outside business hours or your team is busy on-site, who answers? SystemPros AI is there 24/7 to capture these high-intent leads.</p>
+                    </div>
+                    <div class="problem-row">
+                        <h3>Inconsistent Lead Follow-up</h3>
+                        <p>Web forms and voicemails can get buried. Our immediate AI response ensures no lead goes cold while you're focused on delivering exceptional client work.</p>
+                    </div>
+                    <div class="problem-row">
+                        <h3>Marketing Efforts Undermined</h3>
+                        <p>You invest in marketing to drive calls. If those calls aren't answered, that marketing spend is wasted, and potential projects simply disappear.</p>
+                    </div>
+                    <div class="problem-row">
+                        <h3>The Real Cost of Silence</h3>
+                        <p>If you miss just <span id="prob-missed-calls-val">150</span> calls a month, and you convert <span id="prob-close-rate-val">25</span>% at an average project value of <span id="prob-job-value-val">$10,000</span>, that’s approximately <span id="prob-monthly-loss-val"></span> lost per month / <span id="prob-annual-loss-val"></span> lost per year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2 class="section-title">SystemPros AI: Your Dedicated 24/7 Landscaping Lead Capture</h2>
+            <div class="solution-content">
+                <div class="content-box">
+                     <p>SystemPros AI acts as your highly trained, always-on virtual receptionist. We answer every call, engage every lead, and qualify them before they even reach your team, ensuring you only spend time on serious inquiries.</p>
+                    <div class="solution-flow">
+                        <div class="step">
+                            <div class="step-label">Homeowner Calls</div>
+                            <div class="step-title">Your Landscaping Number →</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="step">
+                            <div class="step-label">AI Answers & Engages</div>
+                            <div class="step-title">SystemPros AI</div>
+                            <div class="step-description">Captures details, answers FAQs, schedules calls</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="step">
+                            <div class="step-label">Qualified Leads Delivered</div>
+                            <div class="step-title">To Your Team</div>
+                            <div class="step-description">Instantly via SMS & Email</div>
+                        </div>
+                    </div>
+                    <div class="solution-features">
+                       <div class="solution-feature">
+                            <h3><i class="fas fa-door-open"></i> 24/7 Answering</h3>
+                            <p>Never miss another inbound call, day or night, weekend or holiday.</p>
+                        </div>
+                        <div class="solution-feature">
+                            <h3><i class="fas fa-robot"></i> Instant SMS Engagement</h3>
+                            <p>Qualify leads immediately with automated text responses and chatbots.</p>
+                        </div>
+                        <div class="solution-feature">
+                            <h3><i class="fas fa-phone-volume"></i> Smart Call Forwarding</h3>
+                            <p>Seamlessly forward live calls to your team when needed.</p>
+                        </div>
+                        <div class="solution-feature">
+                            <h3><i class="fas fa-user-check"></i> Human-in-the-Loop</h3>
+                            <p>Option to have a human closer step in for complex or high-value initial calls.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Live in minutes, not weeks.</h2>
+            <div class="how-it-works-content">
+                <div class="how-it-works-cards">
+                    <div class="how-it-works-card">
+                        <span class="step-tag">STEP 1</span>
+                        <h3>Connect Your Number</h3>
+                        <p>Simply forward your main business line or a dedicated lead line to our SystemPros AI system. It's a quick setup.</p>
+                    </div>
+                    <div class="how-it-works-card">
+                        <span class="step-tag">STEP 2</span>
+                        <h3>AI Answers & Qualifies</h3>
+                        <p>Our AI immediately answers calls, gathers lead information, and pre-qualifies them based on your criteria.</p>
+                    </div>
+                    <div class="how-it-works-card">
+                        <span class="step-tag">STEP 3</span>
+                        <h3>Instant Lead Delivery</h3>
+                        <p>You receive qualified leads directly via SMS and email, ready for your team to follow up and close.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roi-calculator" class="roi-calculator">
+        <div class="container">
+            <h2 class="section-title">See how fast SystemPros AI pays for itself.</h2>
+            <div class="calculator-card">
+                <div class="calculator-inputs">
+                    <label for="missed-calls">Est. Missed Calls / Leads Per Month:</label>
+                    <input type="number" id="missed-calls" step="10" min="0">
+
+                    <label for="close-rate">Your Lead to Project Close Rate (%):</label>
+                    <input type="number" id="close-rate" step="1" min="0" max="100">
+
+                    <label for="job-value">Average Project Revenue:</label>
+                    <input type="number" id="job-value">
+
+                    <label for="system-cost">Monthly Cost of SystemPros AI:</label>
+                    <input type="number" id="system-cost" value="500" min="0">
+                </div>
+                <div class="calculator-buttons">
+                    <button id="calculate-roi" class="calculate-btn">Calculate ROI</button>
+                    <button id="reset-values" class="reset-btn">Reset to Defaults</button>
+                </div>
+                <div id="roi-results" class="roi-results" style="display: none;">
+                    <p>Estimated Additional Revenue Per Month:</p>
+                    <div id="extra-revenue" class="highlight"></div>
+                    <p>Your ROI vs. SystemPros AI Cost:</p>
+                    <div id="roi-multiplier" class="highlight"></div>
+                    <div id="roi-tip" class="roi-tip"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Built for landscaping businesses serious about growth.</h2>
+            <div class="content-box">
+                <div class="about-image-card">
+                    <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="SystemPros AI Founder Portrait">
+                </div>
+                <div class="about-text">
+                    <p>At SystemPros AI, we understand the unique challenges faced by driven companies like Sydney Landscaping Pty Ltd. You're experts in transforming spaces, delivering quality, and building beautiful outdoor environments. But you're also juggling client consultations, site visits, and managing your teams.</p>
+                    
+                    <p>We saw a critical gap: the constant battle to capture every inbound lead. Missed calls, unanswered voicemails, and delayed follow-ups literally leave money on the table – money that could be invested back into your business, your people, and more exquisite projects.</p>
+                    
+                    <p>That’s why we built SystemPros AI. Our mission is to provide a seamless, intelligent solution that handles your front-line communication, freeing you to focus on what you do best: creating stunning landscapes and providing unparalleled service to your clients in Sydney and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-content">
+                <div class="content-box">
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>Will this replace my office staff?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            No, SystemPros AI is designed to augment your existing team. It handles initial lead capture and qualification, freeing up your staff to focus on higher-value tasks like detailed client consultations, project management, and closing deals, rather than just answering phones.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>Is switching over complicated?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            Not at all. The setup is straightforward and typically involves a simple call forwarding configuration. We guide you through the entire process to ensure a seamless transition, and you can be operational very quickly.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>What if customers prefer speaking to a human immediately?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            Our AI is programmed for natural conversation and can handle many inquiries. For complex needs, or if a client specifically requests a human, the system can intelligently forward the call directly to your team, ensuring no opportunity is lost.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>Is this only for large landscaping companies?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            Absolutely not. SystemPros AI is scalable and beneficial for any landscaping business, from sole proprietors to larger firms like Sydney Landscaping Pty Ltd, that wants to capture more leads and operate more efficiently without the overhead of a full-time receptionist.
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <div class="question">
+                            <span>What if it doesn’t work for us?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            We are confident in the value SystemPros AI brings. We offer transparent pricing and work closely with you to ensure the AI meets your specific needs. We pride ourselves on delivering tangible results and improving your lead capture process.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to stop losing valuable landscaping projects to missed calls, Sydney Landscaping Pty Ltd?</h2>
+            <p>Imagine your phones always answered, every potential client engaged, and your team focused only on qualified, high-value opportunities. SystemPros AI makes it a reality.</p>
+            <a href="https://systempros.ai/booking" class="cta-link" target="_blank">Book your 15-minute SystemPros AI demo</a>
+            <p style="margin-top: 20px; font-size: 0.9em; color: var(--text-secondary);">No pressure, no long-term contracts, just better lead capture and more finished projects.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            © <span id="current-year"></span> SystemPros AI. All rights reserved.
+            <br>
+            Built for landscaping companies who are done leaving money on the table.
+        </div>
+    </footer>
+
+    <script>
+        // Font Awesome icons are needed for this template
+        // You would typically include this in your <head> like:
+        // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        // For this self-contained HTML, we'll assume the user has this loaded or manually add it if required.
+        // (Adding a placeholder FA equivalent here for demonstration, but best practice is external link)
+
+        function setupFAQAccordion() {
+            const questions = document.querySelectorAll('.faq-item .question');
+            questions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const faqItem = q.parentElement;
+                    faqItem.classList.toggle('active');
+                    const icon = q.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+
+                    const answer = faqItem.querySelector('.answer');
+                    if (faqItem.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else {
+                        answer.style.maxHeight = "0px";
+                    }
+                });
+            });
+        }
+
+        function calculateROI() {
+            const missedCalls = parseFloat(document.getElementById('missed-calls').value) || 0;
+            const closeRate = parseFloat(document.getElementById('close-rate').value) || 0;
+            const jobValue = parseFloat(document.getElementById('job-value').value) || 0;
+            const systemCost = parseFloat(document.getElementById('system-cost').value) || 0;
+
+            const estimatedClosedJobs = missedCalls * (closeRate / 100);
+            const extraRevenue = estimatedClosedJobs * jobValue;
+            const roiMultiplier = systemCost > 0 ? extraRevenue / systemCost : Infinity;
+
+            document.getElementById('extra-revenue').textContent = `$${extraRevenue.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+            document.getElementById('roi-multiplier').textContent = roiMultiplier === Infinity ? 'N/A' : `${roiMultiplier.toFixed(1)}×`;
+            document.getElementById('roi-results').style.display = 'block';
+
+            const roiTipElement = document.getElementById('roi-tip');
+            let tipText = "";
+            let tipClass = "";
+
+            if (roiMultiplier < 1) {
+                tipText = "Consider running more targeted ads or improving your close rate to see greater returns.";
+                tipClass = "negative";
+            } else if (roiMultiplier < 2) {
+                tipText = "This shows the system can pay for itself, but there's room for more upside with optimization.";
+                tipClass = "neutral";
+            } else if (roiMultiplier < 5) {
+                tipText = "SystemPros AI is proving to be a valuable asset, generating solid returns on your investment.";
+                tipClass = "positive";
+            } else {
+                tipText = "Exceptional results! SystemPros AI is a significant driver of revenue for your business.";
+                tipClass = "positive";
+            }
+            
+            // Adjust tip based on specific conditions for landscaping
+            if (missedCalls === 0) {
+                tipText = "With no missed calls, the ROI calculation isn't meaningful. Focus on driving more inbound leads!";
+                tipClass = "neutral";
+            } else if (extraRevenue < systemCost) {
+                tipText = "Ensure your closing numbers are accurate. Even a small increase in close rate can significantly impact ROI.";
+                tipClass = "neutral";
+            } else if (roiMultiplier < 1.5) {
+                 tipText = "Even conservative numbers show this can more than cover itself.";
+                 tipClass = "neutral";
+            } else if (roiMultiplier >= 1.5 && roiMultiplier < 4) {
+                 tipText = "Nice. Your own numbers suggest SystemPros AI could easily pay for itself several times over.";
+                 tipClass = "positive";
+            } else {
+                 tipText = "These numbers are strong. Even a fraction of this upside would make SystemPros AI a no-brainer.";
+                 tipClass = "positive";
+            }
+
+
+            roiTipElement.textContent = tipText;
+            roiTipElement.className = `roi-tip ${tipClass}`;
+        }
+
+        function resetROI() {
+            document.getElementById('missed-calls').value = estimateMissedCalls(); // Default based on prospect type
+            document.getElementById('close-rate').value = 30; // Default close rate
+            document.getElementById('job-value').value = 10000; // Default job value for landscaping
+            document.getElementById('system-cost').value = 500; // Default system cost
+            document.getElementById('roi-results').style.display = 'none';
+        }
+        
+        function estimateMissedCalls(){
+            // For landscaping, assume a moderate number of missed calls if not specified, higher for larger clients.
+            // Let's default to 150, reflecting a business with decent marketing reach.
+            return 150; 
+        }
+
+        document.getElementById('calculate-roi').addEventListener('click', calculateROI);
+        document.getElementById('reset-values').addEventListener('click', resetROI);
+
+        function updateFooterYear() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        }
+
+        // Initialize values and setup
+        function initializePage() {
+            // Set problem section defaults
+            document.getElementById('prob-missed-calls-val').textContent = '150';
+            document.getElementById('prob-close-rate-val').textContent = '25%';
+            document.getElementById('prob-job-value-val').textContent = '$10,000';
+
+            const probMissedCalls = 150;
+            const probCloseRate = 0.25; // 25%
+            const probJobValue = 10000;
+            const monthlyLoss = probMissedCalls * probCloseRate * probJobValue;
+            const annualLoss = monthlyLoss * 12;
+
+            document.getElementById('prob-monthly-loss-val').textContent = `$${monthlyLoss.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+            document.getElementById('prob-annual-loss-val').textContent = `$${annualLoss.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+
+            resetROI(); // Initialize ROI calculator with defaults
+            setupFAQAccordion();
+            updateFooterYear();
+        }
+
+        // Dynamically load Font Awesome if needed (optional, assuming it might be externally linked)
+        function loadFontAwesome() {
+            if (!document.querySelector('link[href*="font-awesome"]')) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'; // Latest FA link
+                document.head.appendChild(link);
+            }
+        }
+        
+        loadFontAwesome(); // Call this to ensure FA is loaded
+        initializePage();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal for Sydney Landscaping Pty Ltd from SystemPros AI</title>
+    <style>
+        :root {
+            --bg-dark: #0a192f;
+            --bg-medium: #11223d;
+            --accent-blue: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+            --border-color: #233554;
+            --cta-bg: #64ffda;
+            --cta-text: #0a192f;
+            --roi-positive: #64ffda;
+            --roi-neutral: #ffc107;
+            --roi-negative: #dc3545;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-dark);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header .logo-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #header .logo-name img {
+            height: 30px;
+        }
+
+        #header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        #header nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+
+        #header nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        #header .cta-button {
+            background-color: var(--cta-bg);
+            color: var(--cta-text);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        #header .cta-button:hover {
+            background-color: var(--text-primary);
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            color: var(--accent-blue);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-blue);
+        }
+
+        .cta-link {
+            display: inline-block;
+            background-color: var(--cta-bg);
+            color: var(--cta-text);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-link:hover {
+            background-color: var(--text-primary);
+        }
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 60%;
+            padding-right: 30px;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .sub-headline {
+            font-size: 1.2em;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .metric-pills {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .metric-pill {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .metric-pill i {
+            color: var(--accent-blue);
+            font-size: 1.2em;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .hero-cta-group .primary-cta {
+            background-color: var(--accent-blue);
+            color: var(--cta-text);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-cta-group .primary-cta:hover {
+            background-color: var(--text-primary);
+        }
+
+        .hero-cta-group .secondary-cta {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .hero-cta-group .secondary-cta:hover {
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        .hero-image-card {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        .hero-image-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 0 15px var(--accent-blue);
+        }
+
+        .hero-image-card .quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .hero-image-card .sender {
+            font-weight: bold;
+            color: var(--accent-blue);
+            font-size: 1em;
+        }
+
+        .problem, .solution, .how-it-works, .roi-calculator, .about, .faq, .cta-section {
+            padding: 80px 0;
+        }
+
+        .problem-content, .solution-content, .how-it-works-content, .about-content, .faq-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .problem .content-box, .solution .content-box, .how-it-works .content-box, .about .content-box, .faq .content-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .problem .section-title, .solution .section-title, .how-it-works .section-title, .about .section-title, .faq .section-title {
+            width: 100%;
+        }
+
+        .problem-row, .solution-feature {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .problem-row:hover, .solution-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-blue);
+        }
+
+        .problem-row h3, .solution-feature h3 {
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .problem-row p, .solution-feature p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+
+        .problem-row .highlight {
+            color: var(--accent-blue);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .solution-flow {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .solution-flow .step {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .solution-flow .step-label {
+            font-size: 0.8em;
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .solution-flow .step-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: var(--accent-blue);
+            margin-bottom: 5px;
+        }
+
+        .solution-flow .step-description {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+
+        .solution-flow .arrow {
+            font-size: 2em;
+            color: var(--text-secondary);
+        }
+
+        .how-it-works-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .how-it-works-card {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px 25px;
+            text-align: center;
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .how-it-works-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-blue);
+        }
+
+        .how-it-works-card .step-tag {
+            font-size: 0.8em;
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .how-it-works-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .how-it-works-card p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+
+        .roi-calculator .calculator-card, .faq .accordion {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .calculator-inputs label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        .calculator-inputs input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-size: 1em;
+        }
+
+        .calculator-inputs input[type="number"]:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 5px var(--accent-blue);
+        }
+
+        .calculator-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .calculator-buttons button {
+            padding: 12px 20px;
+            border: 1px solid var(--accent-blue);
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .calculate-btn {
+            background-color: var(--accent-blue);
+            color: var(--cta-text);
+            border-color: var(--accent-blue);
+        }
+
+        .calculate-btn:hover {
+            background-color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+
+        .reset-btn {
+            background-color: transparent;
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+        }
+
+        .reset-btn:hover {
+            background-color: var(--accent-blue);
+            color: var(--cta-text);
+        }
+
+        .roi-results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--bg-dark);
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .roi-results p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .roi-results .highlight {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        .roi-tip {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .roi-tip.positive { color: var(--roi-positive); }
+        .roi-tip.neutral { color: var(--roi-neutral); }
+        .roi-tip.negative { color: var(--roi-negative); }
+
+        .about .content-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-image-card {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .about-image-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 0 20px var(--accent-blue);
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item .question {
+            background-color: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item .question:hover {
+            background-color: var(--border-color);
+        }
+
+        .faq-item .question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item .question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: var(--bg-dark);
+            padding: 0 20px;
+            font-size: 0.95em;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+        }
+
+        .faq-item .answer.active {
+            max-height: 200px; /* Adjust as needed */
+            padding: 20px;
+        }
+
+        .cta-section {
+            text-align: center;
+            background-color: var(--bg-medium);
+            border-radius: 8px;
+            padding: 80px 40px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            background-color: var(--bg-dark);
+        }
+
+        @media (max-width: 768px) {
+            #header .container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            #header nav {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            #header .cta-button {
+                margin-top: 10px;
+            }
+
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+
+            .hero-image-card {
+                margin: 0 auto;
+            }
+
+            .hero-cta-group {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .problem-content, .solution-content, .how-it-works-content, .about .content-box, .faq .content-box {
+                flex-direction: column;
+            }
+
+            .how-it-works-card {
+                width: 80%;
+                margin: 0 auto 30px auto;
+            }
+
+            .calculator-buttons {
+                flex-direction: column;
+            }
+
+            .about .content-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image-card img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .cta-section h2 {
+                font-size: 2em;
+            }
+            .cta-section p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo-name">
+                <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png" alt="SystemPros AI Logo">
+                SystemPros AI
+                <span style="font-size: 0.7em; color: var(--text-secondary);">24/7 Landscaping Phone Assistant</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#roi-calculator">ROI Calculator</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <a href="https://systempros.ai/booking" class="cta-button" target="_blank">Book a Demo</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Never miss another $10,000 landscaping project, Sydney Landscaping Pty Ltd.</h1>
+                <p class="sub-headline">SystemPros AI provides a 24/7 AI-powered virtual receptionist & lead qualification system designed specifically for leading landscaping businesses like yours.</p>
+                <div class="metric-pills">
+                    <div class="metric-pill">
+                        <i class="fas fa-phone-slash"></i>
+                        <span>~150+ Missed Calls Monthly Est.</span>
+                    </div>
+                    <div class="metric-pill">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>~$1.5M+ Potential Lost Revenue Annually</span>
+                    </div>
+                </div>
+                <div class="hero-cta-group">
+                    <a href="https://systempros.ai/booking" class="primary-cta" target="_blank">Book Your 15-Min Call</a>
+                    <a href="#roi-calculator" class="secondary-cta">See Your ROI →</a>
+                </div>
+            </div>
+            <div class="hero-image-card">
+                <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="SystemPros AI Founder">
+                <p class="quote">"We're automating the front lines so you can focus on building beautiful landscapes and a thriving business."</p>
+                <div class="sender">SystemPros AI</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2 class="section-title">Your phones are quietly costing Sydney Landscaping Pty Ltd thousands in lost opportunities.</h2>
+            <div class="problem-content">
+                <div class="content-box">
+                    <p>Even with award-winning designs and top-tier service, missing calls means missing customers. Every missed call is a potential project walking out the door.</p>
+                    
+                    <div class="problem-row">
+                        <h3>After Hours & Unanswered Calls</h3>
+                        <p>When clients call outside business hours or your team is busy on-site, who answers? SystemPros AI is there 24/7 to capture these high-intent leads.</p>
+                    </div>
+                    <div class="problem-row">
+                        <h3>Inconsistent Lead Follow-up</h3>
+                        <p>Web forms and voicemails can get buried. Our immediate AI response ensures no lead goes cold while you're focused on delivering exceptional client work.</p>
+                    </div>
+                    <div class="problem-row">
+                        <h3>Marketing Efforts Undermined</h3>
+                        <p>You invest in marketing to drive calls. If those calls aren't answered, that marketing spend is wasted, and potential projects simply disappear.</p>
+                    </div>
+                    <div class="problem-row">
+                        <h3>The Real Cost of Silence</h3>
+                        <p>If you miss just <span id="prob-missed-calls-val">150</span> calls a month, and you convert <span id="prob-close-rate-val">25</span>% at an average project value of <span id="prob-job-value-val">$10,000</span>, that’s approximately <span id="prob-monthly-loss-val"></span> lost per month / <span id="prob-annual-loss-val"></span> lost per year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2 class="section-title">SystemPros AI: Your Dedicated 24/7 Landscaping Lead Capture</h2>
+            <div class="solution-content">
+                <div class="content-box">
+                     <p>SystemPros AI acts as your highly trained, always-on virtual receptionist. We answer every call, engage every lead, and qualify them before they even reach your team, ensuring you only spend time on serious inquiries.</p>
+                    <div class="solution-flow">
+                        <div class="step">
+                            <div class="step-label">Homeowner Calls</div>
+                            <div class="step-title">Your Landscaping Number →</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="step">
+                            <div class="step-label">AI Answers & Engages</div>
+                            <div class="step-title">SystemPros AI</div>
+                            <div class="step-description">Captures details, answers FAQs, schedules calls</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="step">
+                            <div class="step-label">Qualified Leads Delivered</div>
+                            <div class="step-title">To Your Team</div>
+                            <div class="step-description">Instantly via SMS & Email</div>
+                        </div>
+                    </div>
+                    <div class="solution-features">
+                       <div class="solution-feature">
+                            <h3><i class="fas fa-door-open"></i> 24/7 Answering</h3>
+                            <p>Never miss another inbound call, day or night, weekend or holiday.</p>
+                        </div>
+                        <div class="solution-feature">
+                            <h3><i class="fas fa-robot"></i> Instant SMS Engagement</h3>
+                            <p>Qualify leads immediately with automated text responses and chatbots.</p>
+                        </div>
+                        <div class="solution-feature">
+                            <h3><i class="fas fa-phone-volume"></i> Smart Call Forwarding</h3>
+                            <p>Seamlessly forward live calls to your team when needed.</p>
+                        </div>
+                        <div class="solution-feature">
+                            <h3><i class="fas fa-user-check"></i> Human-in-the-Loop</h3>
+                            <p>Option to have a human closer step in for complex or high-value initial calls.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Live in minutes, not weeks.</h2>
+            <div class="how-it-works-content">
+                <div class="how-it-works-cards">
+                    <div class="how-it-works-card">
+                        <span class="step-tag">STEP 1</span>
+                        <h3>Connect Your Number</h3>
+                        <p>Simply forward your main business line or a dedicated lead line to our SystemPros AI system. It's a quick setup.</p>
+                    </div>
+                    <div class="how-it-works-card">
+                        <span class="step-tag">STEP 2</span>
+                        <h3>AI Answers & Qualifies</h3>
+                        <p>Our AI immediately answers calls, gathers lead information, and pre-qualifies them based on your criteria.</p>
+                    </div>
+                    <div class="how-it-works-card">
+                        <span class="step-tag">STEP 3</span>
+                        <h3>Instant Lead Delivery</h3>
+                        <p>You receive qualified leads directly via SMS and email, ready for your team to follow up and close.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roi-calculator" class="roi-calculator">
+        <div class="container">
+            <h2 class="section-title">See how fast SystemPros AI pays for itself.</h2>
+            <div class="calculator-card">
+                <div class="calculator-inputs">
+                    <label for="missed-calls">Est. Missed Calls / Leads Per Month:</label>
+                    <input type="number" id="missed-calls" step="10" min="0">
+
+                    <label for="close-rate">Your Lead to Project Close Rate (%):</label>
+                    <input type="number" id="close-rate" step="1" min="0" max="100">
+
+                    <label for="job-value">Average Project Revenue:</label>
+                    <input type="number" id="job-value">
+
+                    <label for="system-cost">Monthly Cost of SystemPros AI:</label>
+                    <input type="number" id="system-cost" value="500" min="0">
+                </div>
+                <div class="calculator-buttons">
+                    <button id="calculate-roi" class="calculate-btn">Calculate ROI</button>
+                    <button id="reset-values" class="reset-btn">Reset to Defaults</button>
+                </div>
+                <div id="roi-results" class="roi-results" style="display: none;">
+                    <p>Estimated Additional Revenue Per Month:</p>
+                    <div id="extra-revenue" class="highlight"></div>
+                    <p>Your ROI vs. SystemPros AI Cost:</p>
+                    <div id="roi-multiplier" class="highlight"></div>
+                    <div id="roi-tip" class="roi-tip"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Built for landscaping businesses serious about growth.</h2>
+            <div class="content-box">
+                <div class="about-image-card">
+                    <img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="SystemPros AI Founder Portrait">
+                </div>
+                <div class="about-text">
+                    <p>At SystemPros AI, we understand the unique challenges faced by driven companies like Sydney Landscaping Pty Ltd. You're experts in transforming spaces, delivering quality, and building beautiful outdoor environments. But you're also juggling client consultations, site visits, and managing your teams.</p>
+                    
+                    <p>We saw a critical gap: the constant battle to capture every inbound lead. Missed calls, unanswered voicemails, and delayed follow-ups literally leave money on the table – money that could be invested back into your business, your people, and more exquisite projects.</p>
+                    
+                    <p>That’s why we built SystemPros AI. Our mission is to provide a seamless, intelligent solution that handles your front-line communication, freeing you to focus on what you do best: creating stunning landscapes and providing unparalleled service to your clients in Sydney and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-content">
+                <div class="content-box">
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>Will this replace my office staff?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            No, SystemPros AI is designed to augment your existing team. It handles initial lead capture and qualification, freeing up your staff to focus on higher-value tasks like detailed client consultations, project management, and closing deals, rather than just answering phones.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>Is switching over complicated?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            Not at all. The setup is straightforward and typically involves a simple call forwarding configuration. We guide you through the entire process to ensure a seamless transition, and you can be operational very quickly.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>What if customers prefer speaking to a human immediately?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            Our AI is programmed for natural conversation and can handle many inquiries. For complex needs, or if a client specifically requests a human, the system can intelligently forward the call directly to your team, ensuring no opportunity is lost.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <span>Is this only for large landscaping companies?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            Absolutely not. SystemPros AI is scalable and beneficial for any landscaping business, from sole proprietors to larger firms like Sydney Landscaping Pty Ltd, that wants to capture more leads and operate more efficiently without the overhead of a full-time receptionist.
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <div class="question">
+                            <span>What if it doesn’t work for us?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="answer">
+                            We are confident in the value SystemPros AI brings. We offer transparent pricing and work closely with you to ensure the AI meets your needs. We pride ourselves on delivering tangible results and improving your lead capture process.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to stop losing valuable landscaping projects to missed calls, Sydney Landscaping Pty Ltd?</h2>
+            <p>Imagine your phones always answered, every potential client engaged, and your team focused only on qualified, high-value opportunities. SystemPros AI makes it a reality.</p>
+            <a href="https://systempros.ai/booking" class="cta-link" target="_blank">Book your 15-minute SystemPros AI demo</a>
+            <p style="margin-top: 20px; font-size: 0.9em; color: var(--text-secondary);">No pressure, no long-term contracts, just better lead capture and more finished projects.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            © <span id="current-year"></span> SystemPros AI. All rights reserved.
+            <br>
+            Built for landscaping companies who are done leaving money on the table.
+        </div>
+    </footer>
+
+    <script>
+        // Font Awesome icons are needed for this template
+        // You would typically include this in your <head> like:
+        // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        // For this self-contained HTML, we'll assume the user has this loaded or manually add it if required.
+        // (Adding a placeholder FA equivalent here for demonstration, but best practice is external link)
+
+        function setupFAQAccordion() {
+            const questions = document.querySelectorAll('.faq-item .question');
+            questions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const faqItem = q.parentElement;
+                    faqItem.classList.toggle('active');
+                    const icon = q.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+
+                    const answer = faqItem.querySelector('.answer');
+                    if (faqItem.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else {
+                        answer.style.maxHeight = "0px";
+                    }
+                });
+            });
+        }
+
+        function calculateROI() {
+            const missedCalls = parseFloat(document.getElementById('missed-calls').value) || 0;
+            const closeRate = parseFloat(document.getElementById('close-rate').value) || 0;
+            const jobValue = parseFloat(document.getElementById('job-value').value) || 0;
+            const systemCost = parseFloat(document.getElementById('system-cost').value) || 0;
+
+            const estimatedClosedJobs = missedCalls * (closeRate / 100);
+            const extraRevenue = estimatedClosedJobs * jobValue;
+            const roiMultiplier = systemCost > 0 ? extraRevenue / systemCost : Infinity;
+
+            document.getElementById('extra-revenue').textContent = `$${extraRevenue.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+            document.getElementById('roi-multiplier').textContent = roiMultiplier === Infinity ? 'N/A' : `${roiMultiplier.toFixed(1)}×`;
+            document.getElementById('roi-results').style.display = 'block';
+
+            const roiTipElement = document.getElementById('roi-tip');
+            let tipText = "";
+            let tipClass = "";
+
+            if (roiMultiplier < 1) {
+                tipText = "Consider running more targeted ads or improving your close rate to see greater returns.";
+                tipClass = "negative";
+            } else if (roiMultiplier < 2) {
+                tipText = "This shows the system can pay for itself, but there's room for more upside with optimization.";
+                tipClass = "neutral";
+            } else if (roiMultiplier < 5) {
+                tipText = "SystemPros AI is proving to be a valuable asset, generating solid returns on your investment.";
+                tipClass = "positive";
+            } else {
+                tipText = "Exceptional results! SystemPros AI is a significant driver of revenue for your business.";
+                tipClass = "positive";
+            }
+            
+            // Adjust tip based on specific conditions for landscaping
+            if (missedCalls === 0) {
+                tipText = "With no missed calls, the ROI calculation isn't meaningful. Focus on driving more inbound leads!";
+                tipClass = "neutral";
+            } else if (extraRevenue < systemCost) {
+                tipText = "Ensure your closing numbers are accurate. Even a small increase in close rate can significantly impact ROI.";
+                tipClass = "neutral";
+            } else if (roiMultiplier < 1.5) {
+                 tipText = "Even conservative numbers show this can more than cover itself.";
+                 tipClass = "neutral";
+            } else if (roiMultiplier >= 1.5 && roiMultiplier < 4) {
+                 tipText = "Nice. Your own numbers suggest SystemPros AI could easily pay for itself several times over.";
+                 tipClass = "positive";
+            } else {
+                 tipText = "These numbers are strong. Even a fraction of this upside would make SystemPros AI a no-brainer.";
+                 tipClass = "positive";
+            }
+
+
+            roiTipElement.textContent = tipText;
+            roiTipElement.className = `roi-tip ${tipClass}`;
+        }
+
+        function resetROI() {
+            document.getElementById('missed-calls').value = estimateMissedCalls(); // Default based on prospect type
+            document.getElementById('close-rate').value = 30; // Default close rate
+            document.getElementById('job-value').value = 10000; // Default job value for landscaping
+            document.getElementById('system-cost').value = 500; // Default system cost
+            document.getElementById('roi-results').style.display = 'none';
+        }
+        
+        function estimateMissedCalls(){
+            // For landscaping, assume a moderate number of missed calls if not specified, higher for larger clients.
+            // Let's default to 150, reflecting a business with decent marketing reach.
+            return 150; 
+        }
+
+        document.getElementById('calculate-roi').addEventListener('click', calculateROI);
+        document.getElementById('reset-values').addEventListener('click', resetROI);
+
+        function updateFooterYear() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        }
+
+        // Initialize values and setup
+        function initializePage() {
+            // Set problem section defaults
+            document.getElementById('prob-missed-calls-val').textContent = '150';
+            document.getElementById('prob-close-rate-val').textContent = '25%';
+            document.getElementById('prob-job-value-val').textContent = '$10,000';
+
+            const probMissedCalls = 150;
+            const probCloseRate = 0.25; // 25%
+            const probJobValue = 10000;
+            const monthlyLoss = probMissedCalls * probCloseRate * probJobValue;
+            const annualLoss = monthlyLoss * 12;
+
+            document.getElementById('prob-monthly-loss-val').textContent = `$${monthlyLoss.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+            document.getElementById('prob-annual-loss-val').textContent = `$${annualLoss.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+
+            resetROI(); // Initialize ROI calculator with defaults
+            setupFAQAccordion();
+            updateFooterYear();
+        }
+
+        // Dynamically load Font Awesome if needed (optional, assuming it might be externally linked)
+        function loadFontAwesome() {
+            if (!document.querySelector('link[href*="font-awesome"]')) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'; // Latest FA link
+                document.head.appendChild(link);
+            }
+        }
+        
+        loadFontAwesome(); // Call this to ensure FA is loaded
+        initializePage();
+    </script>
+</body>
+</html>
