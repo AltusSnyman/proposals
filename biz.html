@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sydney Landscaping Pty Ltd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root{
+            --primary:#2c6e49;
+            --accent:#f4a261;
+            --light:#f7fbf9;
+            --dark:#1f2a36;
+            --gray:#e0e4e7;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{
+            font-family: "Segoe UI", Arial, sans-serif;
+            color:var(--dark);
+            background:var(--light);
+            line-height:1.6;
+        }
+        header{
+            background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1500&q=80') center/cover fixed;
+            color:#fff;
+        }
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:1.5rem 5%;
+            background:rgba(31,42,54,0.7);
+            position:sticky;
+            top:0;
+            z-index:999;
+            backdrop-filter:blur(6px);
+        }
+        nav a{
+            color:#fff;
+            margin-left:1.5rem;
+            text-decoration:none;
+            font-weight:600;
+        }
+        nav a:hover{color:var(--accent);}
+        .logo{
+            font-weight:700;
+            font-size:1.2rem;
+            letter-spacing:1px;
+        }
+        .hero{
+            padding:8rem 5% 6rem;
+            background:rgba(31,42,54,0.75);
+        }
+        .hero h1{
+            font-size:3rem;
+            margin-bottom:1rem;
+        }
+        .hero p{max-width:600px;margin-bottom:1.5rem;}
+        .cta-btn{
+            background:var(--accent);
+            color:#fff;
+            border:none;
+            padding:0.9rem 1.8rem;
+            border-radius:50px;
+            font-size:1rem;
+            cursor:pointer;
+            transition:transform .3s;
+        }
+        .cta-btn:hover{transform:translateY(-3px);}
+        section{
+            padding:4rem 5%;
+        }
+        h2{
+            font-size:2rem;
+            margin-bottom:1rem;
+            color:var(--primary);
+        }
+        .grid{
+            display:grid;
+            gap:1.5rem;
+        }
+        .services .grid{
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        }
+        .card{
+            background:#fff;
+            padding:1.5rem;
+            border-radius:1rem;
+            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+            border-top:4px solid var(--primary);
+            transition:transform .3s;
+        }
+        .card:hover{transform:translateY(-6px);}
+        .stats{
+            display:flex;
+            flex-wrap:wrap;
+            gap:1.5rem;
+        }
+        .stat{
+            flex:1 1 200px;
+            background:#fff;
+            padding:1.5rem;
+            border-radius:1rem;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,0.05);
+        }
+        .stat h3{
+            font-size:2.5rem;
+            color:var(--accent);
+        }
+        .awards-list{
+            list-style:none;
+            margin-top:1rem;
+        }
+        .awards-list li{
+            padding:0.7rem 1rem;
+            background:#fff;
+            border-left:4px solid var(--accent);
+            margin-bottom:0.6rem;
+            border-radius:0 8px 8px 0;
+            box-shadow:0 5px 15px rgba(0,0,0,0.04);
+        }
+        .projects .grid{
+            grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+        }
+        .project-card{
+            background:#fff;
+            border-radius:1rem;
+            padding:1rem 1.2rem;
+            border-left:4px solid var(--primary);
+        }
+        .project-card h4{margin-bottom:0.3rem;}
+        .steps{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:1rem;
+        }
+        .step{
+            background:#fff;
+            padding:1.2rem;
+            border-radius:1rem;
+            position:relative;
+            box-shadow:0 10px 25px rgba(0,0,0,0.05);
+        }
+        .step span{
+            position:absolute;
+            top:-15px;
+            right:15px;
+            background:var(--accent);
+            color:#fff;
+            width:35px;
+            height:35px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:bold;
+        }
+        .testimonials{
+            background:#fff;
+            border-radius:1rem;
+            box-shadow:0 10px 25px rgba(0,0,0,0.05);
+            padding:2rem;
+        }
+        .testimonial{
+            margin-bottom:1.5rem;
+            border-left:4px solid var(--primary);
+            padding-left:1rem;
+        }
+        .testimonial:last-child{margin-bottom:0;}
+        .locations .grid{
+            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+        }
+        .locations .card{
+            border-top-color:var(--accent);
+        }
+        .contact{
+            background:var(--primary);
+            color:#fff;
+        }
+        .contact-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:2rem;
+            align-items:start;
+        }
+        form{
+            display:grid;
+            gap:1rem;
+        }
+        input, select, textarea{
+            padding:0.8rem;
+            border:none;
+            border-radius:6px;
+            font-size:1rem;
+        }
+        textarea{min-height:120px;resize:vertical;}
+        form button{
+            background:var(--accent);
+            border:none;
+            padding:0.9rem;
+            border-radius:6px;
+            color:#fff;
+            font-weight:600;
+            cursor:pointer;
+        }
+        footer{
+            text-align:center;
+            padding:2rem 5%;
+            background:var(--dark);
+            color:#fff;
+        }
+        .faq details{
+            background:#fff;
+            margin-bottom:0.8rem;
+            padding:1rem 1.2rem;
+            border-radius:8px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.05);
+        }
+        details summary{
+            cursor:pointer;
+            font-weight:600;
+        }
+        @media(max-width:768px){
+            .hero h1{font-size:2.2rem;}
+            nav{flex-direction:column;gap:1rem;}
+            nav a{margin:0 0.5rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header id="home">
+    <nav>
+        <div class="logo">Sydney Landscaping Pty Ltd</div>
+        <div>
+            <a href="#services">Services</a>
+            <a href="#awards">Awards</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Top Landscape Designers in Sydney</h1>
+        <p>Sydney Landscaping Pty Ltd blends innovative design with premium materials to craft bespoke outdoor sanctuaries across the Northern Beaches, North Shore, Hills District, and Greater Sydney.</p>
+        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Landscaping Services</button>
+    </div>
+</header>
+
+<section>
+    <div class="stats">
+        <div class="stat">
+            <h3>2015</h3>
+            <p>Established by Tom Jones, TAFE NSW trained and Fair Trading NSW licensed.</p>
+        </div>
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Years of residential landscaping excellence across Sydney.</p>
+        </div>
+        <div class="stat">
+            <h3>84</h3>
+            <p>Google 5-star reviews praising communication & workmanship.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Our Landscaping Services</h2>
+    <p>From concept to completion, we guide you through every stage ensuring your investment is maximised without compromising quality.</p>
+    <div class="grid">
+        <div class="card">
+            <h3>Design & Consultation</h3>
+            <p>Custom landscape plans, 3D concepts, and practical advice tailored to your block.</p>
+        </div>
+        <div class="card">
+            <h3>Garden Landscaping</h3>
+            <p>Softscapes, planting, garden beds, hedge trimming, tree surgery, and makeovers.</p>
+        </div>
+        <div class="card">
+            <h3>Turf Installation & Care</h3>
+            <p>Natural or synthetic turf, aeration, fertilisation, and tailored maintenance programs.</p>
+        </div>
+        <div class="card">
+            <h3>Paving & Concrete</h3>
+            <p>Premium pavers, driveways, decorative concrete, and drainage integration.</p>
+        </div>
+        <div class="card">
+            <h3>Retaining Walls</h3>
+            <p>Sandstone, rendered concrete, and timber structures engineered for sloped sites.</p>
+        </div>
+        <div class="card">
+            <h3>Decking & Outdoor Living</h3>
+            <p>Composite and hardwood decks, outdoor kitchens, pergolas, and entertainment zones.</p>
+        </div>
+        <div class="card">
+            <h3>Fencing & Gates</h3>
+            <p>Custom boundary solutions, privacy screens, and gate automation.</p>
+        </div>
+        <div class="card">
+            <h3>Irrigation & Lighting</h3>
+            <p>Smart irrigation, water-wise solutions, and accent/security lighting systems.</p>
+        </div>
+    </div>
+</section>
+
+<section id="awards">
+    <h2>Industry Recognition</h2>
+    <p>Member of The Landscape Association (TLA) with award-winning craftsmanship.</p>
+    <ul class="awards-list">
+        <li>2025 Northern Districts Local Business of the Year</li>
+        <li>2025 Outstanding Trade & Service Award</li>
+        <li>2024 Outstanding Trade & Service Award</li>
+    </ul>
+</section>
+
+<section id="projects" class="projects">
+    <h2>Latest Projects</h2>
+    <p>Each project showcases the blend of design finesse and structural integrity.</p>
+    <div class="grid">
+        <div class="project-card">
+            <h4>Chatswood & Putney</h4>
+            <p>Nov 2025 • Full residential transformations with terraced gardens.</p>
+        </div>
+        <div class="project-card">
+            <h4>Epping</h4>
+            <p>Oct 2025 • Decking + smart irrigation system overhaul.</p>
+        </div>
+        <div class="project-card">
+            <h4>Dundas Valley</h4>
+            <p>Oct 2025 • Concrete sleeper retaining walls & privacy fencing.</p>
+        </div>
+        <div class="project-card">
+            <h4>Lilyfield</h4>
+            <p>Oct 2025 • Outdoor kitchen integration and lighting upgrade.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step"><span>1</span><h3>Schedule</h3><p>Book a free consultation via phone or online form.</p></div>
+        <div class="step"><span>2</span><h3>Advise</h3><p>Receive professional site assessment and design recommendations.</p></div>
+        <div class="step"><span>3</span><h3>Meet</h3><p>Collaborate with Tom Jones and the expert team to finalise scope.</p></div>
+        <div class="step"><span>4</span><h3>Deliver</h3><p>Enjoy seamless construction, transparent communication, and quality handover.</p></div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Google 5-Star Reviews</h2>
+    <div class="testimonial">
+        <p>“Tom and his team transformed our yard into a beautiful space. We were consulted at every step.”</p>
+        <strong>— Paul Terroso</strong>
+    </div>
+    <div class="testimonial">
+        <p>“Professional, efficient, and approachable. Zero friction, stellar quality.”</p>
+        <strong>— James Wang</strong>
+    </div>
+    <div class="testimonial">
+        <p>“Honest, flexible and on time. Concrete sleeper retaining wall looks amazing.”</p>
+        <strong>— Jeff Pollard</strong>
+    </div>
+</section>
+
+<section class="locations">
+    <h2>Service Areas</h2>
+    <div class="grid">
+        <div class="card"><h3>Northern Beaches</h3><p>Coastal makeovers with durable finishes.</p></div>
+        <div class="card"><h3>North Shore</h3><p>Including Lindfield, Gordon, Wahroonga, Roseville.</p></div>
+        <div class="card"><h3>Hills District</h3><p>Family-friendly outdoor living upgrades.</p></div>
+        <div class="card"><h3>Greater Sydney</h3><p>From North Ryde to Pendle Hill and beyond.</p></div>
+    </div>
+</section>
+
+<section class="faq">
+    <h2>Helpful Info</h2>
+    <details>
+        <summary>Do you provide residential-only services?</summary>
+        <p>Yes, Sydney Landscaping specialises in bespoke residential projects, from garden makeovers to structural works.</p>
+    </details>
+    <details>
+        <summary>Are quotes free?</summary>
+        <p>Absolutely. Request a free quote via phone or the contact form and we’ll schedule an on-site consultation.</p>
+    </details>
+    <details>
+        <summary>How do you ensure timelines are met?</summary>
+        <p>The in-house crew (not random contractors) allows greater control over timing, communication, and quality.</p>
+    </details>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Book a Consultation</h2>
+    <div class="contact-grid">
+        <div>
+            <p><strong>Phone:</strong> 02 9071 1111 &nbsp;|&nbsp; 1300 003 090</p>
+            <p><strong>Email (North Shore):</strong> northshore@sydneylandscaping.au</p>
+            <p><strong>Office:</strong> 17/4-6 Chaplin Drive, Lane Cove West</p>
+            <p><strong>Hours:</strong> Monday – Friday, 08:00 AM – 04:00 PM</p>
+            <p><strong>Licence No:</strong> 375427C</p>
+        </div>
+        <form id="quoteForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <select id="service" required>
+                <option value="">Select Service</option>
+                <option>Landscaping</option>
+                <option>Retaining Walls</option>
+                <option>Decking</option>
+                <option>Pavers</option>
+                <option>Fencing</option>
+                <option>Concrete</option>
+                <option>Garden Edging</option>
+                <option>Gate Installation</option>
+                <option>Turf</option>
+                <option>Other</option>
+            </select>
+            <input type="text" id="suburb" placeholder="Suburb or Post Code" required>
+            <textarea id="message" placeholder="Project details"></textarea>
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Sydney Landscaping Pty Ltd. Designed by Kintye. Affordability without compromising quality.</p>
+</footer>
+
+<script>
+document.getElementById("quoteForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    alert("Thank you! Your landscaping enquiry has been received. We'll be in touch shortly.");
+    this.reset();
+});
+</script>
+
+</body>
+</html>
