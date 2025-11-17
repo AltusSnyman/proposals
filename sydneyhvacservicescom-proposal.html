@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal for Sydney HVAC Services | SystemPros AI</title>
+<meta name="description" content="Custom AI phone assistant proposal for Sydney HVAC Services">
+<style>
+:root{--bg-primary:#0a0e27;--bg-secondary:#111827;--bg-card:#1a1f3a;--accent-blue:#00d9ff;--accent-blue-glow:rgba(0,217,255,0.3);--accent-green:#00ff88;--accent-red:#ff4444;--text-primary:#ffffff;--text-secondary:#a0aec0;--border-subtle:rgba(255,255,255,0.1);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;border:none;background:none;color:inherit;}
+header{position:sticky;top:0;z-index:1000;background:rgba(10,14,39,0.8);backdrop-filter:blur(18px);border-bottom:1px solid var(--border-subtle);}
+.nav-container{display:flex;align-items:center;justify-content:space-between;padding:16px 4vw;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{width:42px;height:42px;}
+.brand-text{display:flex;flex-direction:column;}
+.brand-text span:first-child{font-weight:700;font-size:18px;}
+.brand-text span:last-child{font-size:13px;color:var(--text-secondary);}
+nav{display:flex;align-items:center;gap:24px;}
+nav a{color:var(--text-secondary);font-size:15px;transition:color 0.3s;}
+nav a:hover{color:var(--text-primary);}
+.cta-btn{background:linear-gradient(90deg,#00d9ff,#47f4ff);color:#050b22;padding:12px 28px;border-radius:12px;font-weight:600;font-size:15px;box-shadow:0 10px 25px var(--accent-blue-glow);transition:transform 0.3s,box-shadow0.3s;}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 15px 30px var(--accent-blue-glow);}
+.hero{position:relative;padding:140px 4vw 80px;background:radial-gradient(circle at top,var(--accent-blue-glow),transparent),linear-gradient(135deg,#09102c,#050815);}
+.hero::before{content:"";position:absolute;inset:0;background-image:url('https://www.transparenttextures.com/patterns/dark-matter.png');opacity:0.2;}
+.hero-content{position:relative;display:flex;gap:40px;align-items:flex-start;}
+.hero-left{flex:1.2;}
+.hero-right{flex:0.8;display:flex;justify-content:flex-end;}
+.eyebrow{color:var(--accent-blue);text-transform:uppercase;letter-spacing:0.2em;font-size:13px;margin-bottom:12px;}
+.hero h1{font-size:56px;font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;}
+.hero p{color:var(--text-secondary);font-size:18px;margin-bottom:28px;}
+.metric-pills{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:32px;}
+.pill{padding:12px 20px;border-radius:24px;border:1px solid var(--accent-blue);background:rgba(0,217,255,0.08);font-size:15px;font-weight:500;display:flex;flex-direction:column;gap:4px;min-width:180px;}
+.pill span{font-size:13px;color:var(--text-secondary);}
+.cta-stack{display:flex;flex-wrap:wrap;gap:16px;}
+.secondary-link{color:var(--accent-blue);font-weight:600;font-size:15px;}
+.founder-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:28px;max-width:360px;box-shadow:0 20px 50px rgba(0,0,0,0.4);}
+.founder-card img{width:80px;height:80px;border-radius:50%;margin-bottom:16px;border:2px solid var(--accent-blue);}
+.founder-card h3{font-size:22px;margin-bottom:6px;}
+.signature{font-family:'Brush Script MT',cursive;color:var(--accent-blue);font-size:22px;margin-top:16px;}
+.section{padding:90px 4vw;}
+.section h2{font-size:42px;font-weight:700;margin-bottom:20px;}
+.section p.lead{font-size:18px;color:var(--text-secondary);margin-bottom:40px;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
+.card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;box-shadow:0 8px 32px rgba(0,0,0,0.4);transition:transform 0.3s,box-shadow 0.3s;}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.5);}
+.card h3{font-size:24px;margin-bottom:12px;}
+.card p{color:var(--text-secondary);font-size:15.5px;}
+.micro-stat{margin-top:12px;font-size:14px;color:var(--accent-blue);}
+.flow-diagram{display:flex;gap:20px;flex-wrap:wrap;margin-top:40px;}
+.flow-step{flex:1;min-width:180px;text-align:center;padding:20px;border-radius:16px;background:var(--bg-card);border:1px solid var(--border-subtle);position:relative;}
+.flow-step::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--accent-blue);font-size:24px;}
+.flow-step:last-child::after{content:"";}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px;}
+.step-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;}
+.step-number{width:40px;height:40px;border-radius:50%;background:rgba(0,217,255,0.15);border:1px solid var(--accent-blue);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px;}
+.step-card ul{list-style:none;color:var(--text-secondary);font-size:15px;line-height:1.5;}
+.roi-section{display:flex;gap:30px;flex-wrap:wrap;}
+.roi-card{flex:1;min-width:300px;background:var(--bg-card);border:1px solid var(--accent-blue);border-radius:20px;padding:32px;box-shadow:0 25px 70px rgba(0,0,0,0.45);}
+.roi-card h3{font-size:26px;margin-bottom:24px;}
+.roi-card label{display:flex;flex-direction:column;font-size:14px;color:var(--text-secondary);margin-bottom:18px;gap:8px;}
+.roi-card input{padding:14px;border-radius:10px;border:1px solid var(--border-subtle);background:#0f1430;color:var(--text-primary);font-size:16px;}
+.roi-buttons{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;}
+.secondary-btn{border:1px solid var(--border-subtle);padding:12px 20px;border-radius:10px;font-weight:600;}
+.results-card{flex:1;min-width:300px;background:linear-gradient(160deg,rgba(0,217,255,0.15),rgba(0,255,136,0.12));border:1px solid var(--border-subtle);border-radius:20px;padding:32px;}
+.result-item{margin-bottom:18px;}
+.result-item span{display:block;font-size:14px;color:var(--text-secondary);margin-bottom:4px;}
+.result-value{font-size:30px;font-weight:700;}
+.result-message{margin-top:20px;font-size:16px;}
+.about-section{display:flex;gap:40px;flex-wrap:wrap;align-items:center;}
+.about-img{flex:0.8;max-width:360px;}
+.about-img img{width:100%;border-radius:24px;box-shadow:0 25px 60px rgba(0,0,0,0.5);border:2px solid var(--accent-blue);}
+.about-text{flex:1.2;}
+.about-text p{color:var(--text-secondary);margin-bottom:14px;}
+.faq{max-width:900px;margin:0 auto;}
+.accordion-item{border-bottom:1px solid var(--border-subtle);}
+.accordion-button{width:100%;text-align:left;padding:18px 0;font-size:18px;font-weight:600;display:flex;justify-content:space-between;align-items:center;}
+.accordion-button span{transition:transform 0.3s;}
+.accordion-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;color:var(--text-secondary);}
+.accordion-content.open{padding:0 0 16px;}
+.final-cta{text-align:center;background:linear-gradient(120deg,var(--bg-secondary),#050b1f);border-radius:24px;padding:60px;box-shadow:0 30px 80px rgba(0,0,0,0.45);}
+.final-cta h2{font-size:40px;margin-bottom:16px;}
+.final-cta p{color:var(--text-secondary);margin-bottom:18px;}
+.final-cta .cta-btn{font-size:18px;padding:16px 40px;}
+.final-cta a.secondary-link{display:inline-block;margin-top:18px;}
+footer{text-align:center;padding:40px 4vw;color:var(--text-secondary);font-size:14px;}
+.hamburger{display:none;flex-direction:column;gap:6px;}
+.hamburger span{width:24px;height:2px;background:#fff;}
+.mobile-nav{display:none;flex-direction:column;gap:16px;margin-top:12px;padding-bottom:16px;border-bottom:1px solid var(--border-subtle);}
+@media(max-width:1023px){
+.hero-content{flex-direction:column;}
+.hero h1{font-size:46px;}
+}
+@media(max-width:768px){
+nav{display:none;}
+.hamburger{display:flex;}
+.mobile-nav{display:flex;}
+.hero{padding:110px 6vw 60px;}
+.hero h1{font-size:38px;}
+.section{padding:70px 6vw;}
+.final-cta{padding:40px 20px;}
+}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<header>
+<div class="nav-container">
+<div class="brand">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png" alt="SystemPros AI logo" loading="lazy">
+<div class="brand-text"><span>SystemPros AI</span><span>Business Growth Specialist</span></div>
+</div>
+<nav>
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#process">How It Works</a>
+<a href="#roi">ROI</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<button class="cta-btn" onclick="window.open('https://systempros.ai/booking','_blank')">Book a Demo</button>
+</nav>
+<div class="hamburger" aria-label="Toggle navigation" tabindex="0">
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class="mobile-nav">
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#process">How It Works</a>
+<a href="#roi">ROI</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<button class="cta-btn" onclick="window.open('https://systempros.ai/booking','_blank')">Book a Demo</button>
+</div>
+</header>
+<section class="hero fade-in">
+<div class="hero-content">
+<div class="hero-left">
+<div class="eyebrow">Custom Proposal for Sydney HVAC Services</div>
+<h1>Never lose another $8,500 HVAC job to voicemail, Sydney HVAC Services</h1>
+<p>SystemPros AI sits on your phone line, answers every call within three seconds, qualifies urgent comfort issues, and sends your techs ready-to-schedule jobs 24/7/365.</p>
+<div class="metric-pills">
+<div class="pill" data-counter="550800">$0<span>Est. annual revenue slipping through missed calls</span></div>
+<div class="pill" data-counter="216">0<span>Opportunities per year going cold after hours</span></div>
+<div class="pill" data-counter="57">0s<span>Response time improvement vs. voicemail</span></div>
+</div>
+<div class="cta-stack">
+<button class="cta-btn" onclick="window.open('https://systempros.ai/booking','_blank')">Book Your 15-Min Demo</button>
+<a class="secondary-link" href="#roi">Calculate Your ROI ↓</a>
+</div>
+</div>
+<div class="hero-right">
+<div class="founder-card">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman" loading="lazy">
+<h3>Altus Snyman</h3>
+<p>Founder & Automation Specialist</p>
+<p>For 25+ years I've helped service companies leverage technology. SystemPros AI was built so businesses like Sydney HVAC Services can keep every high-value comfort call without hiring more staff.</p>
+<div class="signature">Altus S.</div>
+</div>
+</div>
+</div>
+</section>
+<section id="problem" class="section fade-in">
+<h2>Your phones are quietly bleeding revenue</h2>
+<p class="lead">Sydney HVAC Services works hard to earn every inbound lead. But human limitations mean after-hours breakdowns, weekend emergencies, and simultaneous calls slip straight to voicemail—right when panicked homeowners are ready to book.</p>
+<div class="card-grid">
+<div class="card">
+<h3>🌙 After-hours emergencies</h3>
+<p>When a family loses cooling at 9 PM, voicemail isn't an option. They hang up and dial the next number on Google, costing you same-day installs.</p>
+<div class="micro-stat">48% of HVAC emergencies are reported after 5 PM.</div>
+</div>
+<div class="card">
+<h3>📞 Inconsistent follow-up</h3>
+<p>Web leads that wait even 10 minutes for a callback cool off fast. Each delay hands your competitors an opportunity.</p>
+<div class="micro-stat">78% of buyers hire the first contractor who responds.</div>
+</div>
+<div class="card">
+<h3>👥 Staff bandwidth</h3>
+<p>Your office team can't clone themselves. Peak-season spikes overwhelm even the best coordinators, letting marketing dollars burn.</p>
+<div class="micro-stat">Call volume can triple during heatwaves.</div>
+</div>
+<div class="card">
+<h3>⚠️ Chaotic peak season</h3>
+<p>Storm surges flood the lines while techs are in attics. Lack of triage means profitable installs disappear before you even know they called.</p>
+<div class="micro-stat">Missing 18 calls/month at 30% close and $8,500 avg = $45,900 lost monthly — $550,800 yearly.</div>
+</div>
+</div>
+</section>
+<section id="solution" class="section fade-in">
+<h2>Sydney HVAC Services, meet your 24/7 AI assistant</h2>
+<p class="lead">SystemPros AI is a dedicated virtual dispatcher trained on HVAC conversations. It greets callers instantly, captures equipment details, prioritizes emergencies, and sends qualified summaries to your phone, SMS, or CRM—no matter the hour.</p>
+<div class="card-grid">
+<div class="card">
+<h3>🕐 24/7 answering</h3>
+<p>Every inbound ring is picked up in under three seconds so homeowners feel heard and you stay first in line.</p>
+</div>
+<div class="card">
+<h3>⚡ Instant SMS follow-up</h3>
+<p>Web and missed calls receive automated text replies that keep leads warm until a human is free.</p>
+</div>
+<div class="card">
+<h3>🔁 Simple setup</h3>
+<p>Forward your main line or overflow number and you're live. No complex software or training manuals.</p>
+</div>
+<div class="card">
+<h3>🧠 Human oversight</h3>
+<p>You review every conversation transcript and tweak scripts anytime to match your brand voice.</p>
+</div>
+</div>
+<div class="flow-diagram">
+<div class="flow-step">Homeowner calls</div>
+<div class="flow-step">SystemPros AI answers</div>
+<div class="flow-step">Captures issue & equipment</div>
+<div class="flow-step">Qualifies urgency</div>
+<div class="flow-step">Delivers to your team/CRM</div>
+</div>
+</section>
+<section id="process" class="section fade-in">
+<h2>How it works</h2>
+<div class="process-steps">
+<div class="step-card">
+<div class="step-number">1</div>
+<h3>Connect</h3>
+<ul>
+<li>Forward your existing number or set overflow routing</li>
+<li>No hardware, no app to learn</li>
+<li>Completed in a 2-minute call</li>
+</ul>
+</div>
+<div class="step-card">
+<div class="step-number">2</div>
+<h3>Activate</h3>
+<ul>
+<li>AI trained specifically for HVAC call flows</li>
+<li>Starts answering immediately, 24/7</li>
+<li>Script tailored to Sydney HVAC Services</li>
+</ul>
+</div>
+<div class="step-card">
+<div class="step-number">3</div>
+<h3>Close</h3>
+<ul>
+<li>Receive texts/email summaries with booked details</li>
+<li>Handoff live callers to your on-call tech when needed</li>
+<li>Track every opportunity inside dashboards</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="roi" class="section fade-in">
+<h2>Interactive ROI Calculator</h2>
+<p class="lead">Plug in your real numbers to see exactly what plugging the leaks is worth to Sydney HVAC Services.</p>
+<div class="roi-section">
+<div class="roi-card">
+<h3>Your inputs</h3>
+<label>Missed calls/leads per month
+<input type="number" id="missedCalls" value="18" min="0">
+</label>
+<label>Close rate (%)
+<input type="number" id="closeRate" value="30" min="0" max="100">
+</label>
+<label>Average revenue per job ($)
+<input type="number" id="avgRevenue" value="8500" min="0">
+</label>
+<label>Monthly SystemPros cost ($)
+<input type="number" id="monthlyCost" value="500" min="0">
+</label>
+<div class="roi-buttons">
+<button class="cta-btn" id="calcRoi">Calculate My ROI</button>
+<button class="secondary-btn" id="resetRoi">Reset to Defaults</button>
+</div>
+</div>
+<div class="results-card">
+<div class="result-item">
+<span>Extra monthly revenue</span>
+<div class="result-value" id="extraMonthly">$0</div>
+</div>
+<div class="result-item">
+<span>Annual revenue impact</span>
+<div class="result-value" id="annualImpact">$0</div>
+</div>
+<div class="result-item">
+<span>ROI multiple</span>
+<div class="result-value" id="roiMultiple">0x</div>
+</div>
+<div class="result-item">
+<span>Payback period</span>
+<div class="result-value" id="paybackPeriod">—</div>
+</div>
+<div class="result-message" id="roiMessage">Run the numbers to see how much revenue is waiting.</div>
+</div>
+</div>
+</section>
+<section id="about" class="section fade-in">
+<h2>Built by service pros, for service pros</h2>
+<div class="about-section">
+<div class="about-img">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman portrait" loading="lazy">
+</div>
+<div class="about-text">
+<p>I’ve spent decades inside trades businesses, listening to dispatchers juggle three lines while installers beg for their next job. Sydney HVAC Services isn’t missing calls because you don’t care—you’re missing them because your team is human.</p>
+<p>SystemPros AI was created so companies like yours can capture every high-intent call, prioritize true emergencies, and feed your techs steady work without burning out office staff.</p>
+<p>We partner with HVAC and mechanical contractors across Australia, fine-tuning scripts to their tone, integrating with whatever CRM they already use, and giving them full visibility into every conversation.</p>
+<p>My commitment: we’ll stay right beside you until every lost call is turned into scheduled revenue.</p>
+</div>
+</div>
+</section>
+<section id="faq" class="section fade-in">
+<h2>FAQ</h2>
+<div class="faq">
+<div class="accordion-item">
+<button class="accordion-button"><span>Will this replace my staff?</span><span>+</span></button>
+<div class="accordion-content">SystemPros AI handles overflow and after-hours calls so your coordinators can focus on high-touch conversations. It’s an assistant, not a replacement.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"><span>How complex is setup?</span><span>+</span></button>
+<div class="accordion-content">Just forward your main line or set ring-no-answer rules. The entire setup takes about two minutes and we walk you through live.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"><span>What if customers want a human?</span><span>+</span></button>
+<div class="accordion-content">Callers can be transferred instantly to your on-call tech or office line. The AI also lets them request a human follow-up.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"><span>Is this only for big companies?</span><span>+</span></button>
+<div class="accordion-content">We serve single-van operations up to national contractors. Pricing and scripts adapt to your size and call volume.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"><span>What’s the contract commitment?</span><span>+</span></button>
+<div class="accordion-content">All plans are month-to-month. Cancel anytime if you don’t see value—no long-term lock-ins.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"><span>Can I review calls before they go out?</span><span>+</span></button>
+<div class="accordion-content">Yes. Every transcript and lead summary hits your inbox or dashboard for approval, tweaks, or coaching.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"><span>Does it integrate with my CRM?</span><span>+</span></button>
+<div class="accordion-content">We can push leads to SMS, email, HighLevel, ServiceTitan, or simple spreadsheets—whatever you’re already using.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button"><span>What if it doesn’t work for my business?</span><span>+</span></button>
+<div class="accordion-content">We back every deployment with a 30-day money-back guarantee. If it doesn’t capture revenue, you don’t pay.</div>
+</div>
+</div>
+</section>
+<section class="section fade-in">
+<div class="final-cta">
+<h2>Ready to stop losing HVAC installs to voicemail, Sydney HVAC Services?</h2>
+<p>Every missed ring could be the next $8,500 comfort system your crew never installs. Let SystemPros AI catch and qualify them before your competitors do.</p>
+<p>Schedule a quick 15-minute walkthrough—no commitment, just real numbers for your phone line.</p>
+<button class="cta-btn" onclick="window.open('https://systempros.ai/booking','_blank')">Book Your 15-Min Demo</button>
+<a class="secondary-link" href="#roi">Or verify the ROI again →</a>
+<p style="margin-top:18px;color:var(--text-secondary);">No pressure. No long-term contracts. Just real numbers and a path forward.</p>
+</div>
+</section>
+<footer>
+<p>© <span id="year"></span> SystemPros AI. All rights reserved.</p>
+<p>Built for home service companies who are done leaving money on the table.</p>
+</footer>
+<script>
+const mobileNav=document.querySelector('.mobile-nav');const hamburger=document.querySelector('.hamburger');hamburger.addEventListener('click',()=>{mobileNav.classList.toggle('open');mobileNav.style.display=mobileNav.style.display==='flex'?'none':'flex';});
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(!target)return;const offset=80;const bodyRect=document.body.getBoundingClientRect().top;const elementRect=target.getBoundingClientRect().top;const elementPosition=elementRect-bodyRect;const offsetPosition=elementPosition-offset;window.scrollTo({top:offsetPosition,behavior:'smooth'});if(window.innerWidth<768){mobileNav.style.display='none';}});});
+const counters=document.querySelectorAll('[data-counter]');const counterObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;const target=parseFloat(el.getAttribute('data-counter'));let start=0;const increment=target/60;const update=()=>{start+=increment;if(start>=target){start=target;}el.firstChild.textContent=target>=1000?formatCurrency(start):Math.round(start)+(el.textContent.includes('s')?'s':'');if(start<target){requestAnimationFrame(update);}};update();counterObserver.unobserve(el);}});},{threshold:0.5});counters.forEach(counter=>counterObserver.observe(counter));
+const fadeElements=document.querySelectorAll('.fade-in');const fadeObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');fadeObserver.unobserve(entry.target);}});},{threshold:0.1});fadeElements.forEach(el=>fadeObserver.observe(el));
+const faqButtons=document.querySelectorAll('.accordion-button');faqButtons.forEach(btn=>{btn.addEventListener('click',()=>{const content=btn.nextElementSibling;const open=content.style.maxHeight;document.querySelectorAll('.accordion-content').forEach(c=>{c.style.maxHeight=null;c.classList.remove('open');c.previousElementSibling.querySelector('span:last-child').textContent='+';});if(!open){content.style.maxHeight=content.scrollHeight+'px';content.classList.add('open');btn.querySelector('span:last-child').textContent='−';}});});
+const missedInput=document.getElementById('missedCalls');const closeInput=document.getElementById('closeRate');const avgInput=document.getElementById('avgRevenue');const costInput=document.getElementById('monthlyCost');const extraMonthly=document.getElementById('extraMonthly');const annualImpact=document.getElementById('annualImpact');const roiMultiple=document.getElementById('roiMultiple');const paybackPeriod=document.getElementById('paybackPeriod');const roiMessage=document.getElementById('roiMessage');const defaults={missed:18,close:30,avg:8500,cost:500};
+function formatCurrency(val){return '$'+val.toLocaleString(undefined,{maximumFractionDigits:0});}
+function calculateRoi(){const missed=Math.max(0,parseFloat(missedInput.value)||0);const close=Math.max(0,Math.min(100,parseFloat(closeInput.value)||0))/100;const avg=Math.max(0,parseFloat(avgInput.value)||0);const cost=Math.max(0,parseFloat(costInput.value)||0);const monthly=missed*close*avg;const annual=monthly*12;const roi=cost?monthly/cost:0;const payback=monthly>0?Math.max(1,Math.round((cost/(monthly/30)))):'—';extraMonthly.textContent=formatCurrency(Math.round(monthly));annualImpact.textContent=formatCurrency(Math.round(annual));roiMultiple.textContent=cost?roi.toFixed(1)+'x':'∞';paybackPeriod.textContent=monthly>0?payback+' days':'—';let message='Run the numbers to see how much revenue is waiting.';if(monthly===0){message='If missed calls never convert, there\'s no ROI. But most HVAC leaders know they\'re losing real jobs.';}else if(roi<=2){message='Even conservative numbers show this covers itself.';}else if(roi<=5){message='Your numbers suggest SystemPros AI pays for itself several times over.';}else if(roi<=10){message='These numbers are strong. Even half this upside makes this a no-brainer.';}else{message='With returns like this, the real question is: can you afford NOT to capture these leads?';}roiMessage.textContent=message;}
+document.getElementById('calcRoi').addEventListener('click',calculateRoi);
+document.getElementById('resetRoi').addEventListener('click',()=>{missedInput.value=defaults.missed;closeInput.value=defaults.close;avgInput.value=defaults.avg;costInput.value=defaults.cost;calculateRoi();});
+calculateRoi();
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
