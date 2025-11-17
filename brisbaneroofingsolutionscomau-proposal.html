@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal for Brisbane Roofing Solutions | SystemPros AI</title>
+<meta name="description" content="Custom AI phone assistant proposal for Brisbane Roofing Solutions">
+<style>
+:root{--bg-primary:#0a0e27;--bg-secondary:#111827;--bg-card:#1a1f3a;--accent-blue:#00d9ff;--accent-blue-glow:rgba(0,217,255,0.3);--accent-green:#00ff88;--accent-red:#ff4444;--text-primary:#ffffff;--text-secondary:#a0aec0;--border-subtle:rgba(255,255,255,0.1);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:radial-gradient(circle at top,#111b3d, #050414);color:var(--text-primary);line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+button{cursor:pointer;border:none;background:none;}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(10,14,39,0.7);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-subtle);transition:padding 0.3s ease;}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;gap:16px;}
+.nav-left{display:flex;align-items:center;gap:12px;}
+.nav-left img{width:42px;height:42px;}
+.nav-left .brand{font-weight:700;font-size:18px;}
+.nav-left .tagline{font-size:13px;color:var(--text-secondary);}
+nav ul{display:flex;gap:24px;list-style:none;}
+nav a{font-size:14px;color:var(--text-secondary);transition:color 0.3s;}
+nav a:hover{color:var(--accent-blue);}
+.cta-btn{background:linear-gradient(90deg,#00d9ff,#37f2ff);padding:12px 24px;border-radius:12px;font-weight:600;color:#051123;box-shadow:0 4px 16px var(--accent-blue-glow);transition:transform 0.3s,box-shadow 0.3s;}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--accent-blue-glow);}
+.mobile-toggle{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--border-subtle);align-items:center;justify-content:center;}
+.hero{padding:140px 24px 80px;background:linear-gradient(135deg,#050414 0%,#0b1539 60%,#030512 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:-200px;-webkit-mask-image:radial-gradient(circle,rgba(255,255,255,0.5),transparent 65%);background:radial-gradient(circle,#00d9ff20,#00d9ff00 70%);z-index:0;}
+.section{max-width:1200px;margin:0 auto;padding:80px 24px;}
+.hero-grid{display:grid;grid-template-columns:3fr 2fr;gap:32px;position:relative;z-index:1;}
+.hero-eyebrow{font-size:15px;color:var(--accent-blue);text-transform:uppercase;margin-bottom:12px;letter-spacing:0.1em;}
+.hero h1{font-size:56px;font-weight:800;margin-bottom:20px;line-height:1.1;}
+.hero p{color:var(--text-secondary);font-size:18px;margin-bottom:32px;}
+.metric-pills{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px;}
+.metric-pills .pill{background:rgba(0,217,255,0.08);border:1px solid rgba(0,217,255,0.5);border-radius:24px;padding:12px 18px;font-size:14px;font-weight:500;}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;}
+.hero-cta .secondary{background:transparent;border:1px solid var(--border-subtle);color:var(--text-primary);}
+.founder-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:32px;box-shadow:0 10px 40px rgba(0,0,0,0.6);display:flex;flex-direction:column;gap:16px;}
+.founder-card img{width:96px;height:96px;border-radius:50%;border:2px solid var(--accent-blue);align-self:flex-start;}
+.founder-card h3{font-size:22px;font-weight:700;}
+.founder-card p{font-size:15px;color:var(--text-secondary);}
+.signature{font-family:'Segoe Script','Comic Sans MS',cursive;font-size:20px;color:var(--accent-blue);}
+.section-title{font-size:42px;font-weight:700;margin-bottom:18px;}
+.section-subtitle{color:var(--text-secondary);margin-bottom:40px;font-size:18px;}
+.problem-grid,.solution-grid,.steps,.faq-list{display:grid;gap:20px;}
+.problem-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:16px;padding:28px;box-shadow:0 8px 32px rgba(0,0,0,0.4);transition:transform 0.3s,box-shadow 0.3s;}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.6);}
+.card h3{font-size:22px;margin-bottom:12px;}
+.card p{color:var(--text-secondary);font-size:15px;}
+.card .stat{margin-top:16px;font-size:13px;color:var(--accent-blue);}
+.solution-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.feature-flow{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;color:var(--text-secondary);font-size:15px;}
+.feature-flow span{padding:10px 18px;border:1px dashed var(--border-subtle);border-radius:999px;background:rgba(255,255,255,0.02);}
+.steps{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.step-number{width:48px;height:48px;border-radius:14px;background:rgba(0,217,255,0.15);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:var(--accent-blue);margin-bottom:16px;}
+.roi-section{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+.calculator{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:16px;padding:32px;}
+.calculator label{font-size:14px;color:var(--text-secondary);display:block;margin-bottom:6px;}
+.calculator input{width:100%;padding:14px;border-radius:12px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.04);color:var(--text-primary);font-size:16px;margin-bottom:18px;}
+.calculator-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;}
+.secondary-btn{padding:12px 20px;border-radius:10px;border:1px solid var(--border-subtle);color:var(--text-primary);font-weight:500;}
+.results-card{background:linear-gradient(145deg,#111b3a,#050c24);border:1px solid rgba(0,217,255,0.2);border-radius:20px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,0.6);}
+.results-grid{display:grid;gap:16px;margin-top:24px;}
+.results-grid .result{padding:20px;border-radius:14px;background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);}
+.results-grid .label{font-size:13px;color:var(--text-secondary);}
+.results-grid .value{font-size:24px;font-weight:700;margin-top:6px;}
+.dynamic-message{margin-top:24px;font-size:16px;color:var(--accent-green);}
+.about-section{display:grid;grid-template-columns:320px 1fr;gap:36px;align-items:center;}
+.about-section img{border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,0.7);border:2px solid rgba(0,217,255,0.3);}
+.faq-list{grid-template-columns:1fr;}
+.faq-item{border:1px solid var(--border-subtle);border-radius:14px;background:var(--bg-card);overflow:hidden;}
+.faq-question{width:100%;text-align:left;padding:18px 24px;font-weight:600;font-size:16px;display:flex;justify-content:space-between;align-items:center;color:var(--text-primary);}
+.faq-answer{max-height:0;overflow:hidden;padding:0 24px;color:var(--text-secondary);font-size:15px;transition:max-height 0.4s ease;}
+.faq-item.active .faq-answer{max-height:200px;padding-bottom:20px;}
+.final-cta{text-align:center;background:linear-gradient(135deg,#040818,#0c1a42);border-radius:24px;padding:48px;border:1px solid var(--border-subtle);box-shadow:0 20px 60px rgba(0,0,0,0.6);}
+.final-cta h2{font-size:40px;margin-bottom:16px;}
+.final-cta p{color:var(--text-secondary);margin-bottom:16px;}
+.final-cta .cta-btn{font-size:18px;padding:16px 32px;}
+.final-cta .link{display:inline-block;margin-top:12px;color:var(--accent-blue);}
+footer{text-align:center;padding:40px 24px;color:var(--text-secondary);font-size:14px;}
+.scroll-target{scroll-margin-top:120px;}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+@media(max-width:1024px){
+nav{display:none;position:absolute;top:70px;right:24px;background:rgba(10,14,39,0.95);padding:20px;border-radius:16px;border:1px solid var(--border-subtle);flex-direction:column;gap:12px;min-width:220px;}
+nav.open{display:flex;}
+.mobile-toggle{display:flex;}
+.hero-grid, .roi-section, .about-section{grid-template-columns:1fr;}
+header.shrink .nav-container{padding:12px 24px;}
+.hero h1{font-size:44px;}
+}
+@media(max-width:640px){
+.hero{padding-top:120px;}
+.hero h1{font-size:36px;}
+.metric-pills{flex-direction:column;}
+.cta-btn{width:100%;text-align:center;}
+}
+</style>
+</head>
+<body>
+<header id="header">
+<div class="nav-container">
+<div class="nav-left">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png" alt="SystemPros AI Logo">
+<div>
+<div class="brand">SystemPros AI</div>
+<div class="tagline">Business Growth Specialist</div>
+</div>
+</div>
+<nav id="nav">
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#how-it-works">How It Works</a>
+<a href="#roi">ROI</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+</nav>
+<button class="cta-btn" onclick="window.location.href='https://systempros.ai/booking'">Book a Demo</button>
+<button class="mobile-toggle" aria-label="Toggle menu" id="mobileToggle">
+<svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</header>
+<section class="hero">
+<div class="section hero-grid">
+<div>
+<div class="hero-eyebrow">Custom Proposal for Brisbane Roofing Solutions</div>
+<h1>Never lose another $18,000 roof to voicemail, Brisbane Roofing Solutions</h1>
+<p>SystemPros AI answers every call, qualifies every storm-damage inquiry, and sends you ready-to-close restoration jobs—24/7/365, even when Brisbane skies open up after hours.</p>
+<div class="metric-pills">
+<div class="pill">≈ $810,000 annual revenue leaking via missed calls</div>
+<div class="pill">180+ homeowners left waiting each year</div>
+<div class="pill">Respond in 3 seconds instead of 3 hours</div>
+</div>
+<div class="hero-cta">
+<button class="cta-btn" onclick="window.location.href='https://systempros.ai/booking'">Book Your 15-Min Demo</button>
+<a class="cta-btn secondary" href="#roi">Calculate Your ROI ↓</a>
+</div>
+</div>
+<div class="founder-card">
+<img loading="lazy" src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman">
+<h3>Altus Snyman</h3>
+<p>25+ years leading technology, automation, AI, and HighLevel deployments. I built SystemPros AI so roofing companies like Brisbane Roofing Solutions never lose a six-figure month to missed calls again.</p>
+<p>Let me show you how our AI concierge handles every caller with the same professionalism as your top estimator.</p>
+<div class="signature">Altus</div>
+<small>Founder & Automation Specialist</small>
+</div>
+</div>
+</section>
+<section id="problem" class="section scroll-target fade-in">
+<h2 class="section-title">Your phones are quietly bleeding revenue</h2>
+<p class="section-subtitle">Marketing keeps your pipeline full, yet one after-hours storm or a busy install day can erase the gains overnight.</p>
+<div class="problem-grid">
+<div class="card">
+<h3>🌩 After-hours emergencies vanish</h3>
+<p>Brisbane storms don’t wait for business hours. When no one answers, homeowners move on to the next roofer within minutes.</p>
+<div class="stat">Average caller tries 3 roofers in 10 minutes.</div>
+</div>
+<div class="card">
+<h3>📞 Web leads go cold</h3>
+<p>Facebook and Google leads expect an immediate text. If they wait an hour, they’ve already booked a competitor.</p>
+<div class="stat">78% of homeowners choose the first responder.</div>
+</div>
+<div class="card">
+<h3>👥 Staff maxed out</h3>
+<p>Your office manager can’t juggle inbound calls, scheduling, and insurance updates while crews are asking for support.</p>
+<div class="stat">Only 32% of calls get a live answer during peak installs.</div>
+</div>
+<div class="card">
+<h3>🌪 Peak season chaos</h3>
+<p>Storm alerts trigger call surges faster than humans can respond. Those spikes determine whether you hit or miss annual targets.</p>
+<div class="stat">Missing 15 calls/month at 25% close and $18k/roof = $67,500 lost monthly — $810,000 yearly.</div>
+</div>
+</div>
+</section>
+<section id="solution" class="section scroll-target fade-in">
+<h2 class="section-title">Brisbane Roofing Solutions, meet your 24/7 AI assistant</h2>
+<p class="section-subtitle">SystemPros AI is a fully trained, roofing-specific call concierge that answers every phone call, SMS, and web inquiry instantly, captures project scope, qualifies urgency, and hands you deals that are ready for inspection.</p>
+<div class="solution-grid">
+<div class="card">
+<h3>24/7 Live Answering</h3>
+<p>We pick up within 3 rings—day, night, weekends—so storm emergencies and insurance jobs never slip away.</p>
+</div>
+<div class="card">
+<h3>Instant SMS Follow-up</h3>
+<p>While we’re on the line, we text the homeowner, confirm details, and keep them engaged until you arrive.</p>
+</div>
+<div class="card">
+<h3>Plug-and-Play Setup</h3>
+<p>Forward your existing number and we’re live in minutes. No new software to learn, no staff training.</p>
+</div>
+<div class="card">
+<h3>Human Oversight</h3>
+<p>Your team can review every conversation transcript, flag nuances, and keep full control over bookings.</p>
+</div>
+</div>
+<div class="feature-flow">
+<span>Homeowner calls</span>
+<span>SystemPros AI answers</span>
+<span>Captures roof details & urgency</span>
+<span>Qualifies budget & insurance</span>
+<span>Delivers lead to your phone/CRM</span>
+</div>
+</section>
+<section id="how-it-works" class="section scroll-target fade-in">
+<h2 class="section-title">How it works in 3 simple steps</h2>
+<div class="steps">
+<div class="card">
+<div class="step-number">1</div>
+<h3>Connect</h3>
+<ul>
+<li>Forward your main line or overflow to SystemPros AI.</li>
+<li>No hardware changes—just a carrier setting.</li>
+<li>Keep your current call flow intact.</li>
+</ul>
+</div>
+<div class="card">
+<div class="step-number">2</div>
+<h3>Activate</h3>
+<ul>
+<li>AI answers immediately with your script & tone.</li>
+<li>Collects address, roof type, damage severity.</li>
+<li>Confirms insurance or financing needs.</li>
+</ul>
+</div>
+<div class="card">
+<div class="step-number">3</div>
+<h3>Close</h3>
+<ul>
+<li>Receive qualified leads via SMS, email, or CRM.</li>
+<li>Schedule inspections faster than competitors.</li>
+<li>Track every call and transcript for QA.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="roi" class="section scroll-target fade-in">
+<h2 class="section-title">See what SystemPros AI adds to Brisbane Roofing Solutions</h2>
+<p class="section-subtitle">Tweak the numbers to reflect your world—every missed call is a roof you could already be installing.</p>
+<div class="roi-section">
+<div class="calculator card">
+<label for="missedCalls">Missed calls/leads per month</label>
+<input type="number" id="missedCalls" min="0" value="15">
+<label for="closeRate">Close rate (%)</label>
+<input type="number" id="closeRate" min="0" max="100" value="30">
+<label for="jobValue">Average revenue per job ($)</label>
+<input type="number" id="jobValue" min="0" value="18000">
+<label for="systemCost">Monthly SystemPros cost ($)</label>
+<input type="number" id="systemCost" min="0" value="500">
+<div class="calculator-buttons">
+<button class="cta-btn" id="calcBtn">Calculate My ROI</button>
+<button class="secondary-btn" id="resetBtn">Reset to Defaults</button>
+</div>
+</div>
+<div class="results-card">
+<h3>Projected Impact</h3>
+<div class="results-grid">
+<div class="result">
+<div class="label">Extra Monthly Revenue</div>
+<div class="value" id="extraMonthly">$0</div>
+</div>
+<div class="result">
+<div class="label">Annual Revenue Impact</div>
+<div class="value" id="annualImpact">$0</div>
+</div>
+<div class="result">
+<div class="label">ROI Multiple</div>
+<div class="value" id="roiMultiple">0x</div>
+</div>
+<div class="result">
+<div class="label">Payback Period</div>
+<div class="value" id="payback">0 days</div>
+</div>
+</div>
+<div class="dynamic-message" id="roiMessage">Enter your numbers to see the upside.</div>
+</div>
+</div>
+</section>
+<section id="about" class="section scroll-target fade-in">
+<h2 class="section-title">Built by roofers, for roofers</h2>
+<div class="about-section">
+<img loading="lazy" src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman portrait">
+<div>
+<p>I grew up inside roofing companies—listening to office staff drown in voicemails every storm season while owners wondered why marketing ROI was flat. Brisbane Roofing Solutions faces the same reality: homeowners demand instant response, yet crews and admin teams are already stretched thin.</p>
+<p>SystemPros AI is the result of 25+ years in automation and AI, paired with real roofing playbooks. We only work with contractors who care about premium service, storm readiness, and clean communication trails. When you onboard, I stay involved to optimize scripts, integrate with your tech stack, and ensure every lead feels like they just spoke to your top estimator.</p>
+<p>Your win is my reputation—so we obsess over flawless call handling, accurate lead notes, and positive homeowner sentiment.</p>
+</div>
+</div>
+</section>
+<section id="faq" class="section scroll-target fade-in">
+<h2 class="section-title">FAQ</h2>
+<p class="section-subtitle">Straight answers to what roofing owners ask us most.</p>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-question">Will this replace my staff?<span>+</span></button>
+<div class="faq-answer">No. SystemPros AI handles overflow, after-hours, and repetitive qualification so your team can focus on scheduling, insurance, and customer care. Think of it as an extra coordinator that never sleeps.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">How complex is setup?<span>+</span></button>
+<div class="faq-answer">It takes one 2-minute call to your carrier to forward calls. We preload your scripts, service areas, and pricing talking points so the AI sounds like Brisbane Roofing Solutions from day one.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">What if customers demand a human?<span>+</span></button>
+<div class="faq-answer">We offer instant warm-transfer to your team, or can schedule a callback. Most homeowners appreciate the immediate help—even more when they receive instant SMS confirmation.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Is this just for big companies?<span>+</span></button>
+<div class="faq-answer">Not at all. Solo operators use SystemPros AI to cover installs while they’re on the roof. Multi-crew companies use it to tame peak season chaos. It scales with you.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">What’s the commitment?<span>+</span></button>
+<div class="faq-answer">Month-to-month. Cancel anytime. We earn your business by delivering revenue, not contracts.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Can I review conversations before they go out?<span>+</span></button>
+<div class="faq-answer">Yes. Every call and SMS transcript is stored for your review. You can annotate, coach, and request script tweaks whenever you like.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">Does it integrate with my CRM?<span>+</span></button>
+<div class="faq-answer">We plug into HighLevel, JobNimbus, AccuLynx, or simply push to SMS/email. Your estimator will see every detail needed to run the appointment.</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">What if it doesn’t work for my business?<span>+</span></button>
+<div class="faq-answer">You’re covered by our 30-day money-back guarantee. If SystemPros AI doesn’t deliver clear ROI, you walk away with every transcript and no hard feelings.</div>
+</div>
+</div>
+</section>
+<section class="section fade-in">
+<div class="final-cta">
+<h2>Ready to stop losing roofs to voicemail, Brisbane Roofing Solutions?</h2>
+<p>Every missed call is a homeowner begging for help—and a competitor eager to take them. SystemPros AI gives you instant response without adding payroll.</p>
+<p>Let’s spend 15 minutes looking at your numbers, mapping your call flow, and showing live transcripts so you can judge for yourself.</p>
+<button class="cta-btn" onclick="window.location.href='https://systempros.ai/booking'">Book Your 15-Min Demo</button>
+<a class="link" href="#roi">Prefer to double-check the ROI? Jump to the calculator.</a>
+<p style="margin-top:16px;color:var(--text-secondary);">No pressure. No long-term contracts. Just real numbers and a path forward.</p>
+</div>
+</section>
+<footer>
+<p id="year"></p>
+<p>Built for roofing companies who are done leaving money on the table.</p>
+</footer>
+<script>
+const mobileToggle=document.getElementById('mobileToggle');const nav=document.getElementById('nav');mobileToggle.addEventListener('click',()=>{nav.classList.toggle('open');});document.querySelectorAll('nav a, .cta-btn.secondary, .final-cta .link').forEach(link=>{link.addEventListener('click',e=>{const target=link.getAttribute('href');if(target&&target.startsWith('#')){e.preventDefault();nav.classList.remove('open');const el=document.querySelector(target);if(el){window.scrollTo({top:el.offsetTop-100,behavior:'smooth'});}}});});const header=document.getElementById('header');window.addEventListener('scroll',()=>{header.classList.toggle('shrink',window.scrollY>40);});const fadeIns=document.querySelectorAll('.fade-in');const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:0.1});fadeIns.forEach(el=>observer.observe(el));const missedCalls=document.getElementById('missedCalls');const closeRate=document.getElementById('closeRate');const jobValue=document.getElementById('jobValue');const systemCost=document.getElementById('systemCost');const extraMonthly=document.getElementById('extraMonthly');const annualImpact=document.getElementById('annualImpact');const roiMultiple=document.getElementById('roiMultiple');const payback=document.getElementById('payback');const roiMessage=document.getElementById('roiMessage');const calcBtn=document.getElementById('calcBtn');const resetBtn=document.getElementById('resetBtn');const defaults={missedCalls:15,closeRate:30,jobValue:18000,systemCost:500};function formatCurrency(val){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(val);}function formatNumber(val){return new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(val);}function calculateROI(){let calls=Math.max(0,Number(missedCalls.value)||0);let rate=Math.max(0,Math.min(100,Number(closeRate.value)||0))/100;let value=Math.max(0,Number(jobValue.value)||0);let cost=Math.max(0,Number(systemCost.value)||0);const monthlyRevenue=calls*rate*value;const annualRevenue=monthlyRevenue*12;const roi=cost>0?monthlyRevenue/cost:0;const paybackDays=monthlyRevenue>0?Math.max(1,Math.round((cost/monthlyRevenue)*30)):0;extraMonthly.textContent=formatCurrency(monthlyRevenue);annualImpact.textContent=formatCurrency(annualRevenue);roiMultiple.textContent=`${formatNumber(roi)}x`;payback.textContent=monthlyRevenue>0?`${paybackDays} days`:'N/A';let message='';if(monthlyRevenue===0){message='If missed calls never convert, there’s no ROI. But most roofers know they’re losing real jobs.';}else if(roi<=2){message='Even conservative numbers show this covers itself.';}else if(roi<=5){message='Your numbers suggest SystemPros AI pays for itself several times over.';}else if(roi<=10){message='These numbers are strong. Even half this upside makes this a no-brainer.';}else{message='With returns like this, the real question is: can you afford NOT to capture these leads?';}roiMessage.textContent=message;}calcBtn.addEventListener('click',calculateROI);resetBtn.addEventListener('click',()=>{missedCalls.value=defaults.missedCalls;closeRate.value=defaults.closeRate;jobValue.value=defaults.jobValue;systemCost.value=defaults.systemCost;calculateROI();});[missedCalls,closeRate,jobValue,systemCost].forEach(input=>input.addEventListener('input',calculateROI));calculateROI();const faqItems=document.querySelectorAll('.faq-item');faqItems.forEach(item=>{const question=item.querySelector('.faq-question');question.addEventListener('click',()=>{item.classList.toggle('active');});});document.getElementById('year').textContent=`© ${new Date().getFullYear()} SystemPros AI. All rights reserved.`;</script>
+</body>
+</html>
