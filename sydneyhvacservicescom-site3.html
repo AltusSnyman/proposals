@@ -1,0 +1,1476 @@
+<!-- 
+CONFIGURATION
+Chat Widget ID: 691a8c5133e9929ee9b58542
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sydney HVAC Services delivers expert heating, cooling, and ventilation solutions across Sydney with 20+ years of certified experience.">
+    <script>
+const CHAT_WIDGET_ID = "691a8c5133e9929ee9b58542";
+        window.CHAT_WIDGET_CONFIG = {
+            widgetId: CHAT_WIDGET_ID,
+            autoOpen: false,
+            position: "bottom-right"
+        };
+    </script>
+    <title>Sydney HVAC Services | Expert HVAC Solutions in Sydney</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --primary: #0f6ab4;
+    --primary-dark: #09406d;
+    --primary-light: #e2f2ff;
+    --accent-color: #ff8a34;
+    --text-primary: #102033;
+    --text-secondary: #4c5b70;
+    --background-light: #f5f7fb;
+    --background-dark: #081322;
+    --success-color: #2fb573;
+    --error-color: #d64545;
+    --border-color: #d9e2ef;
+    --shadow-color: rgba(15,106,180,0.15);
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--background-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 16px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    padding: 18px 0;
+}
+header.scrolled {
+    background: rgba(8,19,34,0.9);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+nav {
+    display: flex;
+    gap: 32px;
+}
+nav a {
+    color: #fff;
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    position: relative;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+nav a:hover::after {
+    width: 100%;
+}
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: var(--font-size-base);
+}
+.btn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+.btn-primary {
+    background: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(255,138,52,0.3);
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(255,138,52,0.4);
+}
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.6);
+    backdrop-filter: blur(4px);
+}
+.btn-secondary:hover {
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(8,19,34,0.85), rgba(15,106,180,0.65));
+}
+.hero-inner {
+    position: relative;
+    z-index: 2;
+}
+.hero-content {
+    max-width: 640px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.2s ease forwards 0.2s;
+}
+.hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 16px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-size-6xl);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+.hero p {
+    font-size: var(--font-size-lg);
+    margin-bottom: 24px;
+}
+.hero-benefits {
+    list-style: none;
+    margin-bottom: 24px;
+}
+.hero-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.hero-trust {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.hero-trust .stat {
+    text-align: left;
+}
+.hero-trust .stat-number {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    display: block;
+}
+.trust-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+.trust-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 20px;
+    padding: 30px 0;
+}
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+section {
+    padding: 80px 0;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: var(--font-size-4xl);
+    font-family: 'Poppins', sans-serif;
+}
+.section-subtitle {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+    color: var(--text-secondary);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 30px;
+}
+.card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(15,106,180,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 60px rgba(15,106,180,0.15);
+}
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    border: 2px solid var(--primary);
+    margin-bottom: 20px;
+}
+svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-container svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--primary);
+}
+.icon-md svg {
+    width: 24px;
+    height: 24px;
+}
+.icon-lg svg {
+    width: 32px;
+    height: 32px;
+}
+.icon-container-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+}
+.services {
+    background: var(--background-light);
+}
+.service-card h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 12px;
+}
+.service-card p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+.projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 24px;
+}
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 260px;
+}
+.project-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(180deg,transparent,rgba(0,0,0,0.75));
+    color: #fff;
+}
+.about {
+    background: #fff;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 40px;
+    align-items: center;
+}
+.about-story {
+    background: var(--primary-light);
+    padding: 30px;
+    border-radius: 18px;
+}
+.about-list {
+    list-style: none;
+    margin: 20px 0;
+}
+.about-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.location {
+    background: var(--background-light);
+}
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+    align-items: start;
+}
+.map-frame {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    height: 100%;
+    min-height: 420px;
+}
+.service-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.area-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.area-pill {
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+}
+.contact-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(15,106,180,0.12);
+}
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+.pricing {
+    background: #fff;
+}
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 24px;
+}
+.pricing-card {
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 32px;
+    position: relative;
+}
+.pricing-card h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 12px;
+}
+.price {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.pricing-card ul {
+    list-style: none;
+    margin: 20px 0;
+}
+.pricing-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+.badge-popular {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+.testimonials {
+    background: var(--background-light);
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 24px;
+}
+.testimonial-card {
+    background: #fff;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(15,106,180,0.12);
+}
+.stars {
+    color: #f8c02c;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 4px;
+}
+.testimonial-card p {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+.testimonial-author {
+    font-weight: 600;
+}
+.faq {
+    background: #fff;
+}
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 0;
+}
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: var(--text-secondary);
+    margin-top: 12px;
+}
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+.contact-section {
+    background: var(--background-light);
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+}
+.contact-info {
+    background: #fff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(15,106,180,0.12);
+}
+.contact-form {
+    background: #fff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(15,106,180,0.12);
+}
+.contact-form form {
+    display: grid;
+    gap: 16px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+}
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+.cta-final {
+    background: linear-gradient(120deg,var(--primary-dark),var(--primary));
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 24px;
+    margin: 40px 20px;
+}
+.cta-final .btn {
+    margin-top: 20px;
+}
+footer {
+    background: #060c15;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 30px;
+}
+.footer-logo {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-contact div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: var(--font-size-sm);
+    color: #9fb3d1;
+}
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+.social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+.social-link:hover {
+    background: var(--accent-color);
+}
+.hamburger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.5);
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(8,19,34,0.95);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    z-index: 999;
+}
+.mobile-menu.active {
+    transform: translateX(0);
+}
+.mobile-menu a {
+    color: #fff;
+    font-size: var(--font-size-2xl);
+}
+.mobile-close {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: var(--font-size-3xl);
+}
+.chat-trigger {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 18px 40px rgba(255,138,52,0.4);
+    z-index: 998;
+}
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 1024px) {
+    nav {
+        display: none;
+    }
+    .hamburger {
+        display: inline-flex;
+    }
+    .header-cta {
+        display: none;
+    }
+    header.scrolled .logo {
+        color: #fff;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    .hero {
+        height: auto;
+        padding: 140px 0 100px;
+    }
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+    .hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .trust-items {
+        grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    }
+    .cta-final {
+        margin: 30px 0;
+        border-radius: 18px;
+    }
+    .map-frame {
+        min-height: 320px;
+    }
+}
+    </style>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="691a8c5133e9929ee9b58542"
+    ></script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Sydney HVAC Services</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-cta">
+                <a href="tel:0449787187" class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92V21a1 1 0 0 1-1.1 1 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3 3.1 1 1 0 0 1 4 2h4.09a1 1 0 0 1 1 .75 12.35 12.35 0 0 0 .7 2.25 1 1 0 0 1-.23 1L8.09 7.91a16 16 0 0 0 6 6l1.9-1.47a1 1 0 0 1 1-.12 12.35 12.35 0 0 0 2.25.7 1 1 0 0 1 .75 1V21"/>
+                    </svg>
+                    0449 787 187
+                </a>
+                <a href="#contact" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
+                    </svg>
+                    Book Service
+                </a>
+            </div>
+            <button class="hamburger" aria-label="Open Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <button class="mobile-close" aria-label="Close Menu">&times;</button>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="tel:0449787187">Call 0449 787 187</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="home" style="background-image:url('https://images.unsplash.com/photo-1607746882042-944635dfe10e');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <span class="badge">Serving Sydney for 20+ Years</span>
+                    <h1>Expert HVAC Solutions for Comfortable Sydney Spaces</h1>
+                    <p>From emergency repairs to custom installations, our certified technicians keep your home and business climate-ready all year without surprise costs.</p>
+                    <ul class="hero-benefits">
+                        <li>
+                            <div class="icon-container-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            Same-day emergency support
+                        </li>
+                        <li>
+                            <div class="icon-container-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.7 0 1.34.4 1.64 1"/>
+                                </svg>
+                            </div>
+                            Licensed, insured & certified
+                        </li>
+                        <li>
+                            <div class="icon-container-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                            Transparent pricing & free quotes
+                        </li>
+                    </ul>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="tel:0449787187">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92V21a1 1 0 0 1-1.1 1 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3 3.1 1 1 0 0 1 4 2h4.09a1 1 0 0 1 1 .75 12.35 12.35 0 0 0 .7 2.25 1 1 0 0 1-.23 1L8.09 7.91a16 16 0 0 0 6 6l1.9-1.47a1 1 0 0 1 1-.12 12.35 12.35 0 0 0 2.25.7 1 1 0 0 1 .75 1V21"/>
+                            </svg>
+                            Call 0449 787 187
+                        </a>
+                        <a class="btn btn-secondary" href="#services">
+                            Discover Services
+                        </a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="stat">
+                            <span class="stat-number" data-target="20">0</span>+
+                            <span class="stat-label">Years Keeping Sydney Comfortable</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="2540">0</span>+
+                            <span class="stat-label">Systems Installed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="4.9">0</span>/5
+                            <span class="stat-label">Average Client Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trust-bar">
+            <div class="container trust-items">
+                <div class="trust-item">
+                    <div class="icon-container-small" style="background:#0f6ab415;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    Licensed & insured technicians
+                </div>
+                <div class="trust-item">
+                    <div class="icon-container-small" style="background:#0f6ab415;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 5h18M3 10h18M3 15h18M3 20h18"/>
+                        </svg>
+                    </div>
+                    Free detailed quotes
+                </div>
+                <div class="trust-item">
+                    <div class="icon-container-small" style="background:#0f6ab415;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    Rapid response dispatch
+                </div>
+                <div class="trust-item">
+                    <div class="icon-container-small" style="background:#0f6ab415;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16v16H4z"/>
+                            <path d="M8 2v4"/>
+                            <path d="M16 2v4"/>
+                        </svg>
+                    </div>
+                    24/7 emergency coverage
+                </div>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Reliable HVAC Services</h2>
+                <p class="section-subtitle">Tailored heating, cooling, and ventilation services designed to keep Sydney homes and businesses efficient, healthy, and comfortable in every season.</p>
+                <div class="grid">
+                    <div class="card service-card animate-on-scroll">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                                <path d="M7 15h.01M17 15h.01"/>
+                                <path d="M12 8v5"/>
+                            </svg>
+                        </div>
+                        <h3>Custom HVAC Installations</h3>
+                        <p>Energy-smart system design, supply, and commissioning for new builds, retrofits, and expansions with full manufacturer warranties.</p>
+                        <button class="btn btn-primary">Request Quote</button>
+                    </div>
+                    <div class="card service-card animate-on-scroll">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Rapid Repairs & Diagnostics</h3>
+                        <p>Same-day troubleshooting for breakdowns, strange noises, airflow issues, and urgent faults backed by fully stocked service vans.</p>
+                        <button class="btn btn-primary">Book Repair</button>
+                    </div>
+                    <div class="card service-card animate-on-scroll">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-2-2h-5l-2-3-2 3H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12z"/>
+                                <path d="M16 10h.01M12 10h.01M8 10h.01M16 14h.01M12 14h.01M8 14h.01"/>
+                            </svg>
+                        </div>
+                        <h3>Preventive Maintenance</h3>
+                        <p>Seasonal tune-ups, filter programs, and compliance reporting to extend system life, reduce energy spend, and prevent costly downtime.</p>
+                        <button class="btn btn-primary">Schedule Tune-Up</button>
+                    </div>
+                    <div class="card service-card animate-on-scroll">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3h18v4H3z"/>
+                                <path d="M3 17h18v4H3z"/>
+                                <path d="M6 11h12"/>
+                                <path d="M10 7v10"/>
+                            </svg>
+                        </div>
+                        <h3>Indoor Air Quality Upgrades</h3>
+                        <p>Ventilation balancing, filtration, duct cleaning, and smart controls that protect productivity and indoor health standards.</p>
+                        <button class="btn btn-primary">Improve Airflow</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="container">
+                <h2 class="section-title">Recent Climate Control Projects</h2>
+                <p class="section-subtitle">Meticulous workmanship showcased across residential penthouses, medical facilities, commercial kitchens, and industrial warehouses.</p>
+                <div class="project-grid">
+                    <article class="project-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1569157079978-8d1e6da2965b" alt="Commercial HVAC outdoor unit installation" loading="lazy">
+                        <div class="project-info">
+                            <h3>Commercial Rooftop Upgrades</h3>
+                            <p>High-rise CBD condenser bank replacement</p>
+                        </div>
+                    </article>
+                    <article class="project-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1581093588401-2e4dbd49e7a1" alt="Technician performing HVAC repair" loading="lazy">
+                        <div class="project-info">
+                            <h3>Pharmacy Cold-Room Rescue</h3>
+                            <p>Emergency compressor rebuild in under 3 hours</p>
+                        </div>
+                    </article>
+                    <article class="project-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Indoor wall-mounted air conditioning unit" loading="lazy">
+                        <div class="project-info">
+                            <h3>Luxury Apartment Split Systems</h3>
+                            <p>Silent comfort reimagined in Barangaroo</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1590080877777-22e07b32a8e2" alt="Sydney HVAC Services team installing ductwork" loading="lazy">
+                    </div>
+                    <div class="about-story animate-on-scroll">
+                        <h2 class="section-title" style="text-align:left;margin-bottom:12px;">Why Sydney HVAC Services?</h2>
+                        <p>Our certified team has delivered precision HVAC craftsmanship across Sydney for over two decades. From the first site visit to final commissioning, we communicate clearly, protect your property, and refuse to cut corners.</p>
+                        <ul class="about-list">
+                            <li>
+                                <div class="icon-container-small" style="background:var(--primary);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                ARCtick certified & fully insured
+                            </li>
+                            <li>
+                                <div class="icon-container-small" style="background:var(--primary);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 5h12M9 3v2"/>
+                                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                                    </svg>
+                                </div>
+                                Transparent, itemised proposals
+                            </li>
+                            <li>
+                                <div class="icon-container-small" style="background:var(--primary);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 6v6l3 3"/>
+                                    </svg>
+                                </div>
+                                Live project updates & scheduling
+                            </li>
+                        </ul>
+                        <p>Founder Dean Thompson still oversees complex installs, ensuring every system delivers the efficiency, safety, and comfort we promise.</p>
+                        <a href="#contact" class="btn btn-primary" style="margin-top:16px;">Meet the Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="location" id="location">
+            <div class="container location-grid">
+                <iframe class="map-frame animate-on-scroll" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26552.380093057247!2d151.18921333955075!3d-33.868819644125845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3be8ec2b1b%3A0x5017d681632c960!2sSydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1680000000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+                <div class="service-areas animate-on-scroll">
+                    <h2 class="section-title" style="text-align:left;">Sydney-Wide Coverage</h2>
+                    <p>Based in Sydney CBD, our mobile HVAC fleet services homes, offices, hospitality venues, and industrial sites across Greater Sydney.</p>
+                    <div class="area-pills">
+                        <span class="area-pill">Sydney CBD</span>
+                        <span class="area-pill">Inner West</span>
+                        <span class="area-pill">Northern Beaches</span>
+                        <span class="area-pill">Parramatta</span>
+                        <span class="area-pill">Sutherland Shire</span>
+                        <span class="area-pill">North Shore</span>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-row">
+                            <div class="icon-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            Sydney, NSW 2000
+                        </div>
+                        <div class="contact-row">
+                            <div class="icon-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92V21a1 1 0 0 1-1.1 1 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3 3.1 1 1 0 0 1 4 2h4.09a1 1 0 0 1 1 .75 12.35 12.35 0 0 0 .7 2.25 1 1 0 0 1-.23 1L8.09 7.91a16 16 0 0 0 6 6l1.9-1.47a1 1 0 0 1 1-.12 12.35 12.35 0 0 0 2.25.7 1 1 0 0 1 .75 1V21"/>
+                                </svg>
+                            </div>
+                            <a href="tel:0449787187">0449 787 187</a>
+                        </div>
+                        <div class="contact-row">
+                            <div class="icon-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16v16H4z"/>
+                                    <path d="M22 6l-10 7L2 6"/>
+                                </svg>
+                            </div>
+                            <a href="mailto:dean@sydneyhvacservices.com">dean@sydneyhvacservices.com</a>
+                        </div>
+                        <div class="contact-row">
+                            <div class="icon-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            Available Mon–Sat 7am–7pm & 24/7 emergencies
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <h2 class="section-title">Straightforward Packages</h2>
+                <p class="section-subtitle">Choose the support level that fits your property. Every visit includes detailed reporting, safety checks, and priority scheduling.</p>
+                <div class="pricing-grid">
+                    <div class="pricing-card animate-on-scroll">
+                        <h3>Comfort Check</h3>
+                        <div class="price">$189</div>
+                        <p>Per visit</p>
+                        <ul>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                21-point seasonal tune-up
+                            </li>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                Filter change & coil clean
+                            </li>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                Efficiency report
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary">Book Maintenance</button>
+                    </div>
+                    <div class="pricing-card animate-on-scroll" style="border-color:var(--accent-color);">
+                        <span class="badge-popular">Most Popular</span>
+                        <h3>Priority Protection</h3>
+                        <div class="price">$79<span style="font-size:var(--font-size-base);">/month</span></div>
+                        <p>Per system</p>
+                        <ul>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                Quarterly visits
+                            </li>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                10% off repairs
+                            </li>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                Priority callouts anytime
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary">Join the Plan</button>
+                    </div>
+                    <div class="pricing-card animate-on-scroll">
+                        <h3>Complete Upgrade</h3>
+                        <div class="price">From $3,750</div>
+                        <p>Per system</p>
+                        <ul>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                Load calculations & design
+                            </li>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                Supply & installation
+                            </li>
+                            <li>
+                                <div class="icon-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                Warranty registration
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary">Plan Upgrade</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials" id="reviews">
+            <div class="container">
+                <h2 class="section-title">Clients Feel the Difference</h2>
+                <p class="section-subtitle">4.9/5 average from 312 verified Google reviews. Here’s what Sydney residents and businesses say about partnering with us.</p>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                        </div>
+                        <p>"Dean’s team replaced our aging office system over one weekend. They handled strata approvals, left no mess, and the new controls saved us 22% on power bills."</p>
+                        <div class="testimonial-author">Sarah M., Barangaroo</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                        </div>
+                        <p>"They arrived within 90 minutes for our late-night breakdown and had the compressor humming again in under an hour. Genuine lifesavers during the heatwave."</p>
+                        <div class="testimonial-author">James T., Surry Hills</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f8c02c" stroke="#f8c02c" stroke-width="1"><path d="M12 2l2.9 6 6.6.5-5 4.6 1.5 6.4L12 16.9 6 19.5l1.5-6.4-5-4.6 6.6-.5z"/></svg>
+                        </div>
+                        <p>"Our childcare centre needed cleaner air post-reno. Sydney HVAC designed a filtered ventilation system that keeps CO₂ in check and parents impressed."</p>
+                        <div class="testimonial-author">Lucy W., Annandale</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">HVAC Questions Answered</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">Are you licensed and insured? <span>+</span></div>
+                        <div class="faq-answer">Yes. Sydney HVAC Services holds ARCtick refrigeration licensing, electrical endorsements, and comprehensive public liability insurance for every technician on site.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do you charge for quotes? <span>+</span></div>
+                        <div class="faq-answer">No. We provide free, itemised quotes across Sydney including site inspections, load assessments, and system recommendations.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How fast can you respond to emergencies? <span>+</span></div>
+                        <div class="faq-answer">Our dispatch monitors calls 24/7 and typically gets a technician to metro Sydney addresses within 90 minutes for urgent breakdowns.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What brands do you service? <span>+</span></div>
+                        <div class="faq-answer">We maintain and install all major brands including Daikin, Mitsubishi Electric, ActronAir, Fujitsu, Temperzone, and more without voiding warranties.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do you offer maintenance plans? <span>+</span></div>
+                        <div class="faq-answer">Yes. Our Priority Protection Plan provides quarterly visits, compliance paperwork, and 10% discounts on repairs for a flat monthly fee.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Which areas do you cover? <span>+</span></div>
+                        <div class="faq-answer">We service the entire Greater Sydney region including CBD, Inner West, North Shore, Northern Beaches, Parramatta, and the Shire.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What payment options are available? <span>+</span></div>
+                        <div class="faq-answer">We accept EFT, major credit cards, and can arrange staged payments for larger installation projects.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h2 class="section-title" style="text-align:left;">Talk With an HVAC Expert</h2>
+                    <p>Share your address, plans, or issue details and we’ll respond with a tailored solution within one business day.</p>
+                    <div class="contact-row">
+                        <div class="icon-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92V21a1 1 0 0 1-1.1 1 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3 3.1 1 1 0 0 1 4 2h4.09a1 1 0 0 1 1 .75 12.35 12.35 0 0 0 .7 2.25 1 1 0 0 1-.23 1L8.09 7.91a16 16 0 0 0 6 6l1.9-1.47a1 1 0 0 1 1-.12 12.35 12.35 0 0 0 2.25.7 1 1 0 0 1 .75 1V21"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Call us</strong>
+                            <div><a href="tel:0449787187">0449 787 187</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="icon-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16v16H4z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Email us</strong>
+                            <div><a href="mailto:dean@sydneyhvacservices.com">dean@sydneyhvacservices.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="icon-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Response Time</strong>
+                            <div>Under 2 hours for urgent calls</div>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Modern HVAC thermostat control" loading="lazy" style="margin-top:20px;">
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <h3 style="font-size:var(--font-size-3xl);margin-bottom:20px;">Get a Free Quote</h3>
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="text" name="address" placeholder="Street, City, Postcode">
+                        <textarea name="message" placeholder="Tell us about your HVAC project or issue..." required></textarea>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </form>
+                    <p style="margin-top:12px;font-size:var(--font-size-sm);color:var(--text-secondary);">By submitting, you agree to our terms. We reply within one business day.</p>
+                </div>
+            </div>
+        </section>
+        <section class="cta-final">
+            <h2 style="font-size:var(--font-size-4xl);font-family:'Poppins',sans-serif;">Ready for Reliable Comfort?</h2>
+            <p>Schedule an on-site assessment or fast-track an emergency crew today. We’ll keep you informed every step of the way.</p>
+            <a href="tel:0449787187" class="btn btn-primary" style="background:#fff;color:var(--primary-dark);">
+                Call 0449 787 187
+            </a>
+            <div style="margin-top:12px;">Prefer email? <a href="mailto:dean@sydneyhvacservices.com" style="color:#fff;text-decoration:underline;">dean@sydneyhvacservices.com</a></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-logo">Sydney HVAC Services</div>
+                <p>Expert heating, cooling, and ventilation services for Sydney homes and businesses since 2004.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom:12px;">Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#about">About Us</a>
+                    <a href="#reviews">Testimonials</a>
+                    <a href="#contact">Request Quote</a>
+                    <a href="#faq">FAQs</a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4 style="margin-bottom:12px;">Contact</h4>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Sydney, NSW 2000
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92V21a1 1 0 0 1-1.1 1 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3 3.1 1 1 0 0 1 4 2h4.09a1 1 0 0 1 1 .75 12.35 12.35 0 0 0 .7 2.25 1 1 0 0 1-.23 1L8.09 7.91a16 16 0 0 0 6 6l1.9-1.47a1 1 0 0 1 1-.12 12.35 12.35 0 0 0 2.25.7 1 1 0 0 1 .75 1V21"/>
+                    </svg>
+                    <a href="tel:0449787187">0449 787 187</a>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16v16H4z"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                    <a href="mailto:dean@sydneyhvacservices.com">dean@sydneyhvacservices.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">Copyright © <span class="current-year"></span> Sydney HVAC Services. All rights reserved.</div>
+    </footer>
+    <button id="open-chat" class="chat-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        Chat With Us
+    </button>
+    <script>
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+        const targetId = anchor.getAttribute('href');
+        if (targetId.length > 1 && document.querySelector(targetId)) {
+            e.preventDefault();
+            document.querySelector(targetId).scrollIntoView({behavior:'smooth', block:'start'});
+        }
+    });
+});
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileClose = document.querySelector('.mobile-close');
+hamburger.addEventListener('click', () => mobileMenu.classList.add('active'));
+mobileClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        question.parentElement.classList.toggle('active');
+    });
+});
+const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+        }
+    });
+}, {threshold:0.2});
+document.querySelectorAll('.animate-on-scroll').forEach(el => io.observe(el));
+const statObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseFloat(el.dataset.target);
+            const duration = 2000;
+            let current = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.textContent = target % 1 === 0 ? target.toFixed(0) : target.toFixed(1);
+                    clearInterval(timer);
+                } else {
+                    el.textContent = current.toFixed(target % 1 === 0 ? 0 : 1);
+                }
+            },16);
+            statObserver.unobserve(el);
+        }
+    });
+}, {threshold:0.4});
+document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+const form = document.querySelector('#contact-form');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = data.get('name').trim();
+    const email = data.get('email').trim();
+    const phone = data.get('phone').trim();
+    if (!name || !email || !phone) {
+        alert('Please fill in all required fields');
+        return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email');
+        return;
+    }
+    alert('Thank you! We will contact you soon.');
+    form.reset();
+});
+document.querySelector('.current-year').textContent = new Date().getFullYear();
+(function() {
+    const widgetScript = document.querySelector('script[data-widget-id]');
+    if (widgetScript && window.CHAT_WIDGET_CONFIG) {
+        widgetScript.setAttribute('data-widget-id', window.CHAT_WIDGET_CONFIG.widgetId);
+    }
+})();
+const chatButton = document.getElementById('open-chat');
+if (chatButton) {
+    chatButton.addEventListener('click', () => {
+        if (window.LC_API && window.LC_API.open_chat_window) {
+            window.LC_API.open_chat_window();
+        } else {
+            window.open('mailto:dean@sydneyhvacservices.com', '_blank');
+        }
+    });
+}
+    </script>
+</body>
+</html>
