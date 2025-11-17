@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal for Sydney Landscaping Pty Ltd | SystemPros AI</title>
+<meta name="description" content="Custom AI phone assistant proposal for Sydney Landscaping Pty Ltd">
+<style>
+:root{--bg-primary:#0a0e27;--bg-secondary:#111827;--bg-card:#1a1f3a;--accent-blue:#00d9ff;--accent-blue-glow:rgba(0,217,255,0.3);--accent-green:#00ff88;--accent-red:#ff4444;--text-primary:#fff;--text-secondary:#a0aec0;--border-subtle:rgba(255,255,255,0.1);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;}
+img{max-width:100%;display:block;border:0;}
+a{text-decoration:none;color:inherit;}
+button{border:none;cursor:pointer;background:none;color:inherit;font:inherit;}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(10,14,39,0.8);backdrop-filter:blur(16px);border-bottom:1px solid var(--border-subtle);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;}
+.nav-left{display:flex;align-items:center;gap:12px;}
+.nav-left img{width:48px;height:auto;}
+.nav-left div{display:flex;flex-direction:column;}
+.nav-left span:first-child{font-weight:700;}
+.nav-left span:last-child{font-size:14px;color:var(--text-secondary);}
+nav ul{display:flex;gap:24px;list-style:none;}
+nav a{color:var(--text-secondary);font-size:15px;transition:color .3s;}
+nav a:hover{color:var(--accent-blue);}
+.primary-btn{background:linear-gradient(135deg,#00d9ff,#4bfffc);padding:14px 28px;border-radius:12px;font-weight:600;color:#02121f;box-shadow:0 8px 24px var(--accent-blue-glow);transition:transform .3s,box-shadow .3s;}
+.primary-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px var(--accent-blue-glow);}
+.hero{padding:140px 5vw 80px;background:radial-gradient(circle at top left,rgba(0,217,255,0.15),transparent 55%),radial-gradient(circle at bottom right,rgba(0,140,255,0.2),transparent 60%),var(--bg-secondary);display:flex;gap:40px;align-items:stretch;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(0,217,255,0.07)' stroke-width='0.5'%3E%3Cpath d='M0 0h200v200H0z'/%3E%3Cpath d='M20 0v200M40 0v200M60 0v200M80 0v200M100 0v200M120 0v200M140 0v200M160 0v200M180 0v200M0 20h200M0 40h200M0 60h200M0 80h200M0 100h200M0 120h200M0 140h200M0 160h200M0 180h200'/%3E%3C/g%3E%3C/svg%3E");opacity:.4;}
+.hero>*{position:relative;z-index:1;}
+.hero-left{flex:0 0 60%;display:flex;flex-direction:column;gap:24px;}
+.eyebrow{font-size:14px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-blue);}
+h1{font-size:54px;font-weight:800;line-height:1.1;}
+.hero-sub{font-size:20px;color:var(--text-secondary);}
+.metrics{display:flex;gap:12px;flex-wrap:wrap;}
+.metric-pill{background:rgba(0,217,255,0.08);border:1px solid rgba(0,217,255,0.4);border-radius:999px;padding:10px 18px;font-size:14px;display:flex;flex-direction:column;min-width:160px;}
+.metric-pill strong{font-size:18px;}
+.cta-stack{display:flex;gap:16px;flex-wrap:wrap;}
+.secondary-link{font-size:16px;color:var(--accent-blue);text-decoration:underline;align-self:center;}
+.hero-right{flex:0 0 40%;}
+.founder-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:24px;padding:32px;box-shadow:0 8px 32px rgba(0,0,0,0.5);display:flex;flex-direction:column;gap:16px;}
+.founder-card img{width:120px;height:120px;border-radius:50%;border:3px solid var(--accent-blue);align-self:flex-start;}
+.founder-card h3{font-size:24px;margin-bottom:4px;}
+.signature{font-family:'Brush Script MT',cursive;font-size:26px;color:var(--accent-blue);}
+section{padding:80px 5vw;}
+.section-title{font-size:42px;font-weight:700;margin-bottom:16px;}
+.section-sub{max-width:760px;color:var(--text-secondary);margin-bottom:40px;}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
+.card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:16px;padding:32px;box-shadow:0 8px 32px rgba(0,0,0,0.4);transition:transform .3s,box-shadow .3s;border-image:linear-gradient(120deg,transparent,var(--accent-blue)) 1;}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,217,255,0.15);}
+.card h3{font-size:24px;margin-bottom:12px;}
+.card p{color:var(--text-secondary);font-size:15px;}
+.icon-circle{width:48px;height:48px;border-radius:50%;background:rgba(0,217,255,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--accent-blue);margin-bottom:16px;}
+.quant-loss{margin-top:32px;font-size:18px;color:var(--accent-red);}
+.solution-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:32px;}
+.feature-pill{border:1px solid rgba(0,217,255,0.4);border-radius:14px;padding:18px;background:rgba(0,217,255,0.05);font-size:16px;display:flex;align-items:center;gap:10px;}
+.flow{margin-top:32px;padding:32px;border-radius:20px;border:1px solid var(--border-subtle);background:linear-gradient(135deg,rgba(0,217,255,0.1),rgba(0,217,255,0));display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;}
+.flow-step{display:flex;align-items:center;gap:12px;font-size:16px;}
+.flow-step span{width:32px;height:32px;border-radius:50%;border:1px solid var(--accent-blue);display:inline-flex;align-items:center;justify-content:center;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.step-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:18px;padding:28px;}
+.step-number{width:36px;height:36px;border-radius:50%;background:rgba(0,217,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--accent-blue);font-weight:700;margin-bottom:12px;}
+.step-card ul{margin-left:18px;color:var(--text-secondary);}
+.roi-section{display:flex;gap:32px;flex-wrap:wrap;}
+.roi-left,.roi-right{flex:1;min-width:280px;}
+.roi-card{background:var(--bg-card);border:1px solid var(--accent-blue);border-radius:20px;padding:32px;box-shadow:0 12px 40px rgba(0,217,255,0.15);}
+.input-group{display:flex;flex-direction:column;margin-bottom:16px;}
+.input-group label{font-size:14px;color:var(--text-secondary);margin-bottom:6px;}
+.input-group input{padding:14px;border-radius:12px;border:1px solid var(--border-subtle);background:rgba(255,255,255,0.05);color:var(--text-primary);}
+.roi-actions{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;}
+.secondary-btn{padding:12px 20px;border-radius:10px;border:1px solid var(--border-subtle);color:var(--text-primary);transition:.3s;}
+.secondary-btn:hover{border-color:var(--accent-blue);color:var(--accent-blue);}
+.results{margin-top:24px;display:flex;flex-direction:column;gap:12px;}
+.result-line{display:flex;justify-content:space-between;font-size:18px;padding:12px 0;border-bottom:1px solid var(--border-subtle);}
+.result-message{margin-top:16px;font-size:16px;color:var(--accent-green);}
+.about{display:flex;gap:40px;flex-wrap:wrap;align-items:center;}
+.about img{width:320px;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,0.6);border:3px solid var(--accent-blue);}
+.about-text{flex:1;min-width:280px;}
+.about-text p{color:var(--text-secondary);margin-top:16px;}
+.faq{max-width:960px;margin:0 auto;}
+.accordion{border-radius:16px;background:var(--bg-card);border:1px solid var(--border-subtle);margin-bottom:16px;}
+.accordion button{width:100%;text-align:left;padding:20px;font-weight:600;font-size:18px;display:flex;justify-content:space-between;align-items:center;}
+.accordion-content{max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 20px;}
+.accordion-content p{color:var(--text-secondary);padding-bottom:20px;}
+.accordion.active .accordion-content{max-height:300px;}
+.final-cta{text-align:center;padding:80px 5vw;}
+.final-cta p{max-width:700px;margin:12px auto;color:var(--text-secondary);}
+.final-cta .secondary-link{display:inline-block;margin-top:12px;}
+footer{border-top:1px solid var(--border-subtle);padding:24px 5vw;text-align:center;color:var(--text-secondary);font-size:14px;}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;}
+.mobile-toggle span{width:26px;height:3px;background:#fff;border-radius:2px;transition:.3s;}
+@media(max-width:1023px){
+.hero{flex-direction:column;}
+.hero-left,.hero-right{flex:1;}
+nav ul{position:fixed;top:72px;right:-100%;flex-direction:column;background:rgba(10,14,39,0.95);padding:24px;gap:18px;width:70%;height:calc(100vh - 72px);transition:.3s;}
+nav ul.open{right:0;}
+.mobile-toggle{display:flex;}
+}
+@media(max-width:600px){
+h1{font-size:40px;}
+.section-title{font-size:32px;}
+.hero{padding-top:120px;}
+.cta-stack{flex-direction:column;}
+.metrics{flex-direction:column;}
+}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<div class="nav-left">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png" alt="SystemPros AI logo">
+<div>
+<span>SystemPros AI</span>
+<span>Business Growth Specialist</span>
+</div>
+</div>
+<nav>
+<div class="mobile-toggle" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</div>
+<ul>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#how">How It Works</a></li>
+<li><a href="#roi">ROI</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</nav>
+<a href="https://systempros.ai/booking" class="primary-btn">Book a Demo</a>
+</div>
+</header>
+<section class="hero">
+<div class="hero-left reveal">
+<div class="eyebrow">Custom Proposal for Sydney Landscaping Pty Ltd</div>
+<h1>Never lose another $25k outdoor project to voicemail, Sydney Landscaping Pty Ltd</h1>
+<p class="hero-sub">SystemPros AI captures every inquiry, qualifies high-value landscaping leads, and books site visits for your crew before competitors even call back.</p>
+<div class="metrics">
+<div class="metric-pill">
+<strong data-count="1350000">$1,350,000</strong>
+<span>Estimated annual revenue leaking to missed calls</span>
+</div>
+<div class="metric-pill">
+<strong data-count="180">180+</strong>
+<span>Opportunities slipping every year</span>
+</div>
+<div class="metric-pill">
+<strong data-count="60">60 sec</strong>
+<span>Average response time when AI answers first</span>
+</div>
+</div>
+<div class="cta-stack">
+<a href="https://systempros.ai/booking" class="primary-btn">Book Your 15-Min Demo</a>
+<a href="#roi" class="secondary-link">Calculate Your ROI ↓</a>
+</div>
+</div>
+<div class="hero-right reveal">
+<div class="founder-card">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman" loading="lazy">
+<h3>Altus Snyman</h3>
+<p>25+ years in the technology trenches, automation obsessive, AI + HighLevel specialist. I built SystemPros AI so crews like yours never burn marketing dollars on unanswered leads again.</p>
+<div class="signature">Altus</div>
+<small>Founder, SystemPros AI</small>
+</div>
+</div>
+</section>
+<section id="problem" class="reveal">
+<h2 class="section-title">Your phone is quietly bleeding premium landscaping revenue</h2>
+<p class="section-sub">Sydney Landscaping Pty Ltd pushes serious marketing to attract dream projects, yet after-hours rings, weekend inquiries, and web form leads are still slipping through. Every silence costs real design-build jobs.</p>
+<div class="cards-grid">
+<div class="card">
+<div class="icon-circle">🌙</div>
+<h3>After-hours calls vanish</h3>
+<p>Homeowners plan upgrades at night. When no one answers, they tap the next contractor and your carefully crafted brand never gets a shot.</p>
+<p><strong>Result:</strong> Lost emergency makeovers & peak-season installs.</p>
+</div>
+<div class="card">
+<div class="icon-circle">⏳</div>
+<h3>Slow follow-up kills web leads</h3>
+<p>Form submissions cool within minutes. If follow-up waits until the next day, those six-figure courtyard projects disappear.</p>
+<p><strong>Impact:</strong> Marketing spend with zero pipeline.</p>
+</div>
+<div class="card">
+<div class="icon-circle">👥</div>
+<h3>Staff can’t scale with demand</h3>
+<p>Office admins juggle scheduling, suppliers, and logistics. Answering every call instantly simply isn’t realistic.</p>
+<p><strong>Outcome:</strong> Growth bottlenecked by headcount.</p>
+</div>
+<div class="card">
+<div class="icon-circle">🌧️</div>
+<h3>Peak season chaos</h3>
+<p>When spring hits, you’re flooded. Without a system triaging intent, high-value prospects wait days for a response.</p>
+<p><strong>Fallout:</strong> Competitors scoop the most profitable designs.</p>
+</div>
+</div>
+<p class="quant-loss">If you miss just 15 inquiries per month and close 30% at $25,000 per landscape, that’s $112,500/month — $1,350,000/year walking away.</p>
+</section>
+<section id="solution" class="reveal">
+<h2 class="section-title">Sydney Landscaping Pty Ltd, meet your 24/7 AI project coordinator</h2>
+<p class="section-sub">SystemPros AI answers like your best-trained office manager, qualifies scope and budget, books site meetings, and routes hot leads to your phone or CRM instantly—day or night.</p>
+<div class="solution-features">
+<div class="feature-pill">✅ 24/7 live answering</div>
+<div class="feature-pill">⚡ Instant SMS & email follow-up</div>
+<div class="feature-pill">🔌 2-minute number forwarding setup</div>
+<div class="feature-pill">🧠 Human oversight on every convo</div>
+</div>
+<div class="flow">
+<div class="flow-step"><span>1</span>Homeowner calls or texts</div>
+<div class="flow-step"><span>2</span>SystemPros AI answers with your script</div>
+<div class="flow-step"><span>3</span>Captures project scope & budget</div>
+<div class="flow-step"><span>4</span>Qualifies intent + schedules visit</div>
+<div class="flow-step"><span>5</span>Instantly pings you/CRM ready to close</div>
+</div>
+</section>
+<section id="how" class="reveal">
+<h2 class="section-title">How it works in 3 simple steps</h2>
+<div class="steps">
+<div class="step-card">
+<div class="step-number">1</div>
+<h3>Connect</h3>
+<ul>
+<li>Forward your main line in two minutes</li>
+<li>No new hardware or training</li>
+<li>Keep full control anytime</li>
+</ul>
+</div>
+<div class="step-card">
+<div class="step-number">2</div>
+<h3>Activate</h3>
+<ul>
+<li>Upload your offers & service areas</li>
+<li>AI answers instantly with your tone</li>
+<li>Human team monitors quality daily</li>
+</ul>
+</div>
+<div class="step-card">
+<div class="step-number">3</div>
+<h3>Close</h3>
+<ul>
+<li>Receive qualified briefs via SMS/email</li>
+<li>Appointments auto-scheduled</li>
+<li>Your crew focuses on builds, not phones</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="roi" class="reveal">
+<h2 class="section-title">Interactive ROI calculator</h2>
+<p class="section-sub">Plug in Sydney Landscaping Pty Ltd’s numbers to see how fast SystemPros AI pays for itself.</p>
+<div class="roi-section">
+<div class="roi-left roi-card">
+<div class="input-group">
+<label for="missedCalls">Missed calls/leads per month</label>
+<input type="number" id="missedCalls" value="15" min="0">
+</div>
+<div class="input-group">
+<label for="closeRate">Close rate (%)</label>
+<input type="number" id="closeRate" value="30" min="0" max="100">
+</div>
+<div class="input-group">
+<label for="avgRevenue">Average revenue per project ($)</label>
+<input type="number" id="avgRevenue" value="25000" min="0">
+</div>
+<div class="input-group">
+<label for="monthlyCost">Monthly SystemPros AI cost ($)</label>
+<input type="number" id="monthlyCost" value="500" min="0">
+</div>
+<div class="roi-actions">
+<button class="primary-btn" id="calcBtn">Calculate My ROI</button>
+<button class="secondary-btn" id="resetBtn">Reset to Defaults</button>
+</div>
+</div>
+<div class="roi-right roi-card">
+<div class="results">
+<div class="result-line"><span>Extra monthly revenue</span><strong id="monthlyRevenue">$0</strong></div>
+<div class="result-line"><span>Annual revenue impact</span><strong id="annualRevenue">$0</strong></div>
+<div class="result-line"><span>ROI multiple</span><strong id="roiMultiple">0x</strong></div>
+<div class="result-line"><span>Payback period</span><strong id="payback">0 days</strong></div>
+</div>
+<div class="result-message" id="roiMessage">Enter your numbers to see the upside.</div>
+</div>
+</div>
+</section>
+<section id="about" class="reveal">
+<h2 class="section-title">Built for landscapers who refuse to waste leads</h2>
+<div class="about">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman" loading="lazy">
+<div class="about-text">
+<p>I’ve spent decades helping high-ticket home services teams automate what humans can’t scale. Watching premium landscaping firms lose six-figure courtyards and pool surrounds to voicemail drove me to create SystemPros AI.</p>
+<p>Today we partner with design-build crews across Sydney, the Northern Beaches, and the Hills who value craftsmanship and predictable pipelines. We obsess over your scripts, your tone, and your standards so every conversation feels like it came from your own office.</p>
+<p>My promise: we’ll treat your brand like our own and won’t quit until every call, text, and form turns into a qualified opportunity for Sydney Landscaping Pty Ltd.</p>
+</div>
+</div>
+</section>
+<section id="faq" class="reveal faq">
+<h2 class="section-title">FAQ</h2>
+<div class="accordion">
+<button aria-expanded="false">Will this replace my staff?<span>+</span></button>
+<div class="accordion-content"><p>No. SystemPros AI handles overflow, after-hours, and first-touch qualification so your team can focus on site visits and builds. It’s the assistant that never sleeps.</p></div>
+</div>
+<div class="accordion">
+<button aria-expanded="false">How complex is setup?<span>+</span></button>
+<div class="accordion-content"><p>Setup takes one quick call to forward your number. We load your offers, service areas, and FAQs, then you’re live the same day.</p></div>
+</div>
+<div class="accordion">
+<button aria-expanded="false">What if clients demand a human?</button>
+<div class="accordion-content"><p>If a homeowner insists, SystemPros AI can warm-transfer to your team or schedule a callback instantly. No one feels trapped in automation.</p></div>
+</div>
+<div class="accordion">
+<button aria-expanded="false">Is this just for big companies?</button>
+<div class="accordion-content"><p>We power solo operators through 100-person crews. If you answer a phone and sell projects, we keep your pipeline full.</p></div>
+</div>
+<div class="accordion">
+<button aria-expanded="false">What's the commitment?</button>
+<div class="accordion-content"><p>Month-to-month. Cancel anytime. We earn our keep by delivering qualified opportunities, not locking you in.</p></div>
+</div>
+<div class="accordion">
+<button aria-expanded="false">Can I review conversations?</button>
+<div class="accordion-content"><p>Absolutely. Every transcript is logged for your review, coaching, and compliance. You maintain full visibility.</p></div>
+</div>
+<div class="accordion">
+<button aria-expanded="false">Does it integrate with my CRM?</button>
+<div class="accordion-content"><p>Yes. We can push leads to your CRM, email, SMS, or even Slack. Prefer a simple text? Done.</p></div>
+</div>
+<div class="accordion">
+<button aria-expanded="false">What if it doesn't work for us?</button>
+<div class="accordion-content"><p>Try us risk-free with a 30-day money-back guarantee. If we don’t capture real revenue, you don’t pay.</p></div>
+</div>
+</section>
+<section class="final-cta reveal">
+<h2 class="section-title">Ready to stop losing dream landscapes to voicemail, Sydney Landscaping Pty Ltd?</h2>
+<p>Every unanswered ring is another designer courtyard or pool surround booked with someone else. Let SystemPros AI capture and qualify those jobs before they disappear.</p>
+<p>It’s a 15-minute demo, zero pressure, and no contracts. Just numbers tailored to your pipeline.</p>
+<div class="cta-stack" style="justify-content:center;">
+<a href="https://systempros.ai/booking" class="primary-btn">Book Your 15-Min Demo</a>
+<a href="#roi" class="secondary-link">See live ROI again →</a>
+</div>
+<p>No pressure. No long-term contracts. Just real numbers and a path forward.</p>
+</section>
+<footer>
+<p>© <span id="year"></span> SystemPros AI. All rights reserved.</p>
+<p>Built for landscaping companies who are done leaving money on the table.</p>
+</footer>
+<script>
+const navLinks=document.querySelector('nav ul');const toggle=document.querySelector('.mobile-toggle');toggle.addEventListener('click',()=>{navLinks.classList.toggle('open');toggle.classList.toggle('active');});document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();navLinks.classList.remove('open');toggle.classList.remove('active');const headerOffset=document.querySelector('header').offsetHeight;const elementPosition=target.getBoundingClientRect().top+window.pageYOffset;const offsetPosition=elementPosition-headerOffset+10;window.scrollTo({top:offsetPosition,behavior:'smooth'});}});});const accordionButtons=document.querySelectorAll('.accordion button');accordionButtons.forEach(btn=>btn.addEventListener('click',()=>{const active=btn.parentElement.classList.contains('active');document.querySelectorAll('.accordion').forEach(acc=>acc.classList.remove('active'));if(!active){btn.parentElement.classList.add('active');}}));const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));const formatter=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});const numberFormatter=new Intl.NumberFormat('en-US',{maximumFractionDigits:1});const missedCalls=document.getElementById('missedCalls');const closeRate=document.getElementById('closeRate');const avgRevenue=document.getElementById('avgRevenue');const monthlyCost=document.getElementById('monthlyCost');const monthlyRevenue=document.getElementById('monthlyRevenue');const annualRevenue=document.getElementById('annualRevenue');const roiMultiple=document.getElementById('roiMultiple');const payback=document.getElementById('payback');const roiMessage=document.getElementById('roiMessage');function clampInput(input){if(+input.value<0)input.value=0;} [missedCalls,closeRate,avgRevenue,monthlyCost].forEach(input=>input.addEventListener('input',()=>clampInput(input)));function calcROI(){const calls=+missedCalls.value||0;const close=(+closeRate.value||0)/100;const revenue=+avgRevenue.value||0;const cost=+monthlyCost.value||0;const extraMonthly=calls*close*revenue;const extraAnnual=extraMonthly*12;const roi=cost?extraMonthly/cost:0;const paybackDays=extraMonthly?Math.max(1,Math.round((cost/extraMonthly)*30)):0;monthlyRevenue.textContent=formatter.format(extraMonthly);annualRevenue.textContent=formatter.format(extraAnnual);roiMultiple.textContent=`${numberFormatter.format(roi)}x`;payback.textContent=extraMonthly?`${paybackDays} days`:'N/A';let msg="If missed calls never convert, there's no ROI. But most landscapers know they're losing real jobs.";if(roi>0&&roi<=2){msg="Even conservative numbers show this covers itself.";}else if(roi>2&&roi<=5){msg="Your numbers suggest SystemPros AI pays for itself several times over.";}else if(roi>5&&roi<=10){msg="These numbers are strong. Even half this upside makes this a no-brainer.";}else if(roi>10){msg="With returns like this, the real question is: can you afford NOT to capture these leads?";}roiMessage.textContent=msg;}document.getElementById('calcBtn').addEventListener('click',calcROI);document.getElementById('resetBtn').addEventListener('click',()=>{missedCalls.value=15;closeRate.value=30;avgRevenue.value=25000;monthlyCost.value=500;calcROI();});calcROI();const yearSpan=document.getElementById('year');yearSpan.textContent=new Date().getFullYear();document.querySelectorAll('[data-count]').forEach(el=>{const target=+el.getAttribute('data-count');let current=0;const increment=target/60;function update(){current+=increment;if(current>=target){el.textContent=Number.isInteger(target)?target:target.toFixed(0);}else{el.textContent=Number.isInteger(target)?Math.round(current):current.toFixed(0);requestAnimationFrame(update);}}update();});
+</script>
+</body>
+</html>
