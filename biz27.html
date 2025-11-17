@@ -1,0 +1,1368 @@
+<!-- 
+CONFIGURATION
+Chat Widget ID: 691a8c5133e9929ee9b58542
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sydney Landscaping Pty Ltd delivers award-winning residential landscaping, construction, and maintenance across Sydney. Request your free quote today.">
+    <script>
+        window.CHAT_WIDGET_CONFIG = {
+            widgetId: "691a8c5133e9929ee9b58542",
+            autoOpen: false,
+            position: "bottom-right"
+        };
+    </script>
+    <title>Sydney Landscaping Pty Ltd | Residential Landscaping in Sydney</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2f8f3a;
+            --primary-dark: #1c5c25;
+            --primary-light: #e3f4e7;
+            --accent: #f2a516;
+            --text-primary: #1a2018;
+            --text-secondary: #4a5a45;
+            --background-light: #f5faf3;
+            --background-dark: #0f2011;
+            --success: #3ecf5f;
+            --error: #d64545;
+            --border: #dbe7d5;
+            --shadow: rgba(28, 92, 37, 0.15);
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-primary);
+            background: #ffffff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-sm svg {
+            width: 16px;
+            height: 16px;
+        }
+        .icon-md svg {
+            width: 24px;
+            height: 24px;
+        }
+        .icon-lg svg {
+            width: 32px;
+            height: 32px;
+        }
+        .icon-xl svg {
+            width: 48px;
+            height: 48px;
+        }
+        .nav-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+        .feature-icon svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 16px;
+        }
+        .service-icon svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 20px;
+        }
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+        .button svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        .contact-icon svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .icon-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 16px;
+            background: var(--primary-light);
+            border: 2px solid var(--primary);
+        }
+        .icon-container svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--primary);
+        }
+        @media (max-width: 768px) {
+            .service-icon svg {
+                width: 48px;
+                height: 48px;
+            }
+            .feature-icon svg {
+                width: 36px;
+                height: 36px;
+            }
+            .icon-container {
+                padding: 12px;
+            }
+            .icon-container svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+        }
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            background: transparent;
+        }
+        header.scrolled {
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            backdrop-filter: blur(12px);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+        header.scrolled .logo {
+            color: var(--primary-dark);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+       }
+        nav a {
+            font-weight: 500;
+            color: #ffffff;
+        }
+        header.scrolled nav a {
+            color: var(--text-primary);
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        header.scrolled .phone-link {
+            color: var(--primary-dark);
+        }
+        .btn {
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: var(--font-size-base);
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #1f1500;
+            box-shadow: 0 10px 20px rgba(242,165,22,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        header.scrolled .btn-secondary {
+            color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(15,32,17,0.9), rgba(47,143,58,0.7)), url('https://source.unsplash.com/1600x900/?luxury,landscape,garden') center/cover no-repeat;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+        }
+        .hero-content {
+            max-width: 650px;
+        }
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--font-size-5xl);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: var(--font-size-lg);
+            margin-bottom: 30px;
+        }
+        .hero-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+            gap: 16px;
+            margin: 30px 0;
+        }
+        .benefit {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .benefit strong {
+            display: block;
+            font-size: var(--font-size-base);
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .stat {
+            text-align: left;
+        }
+        .stat-number {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+        .trust-bar {
+            background: #ffffff;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            margin-top: -40px;
+            position: relative;
+        }
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .trust-item {
+            padding: 20px;
+            border-right: 1px solid var(--border);
+        }
+        .trust-item:last-child {
+            border-right: none;
+        }
+        .trust-item h4 {
+            margin: 10px 0 4px;
+            font-size: var(--font-size-xl);
+        }
+        .services {
+            background: var(--background-light);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: var(--font-size-4xl);
+            font-family: 'Poppins', sans-serif;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+        .service-card h3 {
+            margin: 20px 0 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .service-card p {
+            color: var(--text-secondary);
+        }
+        .service-card .btn {
+            margin-top: 16px;
+            width: 100%;
+        }
+        .about {
+            background: #ffffff;
+        }
+        .about-inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+        .about img {
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        .about h3 {
+            font-size: var(--font-size-3xl);
+            margin-bottom: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .about-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .location {
+            background: var(--background-light);
+        }
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+            gap: 30px;
+        }
+        .contact-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .contact-card h4 {
+            margin-top: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .contact-line {
+            display: flex;
+            align-items: center;
+        }
+        .service-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .area-pill {
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #ffffff;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .pricing {
+            background: #ffffff;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+            gap: 30px;
+        }
+        .pricing-card {
+            border: 2px solid var(--border);
+            border-radius: 18px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transform: translateY(-6px);
+        }
+        .pricing-card h4 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .price {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 16px 0;
+        }
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .pricing-card ul li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 8px 0;
+            color: var(--text-secondary);
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+        .testimonials {
+            background: var(--background-light);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+            position: relative;
+        }
+        .stars {
+            display: flex;
+            gap: 4px;
+            color: var(--accent);
+        }
+        .faq {
+            background: #ffffff;
+        }
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 24px;
+            color: var(--text-secondary);
+        }
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 200px;
+        }
+        .contact {
+            background: var(--background-light);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+            gap: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        input, select, textarea {
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            font-size: var(--font-size-base);
+            font-family: inherit;
+            width: 100%;
+        }
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: #ffffff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .final-cta h2 {
+            font-size: var(--font-size-4xl);
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 16px;
+        }
+        .final-cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #dbead8;
+        }
+        footer {
+            background: #0c150c;
+            color: #d2e5d0;
+            padding: 60px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 30px;
+        }
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #d2e5d0;
+        }
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .socials a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.4);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            font-size: var(--font-size-sm);
+            color: #9ab49b;
+        }
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(12,21,12,0.95);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+        }
+        .mobile-menu.active {
+            transform: translateY(0);
+        }
+        .hamburger, .mobile-close {
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            display: none;
+        }
+        @media (max-width: 1023px) {
+            nav {
+                display: none;
+            }
+            .hamburger {
+                display: inline-flex;
+            }
+            .header-actions .btn-secondary {
+                display: none;
+            }
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #open-chat {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: var(--accent);
+            border: none;
+            color: #1f1500;
+            border-radius: 30px;
+            padding: 14px 22px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            z-index: 900;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 80vh;
+                text-align: center;
+            }
+            .hero-content {
+                margin: 0 auto;
+            }
+            .hero-benefits {
+                text-align: left;
+            }
+            .hero-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .trust-item {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+            .trust-item:last-child {
+                border-bottom: none;
+            }
+            .hero-ctas, .benefit {
+                justify-content: center;
+            }
+            .contact-card, .service-card, .pricing-card {
+                text-align: center;
+            }
+            .contact-line {
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="691a8c5133e9929ee9b58542"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Sydney Landscaping</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:1300003090" class="phone-link">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.35 12.35 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.35 12.35 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
+                    1300 003 090
+                </a>
+                <a href="#contact" class="btn btn-primary button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10h-3a1 1 0 0 1-1-1V6"/><path d="M16 3h5v5"/><path d="M5 13h14"/><path d="M5 17h14"/><path d="M5 21h14"/></svg>Get Free Quote
+                </a>
+                <button class="hamburger">
+                    <span class="icon-md nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <button class="mobile-close">
+            <span class="icon-md nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </span>
+        </button>
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:1300003090" class="btn btn-primary">Call 1300 003 090</a>
+    </div>
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <span class="badge">Award-winning team • Since 2015</span>
+            <h1>Luxury Landscapes Without the Headache in Sydney</h1>
+            <p>From structural retaining walls to refined outdoor sanctuaries, Sydney Landscaping Pty Ltd brings craftsmanship, communication, and premium materials together for spaces that thrive year after year.</p>
+            <div class="hero-benefits">
+                <div class="benefit">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                    <div>
+                        <strong>Licensed & Insured</strong>
+                        Fair Trading NSW structural licence
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M5 8h5"/><path d="M14 8h5"/><path d="M5 16h5"/><path d="M14 16h5"/></svg>
+                    </span>
+                    <div>
+                        <strong>Design + Build</strong>
+                        One team for concept to completion
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M5 10l7-6 7 6"/></svg>
+                    </span>
+                    <div>
+                        <strong>Sydney Focused</strong>
+                        Northern Beaches to Hills District
+                    </div>
+                </div>
+            </div>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7"/></svg>Book Onsite Consultation
+                </a>
+                <a href="#services" class="btn btn-secondary button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Explore Services
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number" data-target="2847">0</div>
+                    <div>Landscapes Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="84">0</div>
+                    <div>5-Star Google Reviews</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div>Years Perfecting Sydney Gardens</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="trust-bar">
+        <div class="container trust-items">
+            <div class="trust-item">
+                <div class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l3 5 6 .9-4.5 4 1 6-5.5-3-5.5 3 1-6L3 6.9 9 6z"/></svg>
+                </div>
+                <h4>Multi-Awarded</h4>
+                <p>2024 & 2025 Outstanding Trade & Service</p>
+            </div>
+            <div class="trust-item">
+                <div class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+                </div>
+                <h4>Led by Tom Jones</h4>
+                <p>TAFE NSW qualified, Fair Trading licence 375427C</p>
+            </div>
+            <div class="trust-item">
+                <div class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M12 7V3"/><path d="M8 3h8"/></svg>
+                </div>
+                <h4>TLA Member</h4>
+                <p>The Landscape Association trusted partner</p>
+            </div>
+            <div class="trust-item">
+                <div class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                </div>
+                <h4>Premium Materials</h4>
+                <p>Decking, stone and concrete built to last</p>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Landscaping Services</h2>
+            <p class="section-subtitle">One integrated team handling structural construction, lush planting, and ongoing care so your outdoor investment stays impeccable.</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="icon-container service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18"/><path d="M12 7v14"/><rect x="5" y="7" width="4" height="14"/><rect x="15" y="7" width="4" height="14"/></svg>
+                    </div>
+                    <h3>Structural Retaining Walls</h3>
+                    <p>Engineered sleeper, sandstone, and masonry walls that stabilise slopes and add architectural definition.</p>
+                    <button class="btn btn-primary">Request Assessment</button>
+                </div>
+                <div class="service-card">
+                    <div class="icon-container service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+                    </div>
+                    <h3>Decking & Outdoor Rooms</h3>
+                    <p>Spotted gum, composite, and hardwood decks paired with screens, pergolas, and bespoke joinery.</p>
+                    <button class="btn btn-primary">Design My Deck</button>
+                </div>
+                <div class="service-card">
+                    <div class="icon-container service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-6 7 6v12"/></svg>
+                    </div>
+                    <h3>Paving & Concrete</h3>
+                    <p>Precision-laid pavers, driveways, and feature concrete that handle heavy traffic with style.</p>
+                    <button class="btn btn-primary">Plan My Hardscape</button>
+                </div>
+                <div class="service-card">
+                    <div class="icon-container service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M5 12h14"/><path d="M8 18h8"/><path d="M6 6h12"/></svg>
+                    </div>
+                    <h3>Garden Makeovers</h3>
+                    <p>Planting palettes, turf installation, edging, and irrigation tuned to Sydney’s microclimates.</p>
+                    <button class="btn btn-primary">Refresh My Garden</button>
+                </div>
+                <div class="service-card">
+                    <div class="icon-container service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M4 10h16"/><path d="M4 4h16"/><path d="M8 10v10"/><path d="M16 4v6"/></svg>
+                    </div>
+                    <h3>Premium Fencing & Gates</h3>
+                    <p>Custom steel, hardwood, and composite solutions for privacy, security, and curb appeal.</p>
+                    <button class="btn btn-primary">Secure My Property</button>
+                </div>
+                <div class="service-card">
+                    <div class="icon-container service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M5 12c0-4 2-8 7-8s7 4 7 8-2 8-7 8-7-4-7-8z"/><path d="M12 12v.01"/></svg>
+                    </div>
+                    <h3>Pool & Irrigation Integration</h3>
+                    <p>Surround builds, lighting, and smart irrigation delivering effortless maintenance.</p>
+                    <button class="btn btn-primary">Discuss My Poolscape</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about animate-on-scroll">
+        <div class="container about-inner">
+            <div>
+                <img src="https://source.unsplash.com/800x800/?landscape,designer" alt="Sydney Landscaping team crafting outdoor spaces" loading="lazy">
+            </div>
+            <div>
+                <h3>Why Choose Sydney Landscaping Pty Ltd</h3>
+                <p>Since 2015, founder Tom Jones has led a tightly knit crew of landscapers, horticulturists, and concreters dedicated to high-touch communication and uncompromising workmanship. From the Northern Beaches to the Hills District, every project is delivered with transparent scheduling, on-site supervision, and a finish that holds up in Sydney’s harsh conditions.</p>
+                <ul class="about-list">
+                    <li>
+                        <span class="icon-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </span>
+                        Landscape Association (TLA) member for industry-leading standards
+                    </li>
+                    <li>
+                        <span class="icon-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </span>
+                        Dedicated site manager guiding you from concept to handover
+                    </li>
+                    <li>
+                        <span class="icon-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M12 4v16"/><path d="M4 4v16"/></svg>
+                        </span>
+                        Detailed workmanship warranties and proactive aftercare options
+                    </li>
+                    <li>
+                        <span class="icon-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H9l-6 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </span>
+                        84 verified five-star Google reviews praising communication
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Meet the Team</a>
+            </div>
+        </div>
+    </section>
+    <section class="location animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Sydney-Wide Service, Local Insight</h2>
+            <p class="section-subtitle">Headquartered in Lane Cove West, we’re on the ground daily across the North Shore, Northern Beaches, Hills District, Inner West, and Greater Sydney.</p>
+            <div class="location-grid">
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.518519011202!2d151.1496723!3d-33.813044299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a5e3fc5cf3f3%3A0x5f6f31a8cf24afcd!2s4-6%20Chaplin%20Dr%2C%20Lane%20Cove%20West%20NSW%202066%2C%20Australia!5e0!3m2!1sen!2sau!4v1700000000000" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-card">
+                    <h4>Visit & Contact</h4>
+                    <div class="contact-details">
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                            17/4-6 Chaplin Drive, Lane Cove West NSW 2066
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12 18 8 12 14 6 8 2 12"/><path d="M2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6"/><path d="m6 8 6-5 6 5"/></svg>
+                            </span>
+                            <a href="mailto:hello@sydneylandscaping.com.au">hello@sydneylandscaping.com.au</a>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.35 12.35 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.35 12.35 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <a href="tel:1300003090">1300 003 090</a> • <a href="tel:0290711111">02 9071 1111</a>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </span>
+                            Mon–Fri: 08:00 AM – 04:00 PM
+                        </div>
+                    </div>
+                    <h5>Service Areas</h5>
+                    <div class="service-areas">
+                        <span class="area-pill">Northern Beaches</span>
+                        <span class="area-pill">North Shore</span>
+                        <span class="area-pill">Hills District</span>
+                        <span class="area-pill">Inner West</span>
+                        <span class="area-pill">Roseville</span>
+                        <span class="area-pill">North Ryde</span>
+                        <span class="area-pill">Pendle Hill</span>
+                        <span class="area-pill">Putney</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Transparent Investment Options</h2>
+            <p class="section-subtitle">Every project receives a detailed scope and fixed proposal. Below are guide packages to spark ideas—book a site consult for precise pricing.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Garden Refresh</h4>
+                    <div class="price">From $4,450</div>
+                    <ul>
+                        <li>
+                            <span class="icon-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Turf replacement & premium soil prep
+                        </li>
+                        <li>
+                            <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            Garden edging and mulched beds
+                        </li>
+                        <li>
+                            <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            20m² planting plan & irrigation tune
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary">Start My Refresh</button>
+                </div>
+                <div class="pricing-card">
+                    <span class="badge">Most Popular</span>
+                    <h4>Outdoor Living Suite</h4>
+                    <div class="price">From $18,900</div>
+                    <ul>
+                        <li><span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Timber or composite deck up to 40m²</li>
+                        <li><span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Custom screens, lighting, seating</li>
+                        <li><span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Integrated planting & smart irrigation</li>
+                    </ul>
+                    <button class="btn btn-primary">Plan My Outdoor Room</button>
+                </div>
+                <div class="pricing-card">
+                    <h4>Complete Rebuild</h4>
+                    <div class="price">Custom Quote</div>
+                    <ul>
+                        <li><span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Concept design & 3D renders</li>
+                        <li><span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Structural retaining, paving, pool surrounds</li>
+                        <li><span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Lighting, irrigation, and maintenance plan</li>
+                    </ul>
+                    <button class="btn btn-primary">Book Strategy Session</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" class="testimonials animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Clients Love Working With Us</h2>
+            <p class="section-subtitle">84 verified Google reviews averaging 5 stars highlight our communication, quality, and care.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                    </div>
+                    <p>"Tom and his crew replaced our tired timber wall with concrete sleepers and new planting in three days. Communication was constant and the site was spotless every night."</p>
+                    <strong>Jeff P. • Putney</strong>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                    </div>
+                    <p>"They turned our Wahroonga backyard into a layered entertaining space with decking, lighting, and irrigation that we can control from our phone. Worth every cent."</p>
+                    <strong>Sarah M. • Wahroonga</strong>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 6.91H22l-5.44 3.95L18.78 20 12 15.9 5.22 20l2.22-7.14L2 8.91h7.61z"/></svg>
+                    </div>
+                    <p>"As a developer we rely on reliable partners. Tom’s team kept our North Shore townhouse project on schedule with zero rework required by certifiers."</p>
+                    <strong>Dan H. • Developer, Upper North Shore</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Straight answers to help you plan your next landscape investment.</p>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are you licensed and insured for structural landscaping?
+                    <span class="icon-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                </div>
+                <div class="faq-answer">Yes. Sydney Landscaping Pty Ltd holds Fair Trading NSW structural licences (Licence No. 375427C) and carries comprehensive public liability and workers compensation insurance.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you provide design services or work from plans provided?
+                    <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+                <div class="faq-answer">We offer in-house concept and documentation packages, but also collaborate seamlessly with architects or designers if you already have plans.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How soon can you start once we approve the quote?
+                    <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+                <div class="faq-answer">Lead times vary seasonally, but most projects commence within 3–6 weeks after deposit and approvals. We provide a detailed timeline so you can plan ahead.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can you manage council approvals if required?
+                    <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+                <div class="faq-answer">Absolutely. Our team helps prepare documentation, liaise with certifiers, and coordinate engineers to keep paperwork painless.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer maintenance after construction?
+                    <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+                <div class="faq-answer">Yes, we provide tailored maintenance visits for turf care, pruning, feeding, and irrigation monitoring to protect your investment.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What payment options are available?
+                    <span class="icon-sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+                <div class="faq-answer">We accept EFT, major credit cards, and staged progress payments aligned with milestones. Larger projects can be structured with progress draws.</div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Request Your Free Consultation</h2>
+            <p class="section-subtitle">Share a few details and our project coordinator will call within one business day to schedule an on-site visit.</p>
+            <div class="contact-grid">
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Full Name*" required>
+                    <input type="email" name="email" placeholder="Email*" required>
+                    <input type="tel" name="phone" placeholder="Phone*" required>
+                    <select name="service">
+                        <option value="">Select Service</option>
+                        <option>Retaining Walls</option>
+                        <option>Decking & Outdoor Rooms</option>
+                        <option>Garden Makeover</option>
+                        <option>Paving & Concrete</option>
+                        <option>Fencing & Gates</option>
+                        <option>Pool Landscaping</option>
+                        <option>Maintenance</option>
+                    </select>
+                    <textarea name="message" placeholder="Tell us about your property or goals..."></textarea>
+                    <button type="submit" class="btn btn-primary">Send My Request</button>
+                </form>
+                <div class="contact-card">
+                    <h4>Direct Support</h4>
+                    <p>Prefer to speak with someone now? Reach out via phone or email for immediate assistance.</p>
+                    <div class="contact-details">
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.35 12.35 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.35 12.35 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <a href="tel:1300003090">Call 1300 003 090</a>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 4 16 16"/><path d="M22 4H2a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h20a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2z"/></svg>
+                            </span>
+                            <a href="mailto:hello@sydneylandscaping.com.au">hello@sydneylandscaping.com.au</a>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            Free on-site consultations across Greater Sydney
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                            17/4-6 Chaplin Drive, Lane Cove West NSW 2066
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="final-cta animate-on-scroll">
+        <div class="container">
+            <h2>Ready to Transform Your Outdoor Space?</h2>
+            <p>Discover how Sydney Landscaping Pty Ltd combines award-winning design, precise construction, and attentive maintenance to deliver landscapes that stay spectacular. Consultations are obligation-free.</p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#contact" class="btn btn-primary button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M5 12h14"/></svg>Request My Free Quote
+                </a>
+                <a href="tel:1300003090" class="btn btn-secondary button" style="border-color:#ffffff;color:#ffffff;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.35 12.35 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.35 12.35 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call 1300 003 090
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-logo">Sydney Landscaping</div>
+                <p>Crafting personalised outdoor sanctuaries across Sydney since 2015 with meticulous structural landscaping and concierge-level service.</p>
+                <div class="socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Free Quote</a></li>
+                    <li><a href="#contact">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <div class="footer-contact">
+                    <div>17/4-6 Chaplin Drive, Lane Cove West NSW 2066</div>
+                    <a href="tel:1300003090">1300 003 090</a>
+                    <a href="tel:0290711111">02 9071 1111</a>
+                    <a href="mailto:hello@sydneylandscaping.com.au">hello@sydneylandscaping.com.au</a>
+                    <div>Mon–Fri: 08:00 AM – 04:00 PM</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © <span class="current-year"></span> Sydney Landscaping Pty Ltd. All rights reserved.
+        </div>
+    </footer>
+    <button id="open-chat">
+        <span class="icon-md">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        Chat With Us
+    </button>
+    <script>
+        (function() {
+            const widgetScript = document.querySelector('script[data-widget-id]');
+            if (widgetScript && window.CHAT_WIDGET_CONFIG) {
+                widgetScript.setAttribute('data-widget-id', window.CHAT_WIDGET_CONFIG.widgetId);
+            }
+        })();
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileClose = document.querySelector('.mobile-close');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+        mobileClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        });
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                }
+            });
+        });
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.parentElement.classList.toggle('active');
+            });
+        });
+        const observerOptions = {threshold: 0.1, rootMargin: '0px 0px -100px 0px'};
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        function animateCounter(element, target, duration = 2000) {
+            let current = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+        const statObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'), 10);
+                    animateCounter(entry.target, target);
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.6});
+        document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+        const form = document.querySelector('#contact-form');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            if (!data.name || !data.email || !data.phone) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Please enter a valid email');
+                return;
+            }
+            alert('Thank you! We will contact you soon.');
+            form.reset();
+        });
+        document.querySelector('.current-year').textContent = new Date().getFullYear();
+        document.getElementById('open-chat').addEventListener('click', () => {
+            if (window.LC_API && LC_API.open_chat_window) {
+                LC_API.open_chat_window();
+            }
+        });
+    </script>
+</body>
+</html>
