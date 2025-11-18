@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Brisbane Roofing Solutions delivers roof restorations, repairs, and replacements across Brisbane, Ipswich, Sunshine Coast, Toowoomba, and the Gold Coast with free inspections and 10-year warranties.">
+<script>
+const CHAT_WIDGET_ID = "691a8c5133e9929ee9b58542";
+</script>
+<title>Brisbane Roofing Solutions | Roof Restorations in Brisbane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary:#c62828;
+    --primary-dark:#8d1d1d;
+    --primary-light:#fdecea;
+    --accent:#1b5e20;
+    --text-primary:#1a1a1a;
+    --text-secondary:#4b5563;
+    --background-light:#f7f7f8;
+    --background-dark:#101828;
+    --success:#27ae60;
+    --error:#d7263d;
+    --border:#e5e7eb;
+    --shadow:rgba(15,23,42,0.15);
+    --font-size-xs:0.75rem;
+    --font-size-sm:0.875rem;
+    --font-size-base:1rem;
+    --font-size-lg:1.125rem;
+    --font-size-xl:1.25rem;
+    --font-size-2xl:1.5rem;
+    --font-size-3xl:1.875rem;
+    --font-size-4xl:2.25rem;
+    --font-size-5xl:3rem;
+    --font-size-6xl:3.75rem;
+}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:'Source Sans 3',sans-serif;
+    color:var(--text-primary);
+    background:#fff;
+    line-height:1.6;
+    scroll-behavior:smooth;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:'Poppins',sans-serif;
+    color:var(--text-primary);
+    line-height:1.2;
+}
+img{
+    max-width:100%;
+    display:block;
+    border-radius:12px;
+}
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
+section{
+    padding:80px 0;
+}
+@media(max-width:768px){
+    section{
+        padding:60px 0;
+    }
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    transition:0.3s ease;
+    padding:18px 0;
+}
+header.scrolled{
+    background:rgba(255,255,255,0.95);
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    backdrop-filter:blur(12px);
+}
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+.logo{
+    font-size:var(--font-size-xl);
+    font-weight:700;
+    color:#fff;
+}
+header.scrolled .logo{
+    color:var(--text-primary);
+}
+nav{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    gap:24px;
+}
+nav a{
+    font-weight:500;
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+header.scrolled nav a{
+    color:var(--text-primary);
+}
+nav a:hover{
+    color:var(--primary);
+}
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+.phone-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+header.scrolled .phone-link{
+    color:var(--text-primary);
+}
+.btn{
+    padding:12px 24px;
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s ease;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
+.btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 20px rgba(198,40,40,0.3);
+}
+.btn-secondary{
+    background:transparent;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.4);
+}
+header.scrolled .btn-secondary{
+    color:var(--text-primary);
+    border-color:var(--border);
+}
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+.hamburger span{
+    width:26px;
+    height:3px;
+    background:#fff;
+    transition:0.3s ease;
+}
+header.scrolled .hamburger span{
+    background:var(--text-primary);
+}
+.mobile-menu{
+    position:fixed;
+    inset:0;
+    background:rgba(16,24,40,0.98);
+    transform:translateX(100%);
+    transition:0.4s ease;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+    z-index:999;
+}
+.mobile-menu.active{
+    transform:translateX(0);
+}
+.mobile-menu a{
+    color:#fff;
+    font-size:var(--font-size-2xl);
+    text-decoration:none;
+}
+@media(max-width:1024px){
+    nav{
+        display:none;
+    }
+    .hamburger{
+        display:flex;
+    }
+    .header-actions{
+        display:none;
+    }
+}
+.hero{
+    min-height:100vh;
+    background-image:url('https://pixabay.com/get/gc42bc7b1ff3463c56e01fef2157e7ddc44c35672c403499a09e7264806d13d5ae867d5ff32c8226655984c4fa41dc46719a91392f1f217dc1593779a79ef1816_1280.jpg');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,rgba(0,0,0,0.75),rgba(0,0,0,0.45));
+}
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:700px;
+}
+.hero h1{
+    font-size:var(--font-size-6xl);
+    margin-bottom:20px;
+    color:#fff;
+}
+.hero p{
+    font-size:var(--font-size-xl);
+    margin-bottom:24px;
+    color:#f8f9fc;
+}
+.hero-benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px;
+    margin:30px 0;
+}
+.hero-benefit{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:600;
+}
+.trust-badges{
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    border-radius:16px;
+    padding:24px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-top:30px;
+    color:var(--text-primary);
+}
+.trust-badge{
+    flex:1;
+    min-width:160px;
+}
+.trust-strip{
+    background:var(--background-light);
+    padding:24px 0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+.trust-strip .stats{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+}
+.stat{
+    flex:1;
+    min-width:160px;
+    text-align:center;
+}
+.stat-number{
+    font-size:var(--font-size-3xl);
+    color:var(--primary);
+    font-weight:700;
+}
+.services{
+    background:#fff;
+}
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+.service-card{
+    background:#fff;
+    border-radius:16px;
+    padding:32px;
+    box-shadow:0 20px 40px rgba(15,23,42,0.08);
+    transition:0.3s ease;
+    text-align:center;
+}
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(15,23,42,0.15);
+}
+.icon-container{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:var(--primary-light);
+    border:2px solid var(--primary);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:18px;
+}
+svg{
+    width:24px;
+    height:24px;
+    flex-shrink:0;
+    display:inline-block;
+    vertical-align:middle;
+}
+.icon-container svg{
+    width:40px;
+    height:40px;
+    stroke:var(--primary);
+}
+.service-card h3{
+    margin-bottom:12px;
+    font-size:var(--font-size-2xl);
+}
+.service-card p{
+    color:var(--text-secondary);
+    margin-bottom:16px;
+}
+.service-card .btn{
+    width:100%;
+}
+.feature-highlight{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    align-items:center;
+}
+.feature-highlight img{
+    width:100%;
+    border-radius:20px;
+}
+.about{
+    background:var(--background-light);
+}
+.about-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    align-items:center;
+}
+.badge-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin:20px 0 30px;
+}
+.badge-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:600;
+}
+.location{
+    background:#fff;
+}
+.location-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+.contact-card{
+    background:#fff;
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 12px 24px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.contact-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--text-secondary);
+}
+.contact-row a{
+    color:var(--text-primary);
+    text-decoration:none;
+    font-weight:600;
+}
+.service-areas{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+.area-pill{
+    padding:10px 18px;
+    background:var(--primary-light);
+    border-radius:999px;
+    font-weight:600;
+    color:var(--primary-dark);
+}
+.pricing{
+    background:var(--background-light);
+}
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+.pricing-card{
+    background:#fff;
+    border-radius:20px;
+    padding:32px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+    position:relative;
+}
+.pricing-card.popular{
+    border:2px solid var(--primary);
+    transform:translateY(-10px);
+}
+.pricing-card h3{
+    font-size:var(--font-size-2xl);
+    margin-bottom:10px;
+}
+.price{
+    font-size:var(--font-size-4xl);
+    color:var(--primary);
+    font-weight:700;
+    margin:10px 0 20px;
+}
+.pricing-card ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:24px;
+    color:var(--text-secondary);
+}
+.testimonials{
+    background:#fff;
+}
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:24px;
+}
+.testimonial-card{
+    background:var(--background-light);
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 12px 24px rgba(15,23,42,0.08);
+}
+.stars{
+    display:flex;
+    gap:4px;
+    color:#fbbf24;
+    margin-bottom:16px;
+}
+.faq{
+    background:#fff;
+}
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+.faq-item{
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px;
+    background:#fff;
+}
+.faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:600;
+    cursor:pointer;
+    font-size:var(--font-size-lg);
+}
+.faq-answer{
+    margin-top:12px;
+    color:var(--text-secondary);
+    display:none;
+}
+.faq-item.active .faq-answer{
+    display:block;
+}
+.final-cta{
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+    color:#fff;
+    text-align:center;
+    border-radius:24px;
+    padding:60px 30px;
+    box-shadow:0 20px 40px rgba(198,40,40,0.4);
+}
+.final-cta h2{
+    color:#fff;
+    font-size:var(--font-size-4xl);
+    margin-bottom:16px;
+}
+footer{
+    background:var(--background-dark);
+    color:#fff;
+    padding:60px 0 20px;
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-bottom:30px;
+}
+.footer-col h4{
+    margin-bottom:16px;
+}
+.footer-col ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.footer-col a{
+    color:#e5e7eb;
+    text-decoration:none;
+}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:12px;
+    font-size:var(--font-size-sm);
+    color:#cbd5f5;
+}
+.social-links{
+    display:flex;
+    gap:14px;
+}
+.social-links a{
+    color:#fff;
+    font-size:var(--font-size-lg);
+}
+.contact-form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:16px;
+    margin-top:30px;
+}
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px 16px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    font-family:'Source Sans 3',sans-serif;
+}
+.contact-form textarea{
+    grid-column:span 2;
+    min-height:120px;
+}
+@media(max-width:600px){
+    .contact-form textarea{
+        grid-column:span 1;
+    }
+}
+.animate-on-scroll{
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.6s ease;
+}
+.animate-on-scroll.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+.button-icon svg,
+.contact-row svg,
+.hero-benefit svg,
+.badge-item svg{
+    stroke:#fff;
+}
+header.scrolled .phone-link svg{
+    stroke:var(--text-primary);
+}
+.icon-md svg{
+    width:20px;
+    height:20px;
+}
+.icon-lg svg{
+    width:32px;
+    height:32px;
+}
+@media(max-width:768px){
+    .logo{
+        color:#fff;
+    }
+    .hero{
+        min-height:90vh;
+    }
+    .hero h1{
+        font-size:2.4rem;
+    }
+    .hero p{
+        font-size:1.1rem;
+    }
+}
+</style>
+<script 
+    src="https://beta.leadconnectorhq.com/loader.js"  
+    data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+    data-widget-id="691a8c5133e9929ee9b58542"
+></script>
+</head>
+<body>
+<header>
+    <div class="container navbar">
+        <div class="logo">Brisbane Roofing Solutions</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <a class="phone-link" href="tel:+61732761546">
+                <span class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72 12.45 12.45 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45 12.45 12.45 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
+                </span>
+                (07) 3276 1546
+            </a>
+            <a href="#contact" class="btn btn-secondary">Book Free Inspection</a>
+        </div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</header>
+<div class="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a
+    ><a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+61732761546" class="btn btn-primary">Call (07) 3276 1546</a>
+</div>
+<section class="hero" id="home">
+    <div class="container hero-content animate-on-scroll">
+        <p class="badge">Trusted Roof Restoration Specialists • 20+ Years</p>
+        <h1>Restore & Protect Your Brisbane Roof with Confidence</h1>
+        <p>Qualified, insured and locally owned, Brisbane Roofing Solutions delivers premium roof restorations, painting, and repairs tailored to Queensland’s harsh climate—backed by 10-year warranties and genuine onsite inspections.</p>
+        <div class="hero-benefits">
+            <div class="hero-benefit">
+                <span class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                10-Year Workmanship Guarantee
+            </div>
+            <div class="hero-benefit">
+                <span class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 8-9 13-9 13s-9-5-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                Servicing SEQ from Brisbane to Toowoomba
+            </div>
+            <div class="hero-benefit">
+                <span class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3h-8v4h8z"/></svg>
+                </span>
+                Finance Options via Handypay
+            </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;">
+            <a href="tel:+61732761546" class="btn btn-primary">
+                <span class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72 12.45 12.45 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45 12.45 12.45 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
+                </span>
+                Call Now
+            </a>
+            <a href="#services" class="btn btn-secondary">View Services</a>
+        </div>
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <p style="font-weight:600;">Top Three Best Rated Roofing Contractors</p>
+                <small>Winner 2022 • 2023 • 2024</small>
+            </div>
+            <div class="trust-badge">
+                <p style="font-weight:600;">QBCC Licence 15030347</p>
+                <small>Fully licensed & insured</small>
+            </div>
+            <div class="trust-badge">
+                <p style="font-weight:600;">4.9★ Google Rating</p>
+                <small>312+ homeowner reviews</small>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="trust-strip">
+    <div class="container stats">
+        <div class="stat">
+            <div class="stat-number" data-target="2847">0</div>
+            <p>Roofs Revived Since 2004</p>
+        </div>
+        <div class="stat">
+            <div class="stat-number" data-target="20">0</div>
+            <p>Years Serving Queensland</p>
+        </div>
+        <div class="stat">
+            <div class="stat-number" data-target="10">0</div>
+            <p>Year Warranty on Workmanship</p>
+        </div>
+        <div class="stat">
+            <div class="stat-number" data-target="5">0</div>
+            <p>Regions Covered Across SEQ</p>
+        </div>
+    </div>
+</section>
+<section class="services" id="services">
+    <div class="container">
+        <div class="animate-on-scroll">
+            <p class="badge">Our Expertise</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:16px;">Comprehensive Roof Solutions for Every Surface</h2>
+            <p style="color:var(--text-secondary);max-width:720px;">From classic terracotta tiles to modern Colorbond profiles, we deliver meticulous restorations, repairs, and replacements that extend roof life, improve thermal performance, and boost street appeal.</p>
+        </div>
+        <div class="services-grid" style="margin-top:40px;">
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l8-5 8 5v9l-8 5-8-5z"/><path d="M12 3v18"/></svg>
+                </div>
+                <h3>Tile & Metal Roof Restorations</h3>
+                <p>Deep clean, repairs, re-bedding, pointing, and sealing systems engineered for Brisbane’s humidity and storms.</p>
+                <button class="btn btn-primary">Book Free Inspection</button>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3z"/><path d="M7 7v10"/><path d="M17 7v10"/><path d="M3 17h18v4H3z"/></svg>
+                </div>
+                <h3>Roof Painting & Coatings</h3>
+                <p>Premium membranes and Colorbond-compatible paints deliver heat-reflective performance and long-lasting colour.</p>
+                <button class="btn btn-primary">Explore Colours</button>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13V7l8-4 8 4v6"/><path d="M20 13a8 8 0 0 1-16 0"/></svg>
+                </div>
+                <h3>Full Roof Replacement</h3>
+                <p>End-to-end project management for tile-to-metal upgrades, storm damage rebuilds, and insurance-supported works.</p>
+                <button class="btn btn-primary">Request Quote</button>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9 6 9-6"/><path d="M21 8v8"/><path d="M3 8v8"/><path d="M21 16l-9 6-9-6"/></svg>
+                </div>
+                <h3>Leak & Storm Repairs</h3>
+                <p>Rapid response teams to locate leaks, replace broken tiles, reseal flashings, and make your roof watertight again.</p>
+                <button class="btn btn-primary">Schedule Repair</button>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M5 10h14"/><path d="M12 4v6"/><path d="M6 10a6 6 0 0 0 12 0"/></svg>
+                </div>
+                <h3>Guttering & Downpipes</h3>
+                <p>Custom colourbond gutters, fascia repairs, and whirlybird installations to maximise ventilation and drainage.</p>
+                <button class="btn btn-primary">Upgrade Drainage</button>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V2m0 0 5 5m-5-5-5 5"/></svg>
+                </div>
+                <h3>Exterior Painting & Sealing</h3>
+                <p>Complete exterior refreshes to match your restored roof, including fascia, gables, and architectural trims.</p>
+                <button class="btn btn-primary">Bundle & Save</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container feature-highlight">
+        <img src="https://pixabay.com/get/g7d9bea56e87b99ae2153306d097b7fcd4ebd939d7cefd78329d2c846be5ee9dfff2aeaec0382bb7dde63d471bbf129fef795792d161419cd79c5356a598d1ac9_1280.jpg" alt="Roofers repairing tiles in Brisbane" loading="lazy">
+        <div class="animate-on-scroll">
+            <p class="badge">Precision Repairs</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:16px;">Certified Technicians Who Treat Your Roof Like Their Own</h2>
+            <p style="color:var(--text-secondary);margin-bottom:20px;">Led by qualified roofer James Kelly, our crew personally inspects every metre of your roof—no drones, no guesswork. We provide photos, a written scope, and a transparent fixed quote so you know exactly what is needed before work begins.</p>
+            <div class="badge-list">
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                    Genuine free onsite roof inspections
+                </div>
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M9 11l3 3 5-5"/></svg>
+                    </span>
+                    Hand-picked coatings for QLD UV & humidity
+                </div>
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M4.93 4.93l4.24 4.24"/></svg>
+                    </span>
+                    Site protection for gardens, paving & pools
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">Plan Your Restoration</a>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="container about-content">
+        <img src="https://pixabay.com/get/gd77f2a00ce042c78074eb773ff1ad99c206d2d7bb6b2e8ab1e4bb3fa103b5a7c20746146cf93aac52bc7ba1262a7f1713071e35984541d36cbc9cdb55cf9b38d_1280.jpg" alt="Brisbane roof restoration scaffolding" loading="lazy">
+        <div class="animate-on-scroll">
+            <p class="badge">Why Homeowners Choose Us</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:16px;">Family-Owned, Quality-Driven Roofing Since 2004</h2>
+            <p>Brisbane Roofing Solutions was founded to give homeowners an honest alternative to high-pressure franchises. Our small but mighty crew has restored more than 2,800 roofs across Brisbane, Ipswich, Sunshine Coast, Toowoomba, and the Gold Coast—staying on schedule, respecting every property, and leaving zero mess behind.</p>
+            <div class="badge-list">
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4v6c0 5-3 9-9 11-6-2-9-6-9-11V6z"/><path d="M9.5 12l2 2 3-3"/></svg>
+                    </span>
+                    Licensed & insured • QBCC 15030347
+                </div>
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M5 5l7-4 7 4"/><path d="M19 19l-7 4-7-4"/></svg>
+                    </span>
+                    10-year workmanship guarantee
+                </div>
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </span>
+                    Finance available with Handypay
+                </div>
+            </div>
+            <a href="#reviews" class="btn btn-primary">See Customer Stories</a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container feature-highlight">
+        <div class="animate-on-scroll">
+            <p class="badge">Roof Painting & Coatings</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:16px;">Reflect Heat, Refresh Colour, Protect Longer</h2>
+            <p>We pair industrial-grade primers with heat-reflective membranes engineered for Colorbond and tile surfaces. Choose from dozens of modern hues—including the always popular Iron Grey transformation—to dramatically lift curb appeal and indoor comfort.</p>
+            <ul style="list-style:none;padding:0;margin:24px 0;display:flex;flex-direction:column;gap:10px;color:var(--text-secondary);">
+                <li>• Two-coat acrylic membrane with 15+ year lifespan</li>
+                <li>• UV blockers and anti-fungal additives for Queensland humidity</li>
+                <li>• Detailed masking and cleanup to protect gardens and driveways</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Match My Colour</a>
+        </div>
+        <img src="https://pixabay.com/get/g4cf212b3b61e608cd3b039728a5cb00c82bdc1195f64ca21b6bb241c4797faa992539be510353cac2f846b96969cb574a749ab8d15a2c9a0ae75443442049225_1280.jpg" alt="Metal roof painting in Brisbane" loading="lazy">
+    </div>
+</section>
+<section>
+    <div class="container feature-highlight">
+        <img src="https://pixabay.com/get/g2d41d67fa9faf801d1133e44e921b8046c3fd3d921af3b79a8211a1e9ef0777fe366bac505c0c6fc7b5d82909ab00823a212b68e6fa595cf961a4a19b9ef8cbe_1280.jpg" alt="Commercial roofing maintenance in Brisbane" loading="lazy">
+        <div class="animate-on-scroll">
+            <p class="badge">Commercial Roofing</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:16px;">Reliable Roofing for Body Corporates & Business Parks</h2>
+            <p>From shopping centres to strata-titled townhouse roofs, we coordinate access, safety, and staging to minimise disruption. Detailed reporting keeps committees informed at every milestone.</p>
+            <div class="badge-list">
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    </span>
+                    Staged works for multi-building complexes
+                </div>
+                <div class="badge-item">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 3v18"/><path d="M5 5h2v2H5z"/><path d="M17 17h2v2h-2z"/></svg>
+                    </span>
+                    Safety & compliance documentation supplied
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">Discuss Commercial Project</a>
+        </div>
+    </div>
+</section>
+<section class="location" id="contact">
+    <div class="container location-grid">
+        <div class="animate-on-scroll">
+            <p class="badge">Visit & Service Areas</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:16px;">Proudly Restoring Roofs Across South East Queensland</h2>
+            <p style="color:var(--text-secondary);margin-bottom:24px;">Head office: 101 Kulcha Street, Algester QLD 4115. Our crews are on the road daily from Brisbane Northside through Ipswich, Sunshine Coast, Toowoomba, and the Gold Coast.</p>
+            <div class="service-areas">
+                <span class="area-pill">Brisbane Metro</span>
+                <span class="area-pill">Ipswich</span>
+                <span class="area-pill">Sunshine Coast</span>
+                <span class="area-pill">Toowoomba</span>
+                <span class="area-pill">Gold Coast</span>
+            </div>
+            <div class="contact-card" style="margin-top:24px;">
+                <div class="contact-row">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </span>
+                    101 Kulcha Street, Algester QLD
+                </div>
+                <div class="contact-row">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72 12.45 12.45 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45 12.45 12.45 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
+                    </span>
+                    <a href="tel:+61732761546">(07) 3276 1546</a>
+                </div>
+                <div class="contact-row">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/><path d="M10 13h4"/></svg>
+                    </span>
+                    <a href="mailto:hello@brisbaneroofingsolutions.com.au">hello@brisbaneroofingsolutions.com.au</a>
+                </div>
+                <div class="contact-row">
+                    <span class="icon-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18"/><path d="M5 4h14"/><path d="M7 20v-8"/><path d="M17 20v-8"/></svg>
+                    </span>
+                    Mon–Fri 7:00am–5:30pm • Sat 8:00am–1:00pm
+                </div>
+            </div>
+        </div>
+        <div class="animate-on-scroll">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.143107198867!2d153.02334369999998!3d-27.639630799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9159ef4f850d1b%3A0x909b02c2b8a3c6d1!2s101%20Kulcha%20St%2C%20Algester%20QLD%204115!5e0!3m2!1sen!2sau!4v1736533333333" width="100%" height="420" style="border:0;border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form class="contact-form" id="contact-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" placeholder="Tell us about your roof..." required></textarea>
+                <button type="submit" class="btn btn-primary" style="grid-column:span 2;">Request Free Roof Inspection</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="pricing">
+    <div class="container">
+        <div class="animate-on-scroll" style="text-align:center;margin-bottom:40px;">
+            <p class="badge">Transparent Pricing</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:12px;">Smart Packages for Every Roof Condition</h2>
+            <p style="color:var(--text-secondary);">All packages include a detailed inspection report, photos, waste removal, and a 10-year workmanship guarantee.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card animate-on-scroll">
+                <h3>Essential Roof Tune-Up</h3>
+                <p class="price">From $690</p>
+                <ul>
+                    <li>Roof health inspection + photos</li>
+                    <li>Broken tile replacement (up to 12)</li>
+                    <li>Minor leak sealing & flashings</li>
+                    <li>Debris removal from valleys</li>
+                </ul>
+                <button class="btn btn-primary">Secure My Spot</button>
+            </div>
+            <div class="pricing-card popular animate-on-scroll">
+                <div class="badge" style="background:var(--primary);color:#fff;position:absolute;top:-12px;right:20px;padding:6px 12px;border-radius:999px;">Most Selected</div>
+                <h3>Complete Roof Restoration</h3>
+                <p class="price">From $3,950</p>
+                <ul>
+                    <li>Pressure clean & biocide treatment</li>
+                    <li>Re-bedding & flexible pointing</li>
+                    <li>Primer + 2 coats membrane</li>
+                    <li>10-year workmanship warranty</li>
+                </ul>
+                <button class="btn btn-primary">Book Inspection</button>
+            </div>
+            <div class="pricing-card animate-on-scroll">
+                <h3>Roof Replacement Upgrade</h3>
+                <p class="price">From $12,800</p>
+                <ul>
+                    <li>Tile-to-Colorbond conversions</li>
+                    <li>Insulation & whirlybirds optional</li>
+                    <li>Disposal & site protection included</li>
+                    <li>Finance via Handypay</li>
+                </ul>
+                <button class="btn btn-primary">Discuss Options</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonials" id="reviews">
+    <div class="container">
+        <div class="animate-on-scroll" style="text-align:center;margin-bottom:40px;">
+            <p class="badge">Happy Homeowners</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:12px;">Real Feedback from Brisbane Roofing Clients</h2>
+            <p style="color:var(--text-secondary);">4.9 ★ average from 312 Google & Facebook reviews</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card animate-on-scroll">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                </div>
+                <p>“Jim and the Brisbane Roofing Solutions team coordinated seamlessly with our gutter installers to turn a faded red tile roof into a modern iron grey. They even handled extras outside scope without charging more. Couldn’t be happier.”</p>
+                <p style="font-weight:600;margin-top:12px;">Jess F. • Google Review</p>
+            </div>
+            <div class="testimonial-card animate-on-scroll">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                </div>
+                <p>“Highly recommend. They didn’t rush, communicated around weather delays, and left the property spotless. Professional, respectful, and the roof looks brand new.”</p>
+                <p style="font-weight:600;margin-top:12px;">Steve • Google Review</p>
+            </div>
+            <div class="testimonial-card animate-on-scroll">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                </div>
+                <p>“My elderly mother had her roof repaired, cleaned and sealed. The guys were patient and kind, and the transformation made the house look new again. Even the neighbour booked after seeing it.”</p>
+                <p style="font-weight:600;margin-top:12px;">Karen W. • Facebook Review</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <div class="container">
+        <div class="animate-on-scroll" style="text-align:center;margin-bottom:30px;">
+            <p class="badge">FAQs</p>
+            <h2 style="font-size:var(--font-size-4xl);margin-bottom:12px;">Roofing Questions We Hear Daily</h2>
+            <p style="color:var(--text-secondary);">Can’t find your answer? Call (07) 3276 1546 and talk directly to a roofer.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">Do you really offer free onsite inspections?<span>+</span></div>
+                <div class="faq-answer">Yes. A licensed roofer visits your property, walks the entire roof, takes photos, and provides a detailed quote—no obligation and no need for you to supply pictures.</div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">What areas do you serve in Queensland?<span>+</span></div>
+                <div class="faq-answer">We regularly service Brisbane North & South, Ipswich, Gold Coast, Sunshine Coast, and Toowoomba. For larger commercial projects we travel across South East Queensland.</div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">How long does a full roof restoration take?<span>+</span></div>
+                <div class="faq-answer">Most tiled roofs are completed in 4–6 days, depending on size and weather. We provide a schedule before work begins and keep you updated each day.</div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">Are you licensed and insured?<span>+</span></div>
+                <div class="faq-answer">Absolutely. Brisbane Roofing Solutions holds QBCC Licence 15030347 and full public liability insurance up to $20M for residential and commercial works.</div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">Do you offer financing or staged payments?<span>+</span></div>
+                <div class="faq-answer">Yes, we partner with Handypay to provide flexible payment plans for restorations and replacements, subject to approval.</div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">What warranty do you provide?<span>+</span></div>
+                <div class="faq-answer">All workmanship carries a 10-year guarantee. Paint/coating systems come with manufacturer warranties up to 15 years depending on product selection.</div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">Can you work with insurance claims?<span>+</span></div>
+                <div class="faq-answer">Yes. We assist with storm damage reports, provide photographic evidence, and liaise with insurers to ensure your claim moves smoothly.</div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">Do you replace gutters and install whirlybirds?<span>+</span></div>
+                <div class="faq-answer">We supply and install Colorbond gutters, downpipes, fascia repairs, and whirlybirds as standalone projects or bundled with roof work.</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container final-cta animate-on-scroll">
+        <h2>Ready to Give Your Roof a New Lease on Life?</h2>
+        <p style="margin-bottom:24px;">Secure your genuine free inspection today and lock in priority scheduling before the next storm season hits.</p>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;">
+            <a href="tel:+61732761546" class="btn btn-primary" style="background:#fff;color:var(--primary);">
+                <span class="icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72 12.45 12.45 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45 12.45 12.45 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"/></svg>
+                </span>
+                Call (07) 3276 1546
+            </a>
+            <a href="#contact" class="btn btn-secondary" style="border-color:#fff;color:#fff;">Book Free Roof Inspection</a>
+        </div>
+        <p style="margin-top:20px;font-size:var(--font-size-sm);">No obligation • Detailed photo report • Quote valid for 30 days</p>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 style="color:#fff;">Brisbane Roofing Solutions</h3>
+                <p>Residential & commercial roofing experts delivering restorations, painting, replacements, and repairs across South East Queensland.</p>
+                <div class="social-links" style="margin-top:16px;">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3.64L19 9h-4V6a1 1 0 0 1 1-1h2z"/></svg>
+                        </span>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37a4 4 0 1 1-2.63-3.78"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Roof Restorations</a></li>
+                    <li><a href="#services">Roof Painting</a></li>
+                    <li><a href="#services">Roof Replacement</a></li>
+                    <li><a href="#reviews">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>101 Kulcha Street, Algester QLD 4115</p>
+                <p><a href="tel:+61732761546" style="color:#fff;text-decoration:none;">(07) 3276 1546</a></p>
+                <p><a href="mailto:hello@brisbaneroofingsolutions.com.au" style="color:#fff;text-decoration:none;">hello@brisbaneroofingsolutions.com.au</a></p>
+                <p>Mon–Fri 7:00am–5:30pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span class="current-year"></span> Brisbane Roofing Solutions. All rights reserved.</p>
+            <p>Website powered by Elite Funnel Studio</p>
+        </div>
+    </div>
+</footer>
+<script>
+const hamburger=document.querySelector('.hamburger');
+const mobileMenu=document.querySelector('.mobile-menu');
+if(hamburger&&mobileMenu){
+    hamburger.addEventListener('click',()=>{mobileMenu.classList.toggle('active');});
+    mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>mobileMenu.classList.remove('active')));
+}
+window.addEventListener('scroll',()=>{
+    const header=document.querySelector('header');
+    if(window.scrollY>100){header.classList.add('scrolled');}else{header.classList.remove('scrolled');}
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+        const target=document.querySelector(this.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+});
+document.querySelectorAll('.faq-question').forEach(question=>{
+    question.addEventListener('click',()=>{
+        question.parentElement.classList.toggle('active');
+    });
+});
+const observerOptions={threshold:0.15,rootMargin:'0px 0px -60px 0px'};
+const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+},observerOptions);
+document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
+const counters=document.querySelectorAll('.stat-number');
+const counterObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            const el=entry.target;
+            const target=parseInt(el.dataset.target,10);
+            let current=0;
+            const increment=Math.max(1,target/100);
+            const timer=setInterval(()=>{
+                current+=increment;
+                if(current>=target){el.textContent=target;clearInterval(timer);}else{el.textContent=Math.floor(current);}
+            },20);
+            counterObserver.unobserve(el);
+        }
+    });
+},{threshold:0.6});
+counters.forEach(el=>counterObserver.observe(el));
+const form=document.querySelector('#contact-form');
+if(form){
+    form.addEventListener('submit',e=>{
+        e.preventDefault();
+        const formData=new FormData(form);
+        const data=Object.fromEntries(formData.entries());
+        const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!data.name||!data.email||!data.phone||!data.message){
+            alert('Please fill in all required fields.');
+            return;
+        }
+        if(!emailRegex.test(data.email)){
+            alert('Please enter a valid email.');
+            return;
+        }
+        alert('Thanks! Your inspection request has been received.');
+        form.reset();
+    });
+}
+const yearEl=document.querySelector('.current-year');
+if(yearEl){yearEl.textContent=new Date().getFullYear();}
+</script>
+</body>
+</html>
