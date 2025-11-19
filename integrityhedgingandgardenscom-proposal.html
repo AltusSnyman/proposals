@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Proposal for Integrity Hedging & Gardens | SystemPros AI</title>
+<meta name="description" content="Custom AI phone assistant proposal for Integrity Hedging & Gardens">
+<style>
+:root{--bg-primary:#0a0e27;--bg-secondary:#111827;--bg-card:#1a1f3a;--accent-blue:#00d9ff;--accent-blue-glow:rgba(0,217,255,0.3);--accent-green:#00ff88;--accent-red:#ff4444;--text-primary:#ffffff;--text-secondary:#a0aec0;--border-subtle:rgba(255,255,255,0.1);font-family:system-ui,-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{border:none;background:none;color:inherit;cursor:pointer}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(10,14,39,0.8);backdrop-filter:blur(18px);border-bottom:1px solid var(--border-subtle)}
+.nav-container{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:48px;height:48px}
+.brand-text{display:flex;flex-direction:column;font-weight:600}
+.brand-text span{font-size:14px;color:var(--text-secondary)}
+nav{display:flex;align-items:center;gap:24px}
+nav a{font-size:15px;color:var(--text-secondary);transition:color .3s}
+nav a:hover{color:var(--accent-blue)}
+.cta-primary{background:linear-gradient(120deg,#00d9ff,#33f1ff);padding:12px 24px;border-radius:12px;font-weight:600;color:#04121f;box-shadow:0 4px 16px var(--accent-blue-glow);transition:transform .3s,box-shadow .3s}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--accent-blue-glow)}
+.hero{padding-top:140px;background:radial-gradient(circle at top,rgba(0,217,255,0.08),transparent);position:relative;overflow:hidden}
+.section{max-width:1200px;margin:0 auto;padding:80px 24px}
+.hero-content{display:flex;gap:40px;align-items:stretch}
+.hero-left{flex:0 0 60%}
+.hero-eyebrow{font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--accent-blue);margin-bottom:12px}
+.hero-left h1{font-size:52px;font-weight:800;line-height:1.1;margin-bottom:16px}
+.hero-left p{font-size:18px;color:var(--text-secondary);margin-bottom:24px}
+.metrics{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.metric-pill{flex:1 1 140px;border:1px solid rgba(0,217,255,0.4);border-radius:16px;padding:16px;background:rgba(0,217,255,0.05)}
+.metric-pill h4{font-size:18px;font-weight:700}
+.metric-pill span{font-size:14px;color:var(--text-secondary)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.secondary-link{padding:14px 24px;border-radius:12px;border:1px solid var(--border-subtle);color:var(--accent-blue);font-weight:600;transition:all .3s}
+.secondary-link:hover{border-color:var(--accent-blue);color:var(--text-primary)}
+.hero-right{flex:0 0 40%}
+.founder-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:24px;padding:32px;box-shadow:0 12px 40px rgba(0,0,0,0.45);position:relative}
+.founder-card img{width:96px;height:96px;border-radius:50%;border:2px solid var(--accent-blue);margin-bottom:16px}
+.signature{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--accent-green);margin-top:12px}
+.section h2{font-size:42px;font-weight:700;margin-bottom:16px}
+.section>p{color:var(--text-secondary);max-width:720px;margin-bottom:32px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:28px;box-shadow:0 12px 32px rgba(0,0,0,0.35);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.45)}
+.card h3{font-size:22px;margin:12px 0}
+.card p{color:var(--text-secondary)}
+.problem-quant{margin-top:24px;border:1px dashed var(--accent-blue);border-radius:16px;padding:20px;color:var(--text-secondary);background:rgba(0,217,255,0.05)}
+.flow{display:flex;align-items:center;gap:16px;margin-top:32px;flex-wrap:wrap}
+.flow-step{flex:1 1 150px;text-align:center;background:rgba(0,217,255,0.08);border:1px solid var(--border-subtle);border-radius:14px;padding:16px}
+.features-pills{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
+.feature-pill{flex:1 1 200px;background:rgba(17,24,39,0.8);border:1px solid rgba(0,217,255,0.3);border-radius:20px;padding:16px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.step-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;padding:24px}
+.step-card .badge{width:40px;height:40px;border-radius:50%;background:rgba(0,217,255,0.15);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent-blue);margin-bottom:16px}
+.step-card ul{color:var(--text-secondary);padding-left:16px}
+.roi-section{display:flex;gap:32px;flex-wrap:wrap}
+.roi-card{flex:1 1 360px;background:var(--bg-card);border-radius:24px;border:1px solid var(--border-subtle);padding:32px}
+.roi-card h3{font-size:24px;margin-bottom:16px}
+.roi-form label{display:block;font-size:14px;color:var(--text-secondary);margin-bottom:8px}
+.roi-form input{width:100%;padding:14px;border-radius:12px;border:1px solid var(--border-subtle);background:transparent;color:var(--text-primary);margin-bottom:16px}
+.roi-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.roi-buttons button{flex:1 1 150px;background:rgba(0,217,255,0.1);border:1px solid var(--accent-blue);border-radius:12px;padding:12px;font-weight:600;transition:all .3s}
+.roi-buttons button:hover{background:var(--accent-blue);color:#04121f}
+.roi-results{flex:1 1 360px;background:linear-gradient(140deg,rgba(0,217,255,0.2),rgba(0,255,136,0.15));border-radius:24px;border:1px solid rgba(0,255,136,0.4);padding:32px;box-shadow:0 20px 50px rgba(0,255,136,0.15)}
+.roi-results h4{font-size:20px;margin-bottom:8px}
+.roi-results p{font-size:14px;color:var(--text-secondary);margin-bottom:16px}
+.result-number{font-size:36px;font-weight:700;margin-bottom:8px}
+.about{display:flex;gap:32px;flex-wrap:wrap;align-items:center}
+.about img{width:320px;border-radius:30px;border:2px solid var(--accent-blue);box-shadow:0 20px 40px rgba(0,0,0,0.45)}
+.about-text p{color:var(--text-secondary);margin-bottom:16px}
+.faq-item{border-bottom:1px solid var(--border-subtle)}
+.faq-question{padding:20px;display:flex;justify-content:space-between;align-items:center;font-weight:600}
+.faq-answer{max-height:0;overflow:hidden;padding:0 20px;color:var(--text-secondary);transition:max-height .4s ease,padding .4s ease}
+.faq-item.active .faq-answer{max-height:200px;padding:0 20px 20px}
+.final-cta{text-align:center;background:radial-gradient(circle,rgba(0,255,136,0.08),transparent);padding:80px 24px;border-top:1px solid var(--border-subtle)}
+.final-cta h2{font-size:40px;margin-bottom:16px}
+.final-cta p{color:var(--text-secondary);margin-bottom:20px}
+.footer{padding:32px 24px;text-align:center;color:var(--text-secondary);border-top:1px solid var(--border-subtle);font-size:14px}
+.mobile-toggle{display:none;width:44px;height:44px;border:1px solid var(--border-subtle);border-radius:12px;align-items:center;justify-content:center}
+.mobile-nav{display:none;flex-direction:column;gap:12px;margin-top:12px}
+@media(max-width:1024px){
+.hero-content{flex-direction:column}
+.hero-left h1{font-size:44px}
+.nav-links{display:none}
+.mobile-toggle{display:flex}
+nav.open+.mobile-nav{display:flex}
+}
+@media(max-width:768px){
+.section{padding:60px 20px}
+header .cta-primary{display:none}
+.hero-left h1{font-size:38px}
+.metric-pill{flex:1 1 100%}
+.about img{width:100%}
+}
+.fade{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.fade.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<header>
+<div class="nav-container">
+<div class="brand">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/68d12fe973c85960a34f17aa.png" alt="SystemPros AI Logo" loading="lazy">
+<div class="brand-text">
+<strong>SystemPros AI</strong>
+<span>Business Growth Specialist</span>
+</div>
+</div>
+<nav class="nav-links">
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#how">How It Works</a>
+<a href="#roi">ROI</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+<svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</div>
+<a class="cta-primary" href="https://systempros.ai/booking" target="_blank" rel="noopener">Book a Demo</a>
+</div>
+<nav class="mobile-nav" id="mobileNav">
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#how">How It Works</a>
+<a href="#roi">ROI</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<a class="cta-primary" style="text-align:center" href="https://systempros.ai/booking" target="_blank" rel="noopener">Book a Demo</a>
+</nav>
+</header>
+<section class="hero section fade" id="hero">
+<div class="hero-content">
+<div class="hero-left">
+<div class="hero-eyebrow">Custom Proposal for Integrity Hedging & Gardens</div>
+<h1>Stop losing $1,500 landscaping projects to voicemail, Integrity Hedging & Gardens</h1>
+<p>SystemPros AI answers every call, qualifies every hedge trim, and sends you ready-to-schedule customers 24/7 so your crews stay fully booked.</p>
+<div class="metrics">
+<div class="metric-pill">
+<h4>$81,000</h4>
+<span>Estimated yearly revenue leaking to missed calls</span>
+</div>
+<div class="metric-pill">
+<h4>180+</h4>
+<span>Opportunities slipping away every year</span>
+</div>
+<div class="metric-pill">
+<h4>3 min → 30 sec</h4>
+<span>Average response time improvement</span>
+</div>
+</div>
+<div class="hero-ctas">
+<a class="cta-primary" href="https://systempros.ai/booking" target="_blank" rel="noopener">Book Your 15-Min Demo</a>
+<a class="secondary-link" href="#roi">Calculate Your ROI ↓</a>
+</div>
+</div>
+<div class="hero-right">
+<div class="founder-card">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman" loading="lazy">
+<p>Hi, I’m Altus Snyman. After 25+ years architecting automation for service pros, I built SystemPros AI so landscaping companies like yours can finally capture every lead without hiring another coordinator.</p>
+<p>We treat your brand like it’s ours—monitoring every conversation, tuning every script, and making sure you only get the jobs worth rolling a trailer for.</p>
+<div class="signature">Altus Snyman<br><span style="font-size:14px;font-weight:600;color:var(--text-secondary)">Founder & Automation Specialist</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section fade" id="problem">
+<h2>Your phones are quietly bleeding revenue</h2>
+<p>Integrity Hedging & Gardens delivers meticulous gardens, but when calls hit after-hours, during pruning sessions, or while the ute is rolling between jobs, those prospects move on to the next landscaper. The marketing you’ve paid for turns into someone else’s retainer.</p>
+<div class="cards-grid">
+<div class="card">
+<div>🌙</div>
+<h3>After-hours calls vanish</h3>
+<p>Homeowners research in the evening. When no one answers, they book a competitor for that $1,500 tidy-up. One missed sunset call can cost a full week of maintenance revenue.</p>
+<span class="small-text">78% of service buyers hire whoever answers first.</span>
+</div>
+<div class="card">
+<div>📞</div>
+<h3>No follow-up rhythm</h3>
+<p>Web form leads sit for hours before anyone responds. By the time someone calls back, they already hired another gardener. Cold leads = wasted ad spend.</p>
+<span class="small-text">Response delays beyond 5 minutes cut conversion by 80%.</span>
+</div>
+<div class="card">
+<div>👥</div>
+<h3>Staff stretched thin</h3>
+<p>Great gardeners aren’t receptionists. Every ring yanks them from the worksite, slowing crews and frustrating current clients.</p>
+<span class="small-text">Each interruption costs ~23 minutes of productivity.</span>
+</div>
+<div class="card">
+<div>🌦️</div>
+<h3>Peak season chaos</h3>
+<p>Spring rush hits, phones melt down, and quality leads disappear while you’re managing retic installs. Marketing scales, phones don’t.</p>
+<span class="small-text">Capacity bottlenecks cap growth regardless of demand.</span>
+</div>
+</div>
+<div class="problem-quant">If you miss just 15 calls per month and close 30% at $1,500 per job, that’s $6,750/month — $81,000/year walking away to another landscaper.</div>
+</section>
+<section class="section fade" id="solution">
+<h2>Integrity Hedging & Gardens, meet your 24/7 AI assistant</h2>
+<p>SystemPros AI is a bilingual, landscaping-trained voice + SMS concierge that answers in your brand tone, gathers project details, qualifies serious homeowners, and books them straight into your workflow even while your team is trimming topiary.</p>
+<div class="features-pills">
+<div class="feature-pill">
+<h4>24/7 Answering</h4>
+<p>Every call, text, or web lead handled instantly with a natural voice.</p>
+</div>
+<div class="feature-pill">
+<h4>Instant SMS Follow-up</h4>
+<p>Texts go out within 15 seconds so you never ghost a hot lead.</p>
+</div>
+<div class="feature-pill">
+<h4>Simple Setup</h4>
+<p>Forward your number and we handle the rest. Live in under 48 hours.</p>
+</div>
+<div class="feature-pill">
+<h4>Human Oversight</h4>
+<p>Our team reviews conversations and tweaks prompts for performance.</p>
+</div>
+</div>
+<div class="flow">
+<div class="flow-step">Homeowner calls</div>
+<div class="flow-step">SystemPros AI answers</div>
+<div class="flow-step">Captures service + timing</div>
+<div class="flow-step">Qualifies budget & urgency</div>
+<div class="flow-step">Delivers to your phone/CRM</div>
+</div>
+</section>
+<section class="section fade" id="how">
+<h2>How it works</h2>
+<div class="steps">
+<div class="step-card">
+<div class="badge">1</div>
+<h3>Connect</h3>
+<ul>
+<li>Forward Integrity Hedging & Gardens’ main line to our AI.</li>
+<li>Upload any scripts, promos, or service zones.</li>
+<li>We tune it to your tone and offerings.</li>
+</ul>
+</div>
+<div class="step-card">
+<div class="badge">2</div>
+<h3>Activate</h3>
+<ul>
+<li>AI starts answering immediately—no training required.</li>
+<li>Instant SMS + email summaries after each call.</li>
+<li>Escalate high-value leads to your phone on demand.</li>
+</ul>
+</div>
+<div class="step-card">
+<div class="badge">3</div>
+<h3>Close</h3>
+<ul>
+<li>Receive only qualified hedge trims, landscaping quotes, or retic repairs.</li>
+<li>Track every call inside a shared dashboard.</li>
+<li>Optimize scripts with our team for higher close rates.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section fade" id="roi">
+<h2>Interactive ROI Calculator</h2>
+<p>Plug in Integrity Hedging & Gardens’ real numbers to see what capturing every call adds to your schedule.</p>
+<div class="roi-section">
+<div class="roi-card">
+<h3>Inputs</h3>
+<div class="roi-form">
+<label for="missedCalls">Missed calls/leads per month</label>
+<input type="number" id="missedCalls" value="15" min="0">
+<label for="closeRate">Close rate (%)</label>
+<input type="number" id="closeRate" value="30" min="0" max="100">
+<label for="avgRevenue">Average revenue per job ($)</label>
+<input type="number" id="avgRevenue" value="1500" min="0">
+<label for="monthlyCost">Monthly SystemPros cost ($)</label>
+<input type="number" id="monthlyCost" value="500" min="0">
+</div>
+<div class="roi-buttons">
+<button id="calcBtn">Calculate My ROI</button>
+<button id="resetBtn">Reset to Defaults</button>
+</div>
+</div>
+<div class="roi-results" id="roiResults">
+<h4>Extra Monthly Revenue</h4>
+<div class="result-number" id="monthlyGain">$6,750</div>
+<p>Annual impact</p>
+<div class="result-number" id="annualGain">$81,000</div>
+<p>ROI Multiple</p>
+<div class="result-number" id="roiMultiple">13.5x</div>
+<p>Payback Period</p>
+<div class="result-number" id="payback">2.2 days</div>
+<p id="roiMessage">With returns like this, the real question is: can you afford NOT to capture these leads?</p>
+</div>
+</div>
+</section>
+<section class="section fade" id="about">
+<h2>Built by landscapers, for landscapers</h2>
+<div class="about">
+<img src="https://storage.googleapis.com/msgsndr/xNwqfxGGXnP9LYh6kWdO/media/690021029d3acfde2b4ced6a.png" alt="Altus Snyman" loading="lazy">
+<div class="about-text">
+<p>I’ve spent decades helping service businesses like Integrity Hedging & Gardens wrestle with the same pattern: marketing drives demand, but the phone system can’t keep up. After watching too many hedge trims and landscape installs slip away, I built SystemPros AI to be the always-on coordinator your crews deserve.</p>
+<p>We work with boutique garden designers, high-volume maintenance teams, and reticulation pros ready to scale without sacrificing craftsmanship. We obsess over scripts, review recordings daily, and adjust to seasonal promos so you command every conversation.</p>
+<p>When you onboard with us, you’re getting a partner who understands green-industry margins, not just another software login.</p>
+</div>
+</div>
+</section>
+<section class="section fade" id="faq">
+<h2>FAQ</h2>
+<div class="faq-item">
+<div class="faq-question">Will this replace my staff?</div>
+<div class="faq-answer">No. SystemPros AI handles overflow, after-hours, and first-response triage so your team can focus on delivering beautiful gardens. Human staff stay in control of estimates and final scheduling.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">How complex is setup?</div>
+<div class="faq-answer">It takes a two-minute call forward plus a 30-minute onboarding to share your services and tone. We do the rest and go live within 48 hours.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What if customers ask for a human?</div>
+<div class="faq-answer">They can press 0 or say “speak to someone” to transfer to your on-call lead, or we can dispatch an SMS/email for immediate call-back.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Is this just for big companies?</div>
+<div class="faq-answer">No. Solo gardeners to 50-person landscaping crews use SystemPros AI. It scales with you and costs far less than a receptionist.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What’s the contract commitment?</div>
+<div class="faq-answer">Month-to-month, cancel anytime. We earn your business every month with measurable results.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Can I review calls before they go out?</div>
+<div class="faq-answer">Absolutely. Every transcript and recording is available instantly, and you can set approval workflows for outbound responses.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Does it integrate with my CRM?</div>
+<div class="faq-answer">Yes, we integrate with popular CRMs or simply send detailed SMS/email summaries so nothing slips through the cracks.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What if it doesn’t work for my business?</div>
+<div class="faq-answer">We offer a 30-day money-back guarantee. If you don’t see the lift we forecast, you don’t pay.</div>
+</div>
+</section>
+<section class="final-cta fade" id="final">
+<h2>Ready to stop losing garden projects to voicemail, Integrity Hedging & Gardens?</h2>
+<p>Every unanswered call is another homeowner hiring the next landscaper. Capture those opportunities with a risk-free demo.</p>
+<p>No setup headaches, no long-term commitments—just a simple way to keep your crews booked solid.</p>
+<div class="hero-ctas" style="justify-content:center">
+<a class="cta-primary" href="https://systempros.ai/booking" target="_blank" rel="noopener">Book Your 15-Min Demo</a>
+<a class="secondary-link" href="#roi">See ROI Again</a>
+</div>
+<p style="margin-top:16px;color:var(--text-secondary)">No pressure. No long-term contracts. Just real numbers and a path forward.</p>
+</section>
+<footer class="footer">
+<div>© <span id="year"></span> SystemPros AI. All rights reserved.</div>
+<div>Built for landscaping companies who are done leaving money on the table.</div>
+</footer>
+<script>
+const mobileToggle=document.getElementById('mobileToggle');const mobileNav=document.getElementById('mobileNav');mobileToggle.addEventListener('click',()=>{mobileNav.classList.toggle('open');if(mobileNav.classList.contains('open')){mobileNav.style.display='flex'}else{mobileNav.style.display='none'}});document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();const headerOffset=document.querySelector('header').offsetHeight;const elementPosition=target.getBoundingClientRect().top+window.pageYOffset;const offsetPosition=elementPosition-headerOffset+10;window.scrollTo({top:offsetPosition,behavior:'smooth'});if(window.innerWidth<1024){mobileNav.style.display='none';mobileNav.classList.remove('open')}}})});const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.15});document.querySelectorAll('.fade').forEach(el=>observer.observe(el));const yearSpan=document.getElementById('year');yearSpan.textContent=new Date().getFullYear();const missedInput=document.getElementById('missedCalls');const closeInput=document.getElementById('closeRate');const revenueInput=document.getElementById('avgRevenue');const costInput=document.getElementById('monthlyCost');const monthlyGain=document.getElementById('monthlyGain');const annualGain=document.getElementById('annualGain');const roiMultiple=document.getElementById('roiMultiple');const payback=document.getElementById('payback');const roiMessage=document.getElementById('roiMessage');const defaults={missed:15,close:30,revenue:1500,cost:500};function formatCurrency(value){return '$'+value.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0})}function formatDecimal(value){return value.toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1})}function calculateROI(){let missed=Math.max(0,Number(missedInput.value)||0);let close=Math.max(0,Math.min(100,Number(closeInput.value)||0));let revenue=Math.max(0,Number(revenueInput.value)||0);let cost=Math.max(0,Number(costInput.value)||0);const monthly=missed*(close/100)*revenue;const annual=monthly*12;const roi=cost===0?0:monthly/cost;const paybackDays=monthly===0?0:(cost/(monthly/30));monthlyGain.textContent=formatCurrency(Math.round(monthly));annualGain.textContent=formatCurrency(Math.round(annual));roiMultiple.textContent=(cost===0?'∞':formatDecimal(roi)+'x');payback.textContent=monthly===0?'—':formatDecimal(paybackDays)+' days';let message='Even conservative numbers show this covers itself.';if(monthly<=0){message='If missed calls never convert, there\'s no ROI. But most landscapers know they\'re losing real jobs.'}else if(roi>10){message='With returns like this, the real question is: can you afford NOT to capture these leads?'}else if(roi>5){message='These numbers are strong. Even half this upside makes this a no-brainer.'}else if(roi>2){message='SystemPros AI pays for itself several times over based on your inputs.'}else if(roi>0){message='Even conservative numbers show this covers itself.'}else{message='If missed calls never convert, there\'s no ROI. But most landscapers know they\'re losing real jobs.'}roiMessage.textContent=message}document.getElementById('calcBtn').addEventListener('click',calculateROI);document.querySelectorAll('#missedCalls,#closeRate,#avgRevenue,#monthlyCost').forEach(input=>input.addEventListener('input',calculateROI));document.getElementById('resetBtn').addEventListener('click',()=>{missedInput.value=defaults.missed;closeInput.value=defaults.close;revenueInput.value=defaults.revenue;costInput.value=defaults.cost;calculateROI()});calculateROI();document.querySelectorAll('.faq-item').forEach(item=>{item.addEventListener('click',()=>{item.classList.toggle('active')})});
+</script>
+</body>
+</html>
